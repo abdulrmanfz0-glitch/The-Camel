@@ -1,34 +1,37 @@
 # هندسة الناقة · The Engineering of the Camel
 
-مختبر تفاعلي ثلاثي الأبعاد يشرح كيف صُمّم جسد الناقة وحيدة السنام (*Camelus dromedarius*) للصحراء. لا تقرأ عن الناقة، بل تشغّلها: حرّك الشمس عبر يوم صيفي، اسقِها، أطلق عليها عاصفة رملية، وافتح جسدها طبقةً طبقة.
+أطلس تفاعلي ثلاثي الأبعاد للناقة وحيدة السنام (*Camelus dromedarius*): التشريح، والحركة، والحرّ والبرد، ومراحل العمر، والصحة والأمراض، والوقاية والتطعيم. الناقة منحوتة بالرياضيات داخل المتصفح، تمشي وترهو وتبرك وتشرب، وتُفتح طبقةً طبقة.
 
-An interactive 3D explorable of how the dromedary’s body is built for the desert. Drag the sun through a summer day and watch her body temperature climb instead of sweating water away, give her a drink, send in a sandstorm, and open her up layer by layer.
+An interactive 3D atlas of the dromedary: anatomy, movement, heat and cold, life stages, a health atlas, and prevention. The camel is sculpted in maths inside your browser; she walks, paces, couches, drinks, and opens up layer by layer.
 
 ## Run it
 
-Open `index.html` in a modern browser. It is one self-contained file: three.js r128 loads from cdnjs (with a jsDelivr fallback) and the fonts come from Google Fonts. Nothing else is fetched.
+Open `index.html` in a modern browser with WebGL2. It is one self-contained file. three.js r170 loads as an ES module from jsDelivr (with an unpkg fallback) and the fonts come from Google Fonts. Nothing else is fetched.
 
-## What you can do
+Quality adapts to the device. Force a tier with `?q=low`, `?q=medium` or `?q=high`, and the language with `?lang=en`. Deep links work, for example `#anatomy.stomach` or `#health.mers`.
+
+## Chapters
 
 | | |
 |---|---|
-| **Timeline** | Drag the sun (or the chart) through the day. Sky, light, shadows, air and body temperature follow. |
-| **Water lost** | Dehydrate her, as % of body weight. Her daily temperature swing widens from ~2 °C to over 6 °C. |
-| **Hump reserve** | The hump is fat, not water: empty it and it shrinks and flops to one side. |
-| **Drink** | About 100 L in ~10 minutes (sped up), with a magnifier on her oval red cells. |
-| **Sandstorm** | Nostrils seal, lashes interlock, the third eyelid sweeps the eye. |
-| **Layers** | Skin · Heat (thermal view) · Organs (X-ray, explodable) · Skeleton. |
-| **Hotspots** | Hump, eye, nose, lip, blood, stomach, kidneys, foot, chest and knee pads. |
+| **Welcome** | A calm first screen and a two-minute guided tour. |
+| **Anatomy** | Skin and coat, muscles, organs (X-ray), a full skeleton that moves with the rig. Lengthwise and cross sections, an exploded view, a peel-away window, and labels that never collide. |
+| **Movement** | Walk and pace (the two-beat lateral gait) with slow motion, colour-coded side pairs, a live footfall diagram, pads that spread under load and footprints in the sand. Couching and rising in the right order, drinking, and a sandstorm. |
+| **Heat and cold** | A summer day and a winter night, water loss and hump reserve, a thermal camera, and an illustrative safe / caution / danger status. |
+| **Life stages** | Newborn, juvenile, adult and old, each re-sculpted with its own proportions, with classical Arabic age names and how age is read from the teeth. |
+| **Health atlas** | Fifteen important conditions: cause, spread, signs, diagnosis, prevention and what a vet typically does. Zoonotic flags with official public-health advice. No doses, and a vet referral on every card. |
+| **Prevention** | A lifetime timeline, which vaccines exist and which do not, and care beyond vaccines. No invented schedules. |
+| **Sources** | Every study and official source used, grouped by topic. |
 
-Keyboard: `Space` play · `← →` time · `1–4` layers · `L` next layer · `X` explode · `D` drink · `S` sandstorm · `R` reset camera · `H` how it works · `/` hide the interface · `Esc` close.
+Keyboard: `/` search · `1–8` chapters · `Space` play the day · `← →` time · `W` walk/pace/stand · `K` couch or rise · `D` drink · `S` sandstorm · `X` explode · `L` next layer · `P` hide panel · `T` tour · `Esc` close.
 
-## The science
+## How it is built
 
-The live numbers come from a simplified model built on published measurements. Every claim on the page is listed with its sources in the “How it works” panel; the main ones are:
+- The camel, her organs and her skeleton are signed-distance sculptures (about 130 blended primitives for the body) meshed with narrow-band surface nets in a Web Worker. The same pass bakes skin weights, coat colour and length, ambient occlusion, thickness, and morph targets for the hump, thirst and closed nostrils.
+- Each life stage is a re-sculpt with its own proportions, not a scaled copy.
+- A procedural rig solves the legs with IK from a lateral-sequence walk and a pace, and plays the couching sequence from keyframes.
+- Rendering: physically based coat with fur shells, image-based light from a procedural sky, soft shadows, SSAO, bloom, depth of field in close-ups, heat shimmer and ACES tone mapping in a custom HDR pipeline.
 
-- Schmidt-Nielsen et al. (1956) *Water balance of the camel*, and (1957) *Body temperature of the camel and its relation to water economy*, American Journal of Physiology.
-- Schmidt-Nielsen, Schroter & Shkolnik (1981) *Desaturation of exhaled air in camels*, Proceedings of the Royal Society B.
-- Perk (1966) *Osmotic hemolysis of the camel’s erythrocytes*, Journal of Experimental Zoology.
-- Fowler (2008) *Camelids are not ruminants*.
+## Accuracy
 
-The camel, dunes, acacia and anatomy are built procedurally from maths (lofted sections, lathes and tubes). There are no model files. The anatomy is a simplified sculpture, not a clinical model.
+Numbers come from published studies, veterinary references and official bodies, listed in the Sources chapter. Where researchers disagree the page says so, and where a schedule could not be verified (vaccination), the page gives principles instead of dates. The health chapter is for awareness, not diagnosis: consult a licensed veterinarian.
