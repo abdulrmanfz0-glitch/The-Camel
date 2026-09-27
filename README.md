@@ -16,7 +16,7 @@ A real, photographic camel model can be dropped in without touching the code: se
 
 | | |
 |---|---|
-| **Welcome** | A calm first screen and a two-minute guided tour. |
+| **Anatomy lab** (opens first) | The page's heart. Organs showing inside the body; tap one or pick it from the atlas. Each card: what it does, how it works step by step, what is special in the camel, more from the research (where it sits, size and shape), connected organs you can fly to, the diseases that affect it, and sources, with a badge on medium-confidence content. Movement, heat and cold, life stages, prevention and the welcome screen are in the **More** menu. |
 | **Anatomy** | Skin and coat, muscles, organs (X-ray), a full skeleton that moves with the rig. Sections, an exploded view, a peel-away window. **Organ atlas:** 38 organs in ten systems — respiratory, circulation and blood, digestive, urinary, reproductive (female/male switch), nerves and senses, glands, lymph nodes, skeleton-muscle-skin, fat — each with a camera fly-to, what it does, what is peculiar in the camel, and the diseases that affect it. Tap an organ to open its card. |
 | **Movement** | Walk and pace with slow motion, colour-coded side pairs, a live footfall diagram, pads that spread under load and footprints that keep their shape. Couching and rising, drinking, and a sandstorm. |
 | **Heat and cold** | A summer day and a winter night, water loss and hump reserve, a thermal camera, and an illustrative safe / caution / danger status. |

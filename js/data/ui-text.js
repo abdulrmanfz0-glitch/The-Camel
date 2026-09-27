@@ -38,25 +38,27 @@ const UI = {
   illustrative: L('العتبات هنا وسائل تعليمية تقريبية، لا حدود طبية.', 'These thresholds are rough teaching aids, not clinical limits.'),
 };
 
+/* the anatomy lab is the page; the other chapters sit in a secondary menu (more: true) */
 const CHAPTERS = [
-  { id: 'home', n: '01', name: L('مقدمة', 'Welcome') },
-  { id: 'anatomy', n: '02', name: L('التشريح', 'Anatomy') },
-  { id: 'movement', n: '03', name: L('الحركة', 'Movement') },
-  { id: 'climate', n: '04', name: L('الحرّ والبرد', 'Heat & cold') },
-  { id: 'life', n: '05', name: L('مراحل العمر', 'Life stages') },
-  { id: 'health', n: '06', name: L('الصحة والأمراض', 'Health atlas') },
-  { id: 'prevention', n: '07', name: L('الوقاية والتطعيم', 'Prevention') },
-  { id: 'sources', n: '08', name: L('المصادر', 'Sources') },
+  { id: 'anatomy', n: '01', name: L('مختبر التشريح', 'Anatomy lab') },
+  { id: 'health', n: '02', name: L('الصحة والأمراض', 'Health atlas') },
+  { id: 'sources', n: '03', name: L('المصادر', 'Sources') },
+  { id: 'movement', n: '04', name: L('الحركة', 'Movement'), more: true },
+  { id: 'climate', n: '05', name: L('الحرّ والبرد', 'Heat & cold'), more: true },
+  { id: 'life', n: '06', name: L('مراحل العمر', 'Life stages'), more: true },
+  { id: 'prevention', n: '07', name: L('الوقاية والتطعيم', 'Prevention'), more: true },
+  { id: 'home', n: '08', name: L('عن الأطلس', 'About'), more: true },
 ];
+const MORE = L('المزيد', 'More');
 
 const HOME = {
   kicker: L('أطلس تفاعلي', 'An interactive atlas'),
   hook: L('يعرف الجميع أن الناقة تصبر على العطش. قليلون يعرفون كيف. هذا الأطلس يفتح جسدها طبقةً طبقة: كيف تخزّن الحرّ، وتمشي على الرمل، وتكبر، وتمرض، وكيف نحميها.',
     'Everyone knows the camel can go without water. Few know how. This atlas opens her body layer by layer: how she banks heat, walks on sand, grows up, falls ill — and how we keep her well.'),
-  start: L('ابدأ الجولة (دقيقتان)', 'Take the 2-minute tour'), explore: L('استكشف بنفسك', 'Explore on your own'),
+  start: L('ابدأ الجولة (دقيقتان)', 'Take the 2-minute tour'), explore: L('افتح مختبر التشريح', 'Open the anatomy lab'),
   what: L('في هذا الأطلس', 'Inside'),
   list: [
-    [L('التشريح', 'Anatomy'), L('أطلس لثمانية وثلاثين عضوًا، مربوطة بالأمراض التي تصيبها، مع مقاطع وتفكيك.', 'An atlas of 38 organs linked to the diseases that affect them, with sections and an exploded view.')],
+    [L('مختبر التشريح', 'Anatomy lab'), L('تسعة وثلاثون عضوًا: وظيفة كلٍّ منها وكيف يعمل وما يميّزه في الناقة، مع مصادره، مربوطةً بالأمراض التي تصيبه.', 'Thirty-nine organs: what each does, how it works and what is special in the camel, with sources, linked to the diseases that affect it.')],
     [L('الحركة', 'Movement'), L('المشي والرهوان بالتصوير البطيء، والبروك والنهوض.', 'Walk and pace in slow motion; couching and rising.')],
     [L('الحرّ والبرد', 'Heat & cold'), L('يوم صيفي وليلة شتوية، وحرارة جسمها لحظةً بلحظة.', 'A summer day and a winter night, her body temperature moment by moment.')],
     [L('العمر والصحة', 'Age & health'), L('من الحُوار إلى المُسنّة، وأطلس للأمراض والوقاية.', 'From newborn to old age, a health atlas, and prevention.')],
@@ -66,4 +68,4 @@ const HOME = {
     'The camel here is sculpted in maths: an adult female, about 1.85 m at the withers, on the red sands east of Riyadh under the real sun. The anatomy is simplified for learning, not a clinical reference.'),
 };
 
-export { UI, CHAPTERS, HOME };
+export { UI, CHAPTERS, HOME, MORE };

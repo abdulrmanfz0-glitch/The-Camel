@@ -63,7 +63,9 @@ function anatomySpecs(cs, boneIx) {
 
   /* abdomen: liver (right, cranial; no gallbladder), spleen (left), C1–C3, intestines */
   O('liver', 'root', '#6e2a1f', [E([.02, 1.4, -.1], [.1, .21, .14], { k: .05 }), E([-.06, 1.33, -.15], [.11, .15, .09], { k: .05 }), E([.04, 1.26, .02], [.07, .12, .09], { k: .05 })], { rough: .35, dir: [.2, .2, -1] });
-  O('spleen', 'root', '#6a2847', [E([.0, 1.42, .24], [.1, .14, .025], { k: .02, m: rotInv(0, 0, -20) })], { rough: .4, dir: [0, .3, 1] });
+  /* spleen (S30): rectangular, triangular in section, rounded edges; a wedge of capsules, thick edge to thin edge */
+  { const d = [.34, .94, 0], w = [.94, -.34, 0], c = [0, 1.42, .235], hl = .13, at = (u, v, z) => [0, 1, 2].map(i => c[i] + d[i] * u + w[i] * v + (i === 2 ? z : 0));
+    O('spleen', 'root', '#6a2847', [[-.045, .026, -.01], [-.01, .02, 0], [.025, .013, .006], [.055, .006, .01]].map(([v, r, z]) => C(at(-hl, v, z), at(hl, v, z), r, r, { k: .018 })), { rough: .4, dir: [0, .3, 1] }); }
   const c1 = [E([-.02, 1.28, .07], [.2, .19, .17], { k: .09 }), E([-.3, 1.27, .09], [.22, .18, .17], { k: .09 }), E([-.16, 1.47, .1], [.035, .1, .2], { op: 1, k: .05 })];
   for (let i = 0; i < 14; i++) c1.push(E([-.34 + i * .042, 1.13 + .02 * Math.sin(i), .1 + .05 * Math.cos(i * 1.7)], [.022, .014, .022], { k: .02, tag: 1 }));
   O('c1', 'root', '#c99d7c', c1, { rough: .5, tags: [{ color: hexLin('#c99d7c') }, { color: hexLin('#9d6a54') }], part: 'stomach', dir: [0, -.6, .8] });

@@ -1,0 +1,118 @@
+#!/usr/bin/env python3
+"""Build js/data/organ-lab.js from research/physiology.json, research/ID_MAP.json and research/SOURCES.md.
+
+Run from the repo root:  python3 tools/organ-data.py
+The output is a plain data module (no build step at runtime). Edit the curation rules below, not the output.
+"""
+import json, re, pathlib
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+R = json.loads((ROOT / 'research/physiology.json').read_text(encoding='utf-8'))
+M = json.loads((ROOT / 'research/ID_MAP.json').read_text(encoding='utf-8'))
+
+# research id -> project atlas id (from ID_MAP.json, not rebuilt)
+TO_PROJECT = {r['research_id']: r['project_id'] for r in M['project_to_research'] if r.get('research_id')}
+FLOW_ONLY = {'salivary_glands', 'environment'}          # stay flow nodes for the journeys, never 3D organs
+
+# ── curation (NOTES.md: where the research is uncertain, say less) ──
+# sentences that talk about the research process rather than the camel
+DROP_LAST_SENTENCE = {'small_intestine', 'pancreas', 'bladder', 'brain', 'ureters', 'adrenals'}
+# steps that contradict a verified claim elsewhere on the page (trachea: camels do not rely on panting;
+# S23 describes rapid shallow breathing only under experimental heat stress)
+DROP_STEPS = {'lungs': [3]}
+# the ureters were added in round 2, after the kidney/bladder entries were written
+EXTRA_CONN = {'kidneys': ['ureters'], 'bladder': ['ureters']}
+
+def ar_digits(s):
+    """Arabic-Indic digits in Arabic prose, the page's convention; leave Latin tokens (C1, S21) alone."""
+    s = re.sub(r'(?<![A-Za-z])(\d+)\.(\d+)', lambda m: m.group(1) + '٫' + m.group(2), s)
+    s = re.sub(r'(?<![A-Za-z\d])\d+', lambda m: m.group(0).translate(str.maketrans('0123456789', '٠١٢٣٤٥٦٧٨٩')), s)
+    return s.replace('%', '٪')
+
+def drop_last(s, ar):
+    parts = re.split(r'(?<=\.)\s+', s.strip())
+    return ' '.join(parts[:-1]) if len(parts) > 1 else s
+
+def L(ar, en):
+    ar = ar_digits(ar)
+    return 'L(' + json.dumps(ar, ensure_ascii=False) + ', ' + json.dumps(en, ensure_ascii=False) + ')'
+
+organs, lines = {o['id']: o for o in R['organs']}, []
+for rid, o in organs.items():
+    if rid in FLOW_ONLY:
+        continue
+    pid = TO_PROJECT[rid]
+    cs_ar, cs_en = o['camel_specific_ar'], o['camel_specific_en']
+    if rid in DROP_LAST_SENTENCE:
+        cs_ar, cs_en = drop_last(cs_ar, True), drop_last(cs_en, False)
+    steps = [s for i, s in enumerate(o['how_it_works']) if i not in DROP_STEPS.get(rid, [])]
+    conn = list(EXTRA_CONN.get(rid, []))
+    for c in o['connected_organs']:
+        if c in FLOW_ONLY or c not in TO_PROJECT:
+            continue
+        p = TO_PROJECT[c]
+        if p != pid and p not in conn:
+            conn.append(p)
+    lines.append(f"  {pid}: {{ rid: '{rid}', conf: '{o['confidence']}',\n"
+                 f"    fn: {L(o['function_ar'], o['function_en'])},\n"
+                 f"    steps: [\n" + ''.join(f"      {L(s['text_ar'], s['text_en'])},\n" for s in steps) + "    ],\n"
+                 f"    camel: {L(cs_ar, cs_en)},\n"
+                 f"    where: {L(o['location']['ar'], o['location']['en'])},\n"
+                 f"    size: {L(o['relative_size']['ar'], o['relative_size']['en'])},\n"
+                 f"    conn: {json.dumps(conn)}, src: {json.dumps(o['source_ids'])} }},")
+
+# the journeys, with organ ids mapped; salivary glands and the outside stay as flow nodes
+def node(rid):
+    return TO_PROJECT.get(rid, rid)
+jl = []
+for j in R['journeys']:
+    stops = ''.join(f"      [{json.dumps(node(s['organ']))}, {L(s['text_ar'], s['text_en'])}],\n" for s in j['stops'])
+    jl.append(f"  {{ id: '{j['id']}', name: {L(j['name_ar'], j['name_en'])}, stops: [\n{stops}    ] }},")
+sal = organs['salivary_glands']
+flow_nodes = (f"  salivary_glands: {{ name: {L(sal['name_ar'], sal['name_en'])}, near: 'mouth', src: {json.dumps(sal['source_ids'])} }},\n"
+              f"  environment: {{ name: {L('خارج الجسم', 'Outside the body')} }},")
+
+# sources S01–S87 from SOURCES.md (the table rows)
+src = []
+for line in (ROOT / 'research/SOURCES.md').read_text(encoding='utf-8').splitlines():
+    m = re.match(r'\|\s*(S\d\d)\s*\|(.*)\|(.*)\|(.*)\|\s*(\S+)\s*\|(.*)\|\s*$', line)
+    if not m:
+        continue
+    sid, title, who, year, url, typ = (x.strip() for x in m.groups())
+    who = re.sub(r'\*(.+?)\*', r'\1', who)
+    title = re.sub(r'\*(.+?)\*', r'\1', title)
+    note = ' [Bactrian camel]' if 'Bactrian' in typ else ' [camelid: guanaco]' if 'guanaco' in typ else ' [Arabic]' if 'Arabic' in typ else ''
+    text = f"{who} ({year}). {title}.{note}"
+    src.append(f"  [{json.dumps(sid)}, 'res', {json.dumps(text, ensure_ascii=False)}, {json.dumps(url)}],")
+
+out = f"""import {{ L }} from '../app.js';
+
+/* ════════════════════════════════════════════════════════════════
+   the anatomy lab: research content for every atlas organ (function, how it works,
+   what is special in the camel, where it sits, connected organs, sources S01–S87).
+   GENERATED by tools/organ-data.py from research/physiology.json, ID_MAP.json and SOURCES.md.
+   Edit the research files or the curation rules in the script, then re-run it.
+   ════════════════════════════════════════════════════════════════ */
+const ORGAN_LAB = {{
+{chr(10).join(lines)}
+}};
+
+/* research-only nodes: not 3D organs, kept for the journeys */
+const FLOW_NODES = {{
+{flow_nodes}
+}};
+
+/* four journeys through the body (food, blood, air, water); stops use atlas ids */
+const JOURNEYS = [
+{chr(10).join(jl)}
+];
+
+/* research sources, merged into SOURCES by merge-v3.js */
+const SOURCES_RES = [
+{chr(10).join(src)}
+];
+
+export {{ ORGAN_LAB, FLOW_NODES, JOURNEYS, SOURCES_RES }};
+"""
+(ROOT / 'js/data/organ-lab.js').write_text(out, encoding='utf-8')
+print('organs', len(lines), 'journeys', len(jl), 'sources', len(src), 'bytes', len(out.encode()))

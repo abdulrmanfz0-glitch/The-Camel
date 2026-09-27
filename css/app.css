@@ -171,6 +171,30 @@ html[dir="ltr"] .rng::-webkit-slider-runnable-track{background:linear-gradient(t
 .ocard p{margin:0;font-size:14px;line-height:1.6}
 .ocard .x{font-size:20px;line-height:1;width:30px;height:30px;border-radius:9px;color:var(--bone-2)}
 .ocard .x:hover{background:rgba(243,235,221,.08);color:var(--bone)}
+.ocard .conf-m{display:inline-block;margin-top:5px;font-size:10.5px;line-height:1;padding:3px 7px;border-radius:999px;border:1px dashed var(--bone-4);color:var(--bone-3)}
+.ocard ol.steps{margin:2px 0 0;padding-inline-start:0;list-style:none;counter-reset:st}
+.ocard ol.steps li{counter-increment:st;position:relative;padding-inline-start:26px;margin:0 0 6px;font-size:13.5px;line-height:1.55;color:var(--bone-2)}
+.ocard ol.steps li::before{content:counter(st);position:absolute;inset-inline-start:0;top:1px;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-family:var(--f-num);background:var(--accent-soft);color:var(--accent-2);border:1px solid var(--accent-line)}
+:root[lang="ar"] .ocard ol.steps li::before{content:counter(st, arabic-indic)}
+.ocard details.omore{margin-top:10px;border-top:1px solid var(--hair);padding-top:6px}
+.ocard details.omore summary,.lab-tools>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--bone-2);min-height:32px}
+.ocard details.omore summary::-webkit-details-marker,.lab-tools>summary::-webkit-details-marker{display:none}
+.ocard details.omore summary .chev,.lab-tools>summary .chev{width:15px;height:15px;transition:transform .25s}
+.ocard details[open].omore summary .chev,.lab-tools[open]>summary .chev{transform:rotate(180deg)}
+.ocard details.omore p{font-size:13.5px;color:var(--bone-2)}
+.ocard .conf-note{margin-top:8px}
+.ocard .hint-i{font-size:11px;color:var(--bone-4);font-weight:400}
+.chip.conn{border-style:dashed}
+.lab-cta{flex-wrap:wrap;margin-bottom:6px}
+.lab-cta .btn{flex:1 1 auto}
+.lab-tools{margin-top:14px;border-top:1px solid var(--hair);padding-top:2px}
+.lab-tools>summary{margin:8px 0 4px}
+.chap.more{display:inline-flex;align-items:center;gap:4px}
+.chap.more .chev{width:14px;height:14px}
+.chap.more[aria-expanded="true"] .chev{transform:rotate(180deg)}
+#moreMenu{position:fixed;z-index:40;min-width:190px;padding:6px;display:flex;flex-direction:column;gap:2px;border-radius:14px;background:rgba(8,14,24,.94);border:1px solid var(--hair-2);box-shadow:0 12px 40px rgba(0,0,0,.45)}
+#moreMenu[hidden]{display:none}
+#moreMenu .chap{text-align:start;border-radius:9px;padding:10px 12px;font-size:14px}
 details.sym{margin:2px 0 14px;border:1px solid var(--hair);border-radius:12px;padding:0 12px}
 details.sym[open]{padding-bottom:12px}
 details.sym summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;padding:11px 0;font-size:14px}

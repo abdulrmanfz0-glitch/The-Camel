@@ -1,7 +1,7 @@
 import { $, ANAT, applyLang, applyViewOffset, atlasFor, ATM, backToDay, buildKeys, BUS, camelFrame, camera,
   CHAPTERS, clamp, closeTopic, CONTACT, CU, damp, digits, drawDay, easeOut, ENV, focalFor, focusCam, FOOT,
   fovFor, frameChapter, go, HL, ic, INSET, LANG, lerp, localToWorldPt, makeRenderer, MODEL, MODEL3D,
-  MOVEMENT, openOrgan, patchSunShadows, pct, pctRange, post, Post, Q, renderer, renderPanel, rig, Rig, root,
+  moreMenu, MOVEMENT, openOrgan, patchSunShadows, pct, pctRange, post, Post, Q, renderer, renderPanel, rig, Rig, root,
   scene, SEARCH, setGait, setHour, setLayer, setPlaying, setPost, setRenderer, setRig, sky, smooth, sq,
   STATE, TAU, terrainH, TEX, THREE, toast, TOURX, tt, tweenHour, U, UI, updateCallouts, updateGaitCursor,
   updateReadout, userSetTime, V3, VIEWS, WORLD, wrap24 } from './app.js';
@@ -16,8 +16,9 @@ function initUI() {
   $('#btnTour').onclick = () => TOURX.on ? TOURX.stop() : TOURX.start();
   $('#btnKeys').onclick = () => { $('#keys').hidden = false; };
   $('#keys').onclick = e => { if (e.target.id === 'keys') $('#keys').hidden = true; };
-  $('#brand').onclick = () => go('home');
-  $('#brand').onkeydown = e => { if (e.key === 'Enter') go('home'); };
+  $('#brand').onclick = () => go('anatomy');
+  $('#brand').onkeydown = e => { if (e.key === 'Enter') go('anatomy'); };
+  document.addEventListener('click', e => { if (!$('#moreMenu').hidden && !e.target.closest('#moreMenu')) moreMenu(false); });
   $('#panelToggle').onclick = () => { document.body.classList.toggle('panel-off'); setTimeout(() => { applyViewOffset(); frameChapter(U.chapter); }, 460); };
   $('#tNext').onclick = () => TOURX.next(); $('#tPrev').onclick = () => TOURX.prev(); $('#tExit').onclick = () => TOURX.stop();
   $('#search').onclick = e => { if (e.target.id === 'search') SEARCH.close(); };
@@ -40,7 +41,7 @@ function initUI() {
   // keyboard
   addEventListener('keydown', e => {
     const tag = (e.target.tagName || '').toLowerCase();
-    if (e.key === 'Escape') { if (!$('#search').hidden) SEARCH.close(); else if (!$('#keys').hidden) $('#keys').hidden = true; else if (TOURX.on) TOURX.stop(); else if (U.topic) closeTopic(); return; }
+    if (e.key === 'Escape') { if (!$('#moreMenu').hidden) moreMenu(false); else if (!$('#search').hidden) SEARCH.close(); else if (!$('#keys').hidden) $('#keys').hidden = true; else if (TOURX.on) TOURX.stop(); else if (U.topic) closeTopic(); return; }
     if (tag === 'input' && e.target.type !== 'range' || tag === 'textarea' || !$('#search').hidden || e.metaKey || e.ctrlKey || e.altKey) return;
     const k = e.code;
     if (e.key === '/' || k === 'Slash') { e.preventDefault(); SEARCH.open(); return; }
@@ -66,7 +67,7 @@ function initUI() {
   // deep link
   let hash = ''; try { hash = decodeURIComponent(location.hash.slice(1)); } catch (e) { /* no hash */ }
   const [hc, ht] = hash.split(/[./~]/);
-  return { chapter: CHAPTERS.find(c => c.id === hc) ? hc : 'home', topic: ht || null };
+  return { chapter: CHAPTERS.find(c => c.id === hc) ? hc : 'anatomy', topic: ht || null };
 }
 
 /* ════════════════════════════════════════════════════════════════

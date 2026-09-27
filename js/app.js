@@ -13,6 +13,7 @@ export * from './data/atlas.js';
 export * from './data/dis-map.js';
 export * from './data/health-v3.js';
 export * from './data/symptoms.js';
+export * from './data/organ-lab.js';
 export * from './data/merge-v3.js';
 export * from './render/renderer.js';
 export * from './render/post.js';
