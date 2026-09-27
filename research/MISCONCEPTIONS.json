@@ -1,0 +1,197 @@
+{
+  "generated": "2026-09-27",
+  "round": 3,
+  "purpose": "Common beliefs about the dromedary that the sources contradict or qualify, with the organ each belongs to. Only items where the evidence reached is clear are included.",
+  "note": "Arabic is written as original prose for a general reader. Every item carries the organ id from js/data/atlas.js and S-ids from research/SOURCES.md; the sources were read in rounds 1-3 unless the entry says otherwise.",
+  "items": [
+    {
+      "id": "hump-stores-water",
+      "organ_id": "hump",
+      "belief_ar": "السنام مخزون ماء تشربه الناقة عند الحاجة.",
+      "belief_en": "The hump is a water reservoir the camel draws on.",
+      "truth_ar": "السنام كتلة دهن ونسيج ضامّ، لا عظم فيه ولا ماء. صحيح أن أكسدة الدهن تولّد ماءً أيضيًّا، لكنه ماء يُنتَج عند الحاجة لا ماء يُخزَّن، والتنفّس الإضافي لحرق الدهن يفقده.",
+      "truth_en": "The hump is a mass of fat and connective tissue with no bone and no water. Fat oxidation does produce metabolic water, but that water is made on demand, not stored, and the extra breathing needed to burn the fat loses water too.",
+      "sources": ["S38", "S39", "S44"]
+    },
+    {
+      "id": "stomach-saccules-water-sacs",
+      "organ_id": "c1",
+      "belief_ar": "في جدار المعدة الأولى أكياس تخزّن الماء للناقة.",
+      "belief_en": "The glandular saccules in the wall of the first stomach compartment store water.",
+      "truth_ar": "الجيوب الغدّية في C1 بنية امتصاصية/تخميرية، وقد ثبت أن فكرة «أكياس الماء» غير صحيحة.",
+      "truth_en": "The glandular saccules of C1 are absorptive and fermentative structures; the old 'water sac' idea has been shown to be wrong.",
+      "sources": ["S06", "S12", "S44"]
+    },
+    {
+      "id": "camel-never-needs-water",
+      "organ_id": "kidneys",
+      "belief_ar": "الجمل لا يحتاج الماء ويمكن تركه شهورًا بلا شرب.",
+      "belief_en": "A camel does not need water and can be left for months without drinking.",
+      "truth_ar": "قدرة الإبل على احتمال العطش عالية فعلًا (تُذكر خسارة نحو ٢٥٪ من كتلة الجسم دون ضرر شديد)، لكنها تحتاج ماءً نظيفًا منتظمًا، وقد تشرب نحو ٩٧ لترًا دفعة واحدة بعد عطش طويل.",
+      "truth_en": "Camels tolerate dehydration well (about 25 % body-mass loss without severe harm) but they still need clean water regularly, and after long thirst a camel may drink about 97 L in one session.",
+      "sources": ["S04", "S35", "S44"]
+    },
+    {
+      "id": "four-chambered-stomach",
+      "organ_id": "c1",
+      "belief_ar": "معدة الجمل أربع حجرات كالبقرة.",
+      "belief_en": "The camel's stomach has four compartments like a cow's.",
+      "truth_ar": "معدة الجمل ثلاث حجرات (C1 وC2 وC3) ولا أمعاء دقيقة بوصف المجترّات الحقيقية؛ ولا توجد «أمعة» (omasum).",
+      "truth_en": "The camel's stomach has three compartments (C1, C2, C3) and no omasum; it is not the four-chambered true-ruminant plan.",
+      "sources": ["S12", "S13", "S44"]
+    },
+    {
+      "id": "camel-is-true-ruminant",
+      "organ_id": "c1",
+      "belief_ar": "الجمل من المجترّات الحقيقية كالأبقار والأغنام.",
+      "belief_en": "The camel is a true ruminant like cattle and sheep.",
+      "truth_ar": "الإبل تجترّ فعلًا، لكنها تطوّرت في رُتَيبة مستقلة (Tylopoda) ولها معدة بثلاث حجرات، فهي ليست من المجترّات الحقيقية.",
+      "truth_en": "Camels do ruminate, but they evolved in their own suborder (Tylopoda) with a three-compartment stomach, so they are not true ruminants.",
+      "sources": ["S12", "S13", "S44"]
+    },
+    {
+      "id": "camel-has-gallbladder",
+      "organ_id": "liver",
+      "belief_ar": "للجمل حوصلة صفراوية (مرارة) كما في غيره من الحيوانات.",
+      "belief_en": "The camel has a gallbladder like other animals.",
+      "truth_ar": "الإبل بلا حوصلة صفراوية؛ تصبّ القناة الكبدية العصارة الصفراوية مباشرةً في الاثني عشر.",
+      "truth_en": "Camels have no gallbladder; the hepatic duct delivers bile straight into the duodenum.",
+      "sources": ["S41", "S43", "S44"]
+    },
+    {
+      "id": "camel-red-cells-discs",
+      "organ_id": "blood",
+      "belief_ar": "كريات دم الجمل أقراص مستديرة كبقية الثدييات.",
+      "belief_en": "Camel red blood cells are round discs like those of other mammals.",
+      "truth_ar": "كريات دم الجمل بيضاوية، وتبقى سليمة وتتحمّل تغيّر تركيز الملح عند الشرب السريع، وهذا يفسّر جزءًا من احتمال العطش.",
+      "truth_en": "Camel red cells are oval, and they stay intact and tolerate the shift in salt concentration when the animal drinks fast, which helps explain its tolerance of thirst.",
+      "sources": ["S28", "S29", "S44"]
+    },
+    {
+      "id": "camel-sweats-like-cattle",
+      "organ_id": "skin",
+      "belief_ar": "الجمل يتعرّق باستمرار كالأبقار في الحرّ.",
+      "belief_en": "A camel sweats continuously in the heat like cattle.",
+      "truth_ar": "الجمل يترك حرارة جسمه ترتفع نهارًا (نحو ٣٤-٤١ °م) ويؤخّر التعرّق حتى ترتفع الحرارة، فيوفّر الماء، ثم يفقد الحرارة ليلًا بالتوصيل والإشعاع.",
+      "truth_en": "The camel lets its body temperature rise by day (roughly 34-41 °C) and delays sweating until it is already hot, saving water, then sheds the heat at night.",
+      "sources": ["S36", "S37", "S44"]
+    },
+    {
+      "id": "camel-has-two-humps",
+      "organ_id": "hump",
+      "belief_ar": "الجمل له سنامان.",
+      "belief_en": "Camels have two humps.",
+      "truth_ar": "الجمل العربي (Dromedary) وحيد السنام، والجمل ذو السنامين (Bactrian) نوع آخر يعيش في آسيا الوسطى.",
+      "truth_en": "The Arabian camel (dromedary) has a single hump; the two-humped Bactrian is a different species from Central Asia.",
+      "sources": ["S44", "S48"]
+    },
+    {
+      "id": "long-neck-more-vertebrae",
+      "organ_id": "skeleton",
+      "belief_ar": "عنق الجمل الطويل يحمل فقرات أكثر من غيره من الثدييات.",
+      "belief_en": "The camel's long neck has more vertebrae than other mammals.",
+      "truth_ar": "فقرات العنق سبع كمعظم الثدييات، لكنها طويلة جدًّا؛ ويشكّل العنق نحو نصف طول العمود الفقري.",
+      "truth_en": "There are seven cervical vertebrae, as in most mammals, but they are very long; the neck is about half the length of the vertebral column.",
+      "sources": ["S81"]
+    },
+    {
+      "id": "front-knee",
+      "organ_id": "pads",
+      "belief_ar": "المفصل الذي ينحني إلى الخلف في القائمة الأمامية هو «ركبة» الجمل كركبة الإنسان.",
+      "belief_en": "The backward-bending joint in the foreleg is the camel's knee, like a human knee.",
+      "truth_ar": "ذلك المفصل هو الرسغ (carpus) أي ما يقابل رسغ اليد، والركبة الحقيقية أعلى منه وقريبة من الجسم.",
+      "truth_en": "That joint is the carpus (the wrist equivalent); the true knee sits higher, close to the body.",
+      "sources": ["S77"]
+    },
+    {
+      "id": "camel-hooves",
+      "organ_id": "pads",
+      "belief_ar": "للجمل حوافر صلبة كالخيل والبقر.",
+      "belief_en": "Camels have hard hooves like horses and cattle.",
+      "truth_ar": "للجمل وسادة عريضة لينة بإصبعين وظفرين صغيرين تنبسط على الرمل لتوزيع الوزن، لا حافر صلب.",
+      "truth_en": "The camel has a broad soft pad with two digits and two small nails that spreads on sand to share the load — not a hard hoof.",
+      "sources": ["S76", "S78"]
+    },
+    {
+      "id": "dulla-is-tongue",
+      "organ_id": "dulla",
+      "belief_ar": "الكيس الوردي الذي يخرجه البعير من فمه لسانه أو قربة ماء.",
+      "belief_en": "The pink bladder a male camel pushes out of its mouth is its tongue or a water sac.",
+      "truth_ar": "الكيس الذي يُخرجه الذكر في الهياج هو الشقشقة: امتداد من الحنك الرخو، وهو بنية خاصة بالذكر لا تُخرجه الأنثى ولا الجمل ذو السنامين.",
+      "truth_en": "What the rutting male pushes out is the dulla, an extension of the soft palate — a male structure; the female and the Bactrian camel do not exteriorise it.",
+      "sources": ["S85", "S73"]
+    },
+    {
+      "id": "camel-urine-medicine",
+      "organ_id": "bladder",
+      "belief_ar": "بول الإبل نافع ويُشرب للعلاج.",
+      "belief_en": "Camel urine is beneficial and is drunk as medicine.",
+      "truth_ar": "بول الإبل شديد التركيز، ولا سند في المصادر التي بلغها البحث لادّعاء علاجي؛ وقد نصحت منظمة الصحة العالمية الأشخاص الأكثر عرضة للإصابة الشديدة بتجنّب شرب بول الإبل النيء.",
+      "truth_en": "Camel urine is highly concentrated, no therapeutic claim is supported by the sources reached, and WHO advises people at greater risk of severe disease not to drink raw camel urine.",
+      "sources": ["S32", "S88"]
+    },
+    {
+      "id": "raw-camel-milk-safe",
+      "organ_id": "udder",
+      "belief_ar": "حليب الإبل النيء آمن ونافع أكثر من الحليب المبستر.",
+      "belief_en": "Raw camel milk is safe and better than pasteurised milk.",
+      "truth_ar": "الحليب النيء يمكن أن ينقل البروسيلا وغيرها، ويُعدّ مصدرًا مهمًّا للإصابة لدى الإنسان؛ والحليب آمن بعد الغلي أو البسترة، ومنظمة الصحة العالمية توصي بمعالجته بالحرارة.",
+      "truth_en": "Raw milk can carry Brucella and other pathogens and is an important source of human brucellosis; it is safe after boiling or pasteurisation, which is what WHO advises.",
+      "sources": ["S89"]
+    },
+    {
+      "id": "mers-camels-obviously-sick",
+      "organ_id": "lungs",
+      "belief_ar": "الإبل المصابة بكورونا الشرق الأوسط تظهر عليها أعراض مرضية واضحة.",
+      "belief_en": "Camels infected with MERS-CoV look sick.",
+      "truth_ar": "الإبل مستودع الفيروس الرئيسي، لكن الإصابة عندها تكون خفية أو بلا أعراض في الغالب؛ فيعتمد تشخيصها على الفحص المختبري لا على العلامات.",
+      "truth_en": "Dromedary camels are the primary reservoir but infection is usually mild or asymptomatic, so diagnosis relies on laboratory testing rather than signs.",
+      "sources": ["S88"]
+    },
+    {
+      "id": "ticks-harmless",
+      "organ_id": "skin",
+      "belief_ar": "القراد على الإبل مجرد إزعاج بسيط.",
+      "belief_en": "Ticks on camels are only a minor nuisance.",
+      "truth_ar": "القراد يسبّب جروحًا وفقر دم مع الإصابة الكثيفة، وينقل أمراضًا؛ وقراد الهيالوما ناقل مهمّ لحمّى القرم-الكونغو النزفية إلى الإنسان.",
+      "truth_en": "Ticks cause wounds and anaemia when heavy, and they transmit disease; Hyalomma ticks are an important vector of Crimean-Congo haemorrhagic fever to people.",
+      "sources": ["S92", "S95"]
+    },
+    {
+      "id": "adaptation-means-no-care",
+      "organ_id": "skin",
+      "belief_ar": "تأقلم الجمل يعني أنه لا يحتاج ظلًّا ولا ماءً ولا راحة في الحرّ.",
+      "belief_en": "The camel's adaptations mean it needs no shade, water or rest in the heat.",
+      "truth_ar": "الآليات الفسيولوجية تعطي الجمل هامشًا أوسع لا رخصةً في الحرمان؛ فالعمل والنقل في أحرّ الساعات وعطش الحيوان يقودان إلى إجهاد حراري حقيقي.",
+      "truth_en": "These mechanisms give the camel a wider margin, not a licence to be deprived; work and transport in the hottest hours and withholding water lead to real heat stress.",
+      "sources": ["S20", "S23"]
+    },
+    {
+      "id": "drooping-hump-disease",
+      "organ_id": "hump",
+      "belief_ar": "ميلان السنام وضموره مرض.",
+      "belief_en": "A drooping, shrunken hump means disease.",
+      "truth_ar": "ضمور السنام وميلانه علامة غذائية في المقام الأول: تستهلكه الناقة عند نقص الغذاء ثم يعود بالغذاء؛ ويُستأنس بذلك للتقدير على أن يقيّمه الطبيب مع باقي العلامات.",
+      "truth_en": "A shrinking, drooping hump is mainly a nutritional sign: the camel draws on the fat store when feed is short and the hump refills with feeding — useful for assessment, but the vet reads it with the other signs.",
+      "sources": ["S38", "S44"]
+    },
+    {
+      "id": "camel-meat-hydatid",
+      "organ_id": "liver",
+      "belief_ar": "أكل لحم الإبل المصابة بالأكياس العدارية ينقل المرض إلى الإنسان.",
+      "belief_en": "Eating meat from a camel with hydatid cysts passes the disease to people.",
+      "truth_ar": "الإنسان يُصاب بابتلاع بيض الدودة الشريطية من براز الكلاب لا من لحم الناقة مباشرة؛ والمكافحة في دورة الكلب والأحشاء مع التخلّص الآمن منها.",
+      "truth_en": "People are infected by swallowing tapeworm eggs from dog faeces, not directly from camel meat; control is in the dog-offal cycle plus safe disposal of infected organs.",
+      "sources": ["S91", "S104"]
+    },
+    {
+      "id": "camel-feet-no-problems",
+      "organ_id": "pads",
+      "belief_ar": "قدم الجمل لا تمرض لأنها وسادة طبيعية للصحراء.",
+      "belief_en": "Camel feet do not develop problems because the pad is made for the desert.",
+      "truth_ar": "إصابات القوائم والخفّ سبب رئيسي للعرج والخسارة الاقتصادية؛ وفي ٢٢٢ جملًا وُثّقت ٣٢٥ إصابة، أكثرها في الرسغ/العرقوب وفي القوائم الأمامية.",
+      "truth_en": "Limb and foot lesions are a leading cause of lameness and economic loss; in 222 camels, 325 lesions were documented, most in the carpus/tarsus and in the forelimbs.",
+      "sources": ["S78"]
+    }
+  ]
+}

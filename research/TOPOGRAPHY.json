@@ -1,0 +1,400 @@
+{
+  "generated": "2026-09-27",
+  "round": 3,
+  "purpose": "Position, orientation, shape, approximate relative size and in-life colour/texture for every project organ id (js/data/atlas.js), so the build team can place organs correctly in the 3D model.",
+  "method": "Each field carries its own confidence and source ids. 'high' means a dromedary source reached in rounds 1-3 states the landmark; 'medium' means a camel source states part of it or a closely related camelid/ruminant source was used; 'low' means it is a modelling estimate from general veterinary anatomy with no camel-specific source reached and should be treated as a placeholder to be checked against an anatomy study.",
+  "landmark_note": "Rib numbers below count from the first rib. Vertebra numbers are given as the anatomical region (T = thoracic, L = lumbar) because no source reached in rounds 1-3 fixes a complete vertebral formula for the dromedary; the atlas's '12 thoracic / 7 lumbar' is unverified (see AUDIT.md).",
+  "field_note": "colour/texture is the appearance in the living animal as seen at surgery, ultrasound or slaughter; it is the least well sourced field and is mostly 'low'.",
+  "organs": {
+    "nose": {
+      "name_ar": "الأنف والممرّات الأنفية",
+      "name_en": "Nose and nasal passages",
+      "system": "resp",
+      "position": { "ar": "في مقدّمة الرأس، بين المنخرين أمامًا والبلعوم خلفًا، فوق سقف الفم.", "en": "At the front of the head, between the nostrils in front and the pharynx behind, above the roof of the mouth.", "confidence": "high", "sources": ["S16", "S17"] },
+      "orientation": { "ar": "الدورسو-بطنية: المحارة الظهرية أعلى، ثم الوسطى الواسعة، ثم البطنية أسفلها، وتمرّ الممرّات الأنفية بينها.", "en": "Dorsoventral: the dorsal concha on top, the large middle concha below it, the ventral concha lowest, with the nasal meatuses running between them.", "confidence": "high", "sources": ["S16", "S17"] },
+      "shape": { "ar": "تجويفان متناظران فيهما محارات ملتفّة؛ الجيب الغاريفي داخل المحارة الظهرية والوسطى دون البطنية.", "en": "Two symmetrical cavities containing rolled conchae; conchal sinuses sit inside the dorsal and middle conchae but not the ventral one.", "confidence": "high", "sources": ["S16", "S17"] },
+      "size": { "ar": "ممرّات ضيّقة واسعة السطح نسبيًّا مقارنة بحجم الرأس — وهي سمة تكيّفية للبيئة الصحراوية.", "en": "Narrow meatuses with a relatively large surface for the size of the head — an adaptation to the desert environment.", "confidence": "medium", "sources": ["S17"] },
+      "appearance": { "ar": "غشاء مخاطي وردي باهت رطب يغطّي المحارات، مع كثافة وعائية عالية.", "en": "Pale pink, wet mucosa covering the conchae with a rich blood supply.", "confidence": "low", "sources": [] }
+    },
+    "larynx": {
+      "name_ar": "الحنجرة",
+      "name_en": "Larynx",
+      "system": "resp",
+      "position": { "ar": "في أعلى العنق تحت الفك، بين البلعوم أمامها والقصبة الهوائية خلفها.", "en": "High in the neck under the jaw, between the pharynx in front and the trachea behind.", "confidence": "high", "sources": ["S17", "S49"] },
+      "orientation": { "ar": "طولية على محور العنق، وفتحة المزمار متجهة إلى البلعوم.", "en": "Longitudinal along the axis of the neck, with the glottis facing the pharynx.", "confidence": "medium", "sources": ["S17"] },
+      "shape": { "ar": "أنبوب غضروفي قصير؛ لسان المزمار ورقة غضروفية تحمل غددًا عميقة واسعة الفتحات.", "en": "A short cartilaginous tube; the epiglottis is a cartilaginous leaf carrying deep glands with wide surface openings.", "confidence": "high", "sources": ["S49"] },
+      "size": { "ar": "صغيرة بالنسبة للعنق الطويل.", "en": "Small relative to the long neck.", "confidence": "low", "sources": [] },
+      "appearance": { "ar": "غضروف أبيض مصفرّ يغطّيه غشاء مخاطي وردي باهت.", "en": "Whitish-yellow cartilage covered by pale pink mucosa.", "confidence": "low", "sources": [] }
+    },
+    "trachea": {
+      "name_ar": "القصبة الهوائية",
+      "name_en": "Trachea",
+      "system": "resp",
+      "position": { "ar": "من الحنجرة نازلة على الجانب البطني من العنق، ثم تدخل الصدر حيث تنقسم إلى قصبتين رئويتين.", "en": "From the larynx down the ventral side of the neck, then into the chest where it divides into the two main bronchi.", "confidence": "medium", "sources": ["S15"] },
+      "orientation": { "ar": "طولية على محور العنق، والعضلة القصبية مثبّتة على السطح الداخلي لحلقات الغضروف.", "en": "Longitudinal along the neck; the trachealis muscle attaches to the inside of the cartilage rings.", "confidence": "high", "sources": ["S15"] },
+      "shape": { "ar": "أنبوب من ٦٦-٧٥ حلقة غضروفية هيالينية ناقصة (غير مغلقة من الخلف).", "en": "A tube of 66-75 incomplete hyaline cartilage rings, open at the back.", "confidence": "high", "sources": ["S15"] },
+      "size": { "ar": "طويلة بطول العنق؛ سماكة المخاطية وتحت المخاطية ٥١٧٫٢ ± ٦١٫٦ ميكرومتر في ٢٠ عيّنة.", "en": "As long as the neck; mucosal plus submucosal thickness 517.2 ± 61.6 µm across 20 samples.", "confidence": "high", "sources": ["S15"] },
+      "appearance": { "ar": "حلقات غضروفية شاحبة يربطها نسيج ليفي، وبطانة مخاطية وردية مغطّاة بمخاط شفّاف.", "en": "Pale cartilage rings joined by fibrous tissue, lined by pink mucosa coated in clear mucus.", "confidence": "low", "sources": [] }
+    },
+    "lungs": {
+      "name_ar": "الرئتان",
+      "name_en": "Lungs",
+      "system": "resp",
+      "position": { "ar": "في التجويف الصدري على جانبي القلب، خلف الضلوع، والصدر عميق ومضغوط جانبيًّا.", "en": "In the thoracic cavity on either side of the heart, behind the ribs; the chest is deep and laterally compressed.", "confidence": "high", "sources": ["S108"] },
+      "orientation": { "ar": "فصوص أمامية وخلفية، والرئة اليمنى تحمل فصًّا إضافيًّا صغيرًا.", "en": "Cranial and caudal lobes; the right lung also carries a small accessory lobe.", "confidence": "high", "sources": ["S108"] },
+      "shape": { "ar": "إسفنجية قليلة التفصّص، والفصوص غير بارزة التقسيم، لكن الفصيصات الصغيرة يفصلها نسيج ضامّ.", "en": "Spongy with little lobulation; the lobes are not sharply divided, but small lobules are separated by connective tissue.", "confidence": "high", "sources": ["S108"] },
+      "size": { "ar": "صغيرة نسبيًّا إلى كتلة الجسم، لكنها عالية المطاوعة والكفاءة.", "en": "Relatively small for the body mass but highly compliant and efficient.", "confidence": "medium", "sources": ["S108"] },
+      "appearance": { "ar": "وردية إلى حمراء رطبة إسفنجية عند التهوية، وتغمق قليلًا في الحيوان المذبوح.", "en": "Pink to red, wet and spongy when inflated, darkening somewhat after death.", "confidence": "low", "sources": [] }
+    },
+    "heart": {
+      "name_ar": "القلب",
+      "name_en": "Heart",
+      "system": "circ",
+      "position": { "ar": "بين الضلع الثالث والسادس (المسافات الوربية ٣-٥)، ملاصقًا للثلث البطني من جدار الصدر.", "en": "Between the 3rd and 6th ribs (3rd-5th intercostal spaces), in contact with the ventral third of the chest wall.", "confidence": "high", "sources": ["S108"] },
+      "orientation": { "ar": "رأسه متجه إلى الخلف وقليلًا إلى اليسار، والقلب أكثر عمودية داخل الصدر من البقر.", "en": "Apex directed caudally and slightly to the left; the heart sits more vertically in the thorax than in cattle.", "confidence": "high", "sources": ["S108"] },
+      "shape": { "ar": "مضخّة من أربع حجرات، بأذينين وبطينين، ويفصل الأخدود التاجي المملوء بالدهن بين الأذينين والبطينين.", "en": "A four-chambered pump with two atria and two ventricles; the fat-filled coronary groove separates atria from ventricles.", "confidence": "high", "sources": ["S108", "S26"] },
+      "size": { "ar": "وزنه في البالغ نحو ٤-٦ كغ أي نحو ٠٫٧٪ من وزن الجسم، مع ملاحظة أن قياسًا قديمًا على ستة قلوب أعطى ٣٫١ كغ.", "en": "In the adult about 4-6 kg, roughly 0.7 % of body weight (note: an older six-heart measurement gave 3.1 kg).", "confidence": "medium", "sources": ["S108", "S26"] },
+      "appearance": { "ar": "عضلة حمراء داكنة، والأخاديد التاجية والدهن حول القاعدة أصفر باهت.", "en": "Dark red muscle with pale yellow fat in the coronary grooves and around the base.", "confidence": "low", "sources": [] }
+    },
+    "vessels": {
+      "name_ar": "الأوعية الدموية الكبرى",
+      "name_en": "Major blood vessels",
+      "system": "circ",
+      "position": { "ar": "الأبهر يخرج من البطين الأيسر ويمتدّ داخل الصدر والبطن على الجانب البطني من العمود الفقري؛ والوريد الوداجي سطحي على جانبي العنق؛ والشبكة السباتية عند قاعدة الجمجمة.", "en": "The aorta leaves the left ventricle and runs through thorax and abdomen ventral to the vertebral column; the jugular vein runs superficially along the sides of the neck; the carotid rete sits at the base of the skull.", "confidence": "medium", "sources": ["S50", "S51"] },
+      "orientation": { "ar": "الأبهر طولي نازل، والوريد الوداجي طولي صاعد في ميزاب العنق.", "en": "The aorta runs caudally; the jugular vein runs cranially in the jugular groove of the neck.", "confidence": "medium", "sources": ["S51"] },
+      "shape": { "ar": "أنابيب مرنة؛ والشبكة السباتية كتلة متشابكة من أفرع شريانية دقيقة.", "en": "Elastic tubes; the carotid rete is a tangled mass of fine arterial branches.", "confidence": "high", "sources": ["S50", "S51"] },
+      "size": { "ar": "أوعية كبيرة قطرها مناسب للجسم؛ والشبكة أكثر البنى دقّة وعددًا.", "en": "Large vessels sized to the body; the rete is the finest, most numerous structure.", "confidence": "low", "sources": [] },
+      "appearance": { "ar": "شرايين شاحبة الجدار سميكة، أوردة أرقّ وأغمق قليلًا، والشبكة شبكة حمراء دقيقة.", "en": "Pale, thick-walled arteries, thinner and slightly darker veins, and the rete as a fine red meshwork.", "confidence": "low", "sources": [] }
+    },
+    "spleen": {
+      "name_ar": "الطحال",
+      "name_en": "Spleen",
+      "system": "circ",
+      "position": { "ar": "في الجانب الأيسر من البطن ملاصقًا للحجرة الأولى من المعدة.", "en": "On the left side of the abdomen against the first stomach compartment.", "confidence": "high", "sources": ["S30"] },
+      "orientation": { "ar": "مستطيل مستعرض على الجانب الأيسر من الصدر/البطن الأمامي.", "en": "Rectangular and flattened, on the left side of the cranial abdomen.", "confidence": "medium", "sources": ["S30"] },
+      "shape": { "ar": "مستطيل بمقطع مثلثي وحوافّ مستديرة وسطح أملس لامع — لا منجلي الشكل.", "en": "Rectangular with a triangular cross-section, rounded edges and a smooth, shiny surface — not sickle-shaped.", "confidence": "high", "sources": ["S30"] },
+      "size": { "ar": "يتبدّل مع وزن الجسم والعمر؛ والدراسة تقيسه بكتلة ومؤشّري طول وعرض يتناقصان بترتيب.", "en": "Varies with body weight and age; the study reports mass plus length and width indices that decline in order.", "confidence": "medium", "sources": ["S30"] },
+      "appearance": { "ar": "أحمر داكن إلى أرجواني، سطحه أملس لامع.", "en": "Dark red to purple with a smooth, shiny surface.", "confidence": "medium", "sources": ["S30"] }
+    },
+    "blood": {
+      "name_ar": "الدم وكرياته الحمراء",
+      "name_en": "Blood and red cells",
+      "system": "circ",
+      "position": { "ar": "في القلب والأوعية في كل الجسم.", "en": "Within the heart and vessels throughout the body.", "confidence": "high", "sources": ["S27", "S29"] },
+      "orientation": { "ar": "لا ينطبق (سائل).", "en": "Not applicable (a fluid).", "confidence": "high", "sources": [] },
+      "shape": { "ar": "كريات حمراء بيضاوية لا قرصية.", "en": "Red cells are oval, not disc-shaped.", "confidence": "high", "sources": ["S28", "S44"] },
+      "size": { "ar": "مساحة الكرية الحمراء نحو ١٥ ميكرومترًا مربعًا في محلول ٠٫٩٪ ملح، وتبقى سليمة حتى ٠٫٢٥٪.", "en": "Red-cell area about 15 µm² in 0.9 % saline; cells stay intact down to 0.25 % saline.", "confidence": "medium", "sources": ["S29"] },
+      "appearance": { "ar": "سائل أحمر داكن في العطش، وأفتح قليلًا بعد الشرب.", "en": "A dark red fluid when the animal is thirsty, slightly lighter after drinking.", "confidence": "low", "sources": [] }
+    },
+    "mouth": {
+      "name_ar": "الشفتان والفم",
+      "name_en": "Lips and mouth",
+      "system": "dig",
+      "position": { "ar": "في مقدّمة الرأس، تحده شفة عليا مشقوقة من الأعلى ووسادة سنّية من الأمام.", "en": "At the front of the head, bordered above by the split upper lip and in front by the dental pad.", "confidence": "high", "sources": ["S44", "S53"] },
+      "orientation": { "ar": "فتحة الفم متجهة إلى الأمام والأسفل.", "en": "The mouth opening faces forwards and downwards.", "confidence": "medium", "sources": [] },
+      "shape": { "ar": "تجويف صغير تحيط به الشفتان والخدّان، وأرضه اللسان.", "en": "A small cavity bounded by lips and cheeks, with the tongue on its floor.", "confidence": "medium", "sources": [] },
+      "size": { "ar": "صغير مقارنة بالمعدة، لكن الأضراس كبيرة.", "en": "Small compared with the forestomach, but the cheek teeth are large.", "confidence": "medium", "sources": ["S12"] },
+      "appearance": { "ar": "مخاطية وردية رطبة، والشفة العليا شاحبة ومشقوقة إلى نصفين.", "en": "Pink, wet mucosa; the upper lip is pale and split into two halves.", "confidence": "medium", "sources": ["S44"] }
+    },
+    "teeth": {
+      "name_ar": "الأسنان",
+      "name_en": "Teeth",
+      "system": "dig",
+      "position": { "ar": "وسادة سنّية في مقدّم الفك العلوي بدل القواطع؛ القواطع والأنياب في مقدّم الفك السفلي؛ الضواحك والأضراس على جانبي الفكين.", "en": "A dental pad replaces the upper incisors; incisors and canines at the front of the lower jaw; premolars and molars along the sides of both jaws.", "confidence": "high", "sources": ["S53"] },
+      "orientation": { "ar": "صفوف سنّية طولية على جانبي الفم، والإطباق على الوسادة السنّية.", "en": "Longitudinal rows along the sides of the mouth, occluding against the dental pad.", "confidence": "high", "sources": ["S53"] },
+      "shape": { "ar": "قواطع قصيرة، أنياب مخروطية (أطول في الذكور)، وأضراس طويلة التاج للطحن.", "en": "Short incisors, conical canines (longer in males), and high-crowned grinding cheek teeth.", "confidence": "medium", "sources": ["S52", "S53"] },
+      "size": { "ar": "٢٢ سنًّا لبنيّة و٣٤ دائمة (I 1/3, C 1/1, P 3/2, M 3/3).", "en": "22 deciduous and 34 permanent teeth (I 1/3, C 1/1, P 3/2, M 3/3).", "confidence": "high", "sources": ["S53"] },
+      "appearance": { "ar": "بيضاء مائلة إلى الصفار، وهي في البالغ أكثر اصفرارًا بالتآكل.", "en": "White to yellowish, more yellow with wear in older animals.", "confidence": "low", "sources": [] }
+    },
+    "esophagus": {
+      "name_ar": "المريء",
+      "name_en": "Oesophagus",
+      "system": "dig",
+      "position": { "ar": "من البلعوم نازلًا بطول العنق إلى جانب القصبة الهوائية، ثم يدخل الصدر ويعبر الحجاب إلى المعدة.", "en": "From the pharynx down the length of the neck beside the trachea, then into the chest through the diaphragm to the stomach.", "confidence": "medium", "sources": ["S14"] },
+      "orientation": { "ar": "طولية على محور العنق، والجهة اليسرى من القصبة في العنق.", "en": "Longitudinal along the neck; it lies on the left side of the trachea in the neck.", "confidence": "low", "sources": [] },
+      "shape": { "ar": "أنبوب عضلي مرن بجدار ذي طبقات ملساء ومخطّطة.", "en": "A flexible muscular tube with smooth and striated muscle layers.", "confidence": "medium", "sources": ["S14"] },
+      "size": { "ar": "طويل بطول العنق.", "en": "As long as the neck.", "confidence": "medium", "sources": ["S14"] },
+      "appearance": { "ar": "مخاطية وردية باهتة ملساء.", "en": "Smooth, pale pink mucosa.", "confidence": "low", "sources": [] }
+    },
+    "c1": {
+      "name_ar": "الحجرة الأولى (C1)",
+      "name_en": "First compartment (C1)",
+      "system": "dig",
+      "position": { "ar": "تشغل معظم النصف الأيسر من البطن وتتجاوز الخطّ الوسطي؛ وهي أكبر الحجرات بكثير.", "en": "Occupies most of the left half of the abdomen and crosses the midline; by far the largest compartment.", "confidence": "medium", "sources": ["S12", "S44"] },
+      "orientation": { "ar": "كيس كبير بأكياس ظهرية/بطنية وذيلية، وفيها جيوب غدّية.", "en": "A large sac with dorsal, ventral and caudal sacs and glandular saccules.", "confidence": "medium", "sources": ["S12", "S44"] },
+      "shape": { "ar": "كيس ضخم متعدّد الأكياس، وجدارها الداخلي يحمل جيوبًا غدّية (لا تخزّن الماء).", "en": "A huge multi-saccular bag whose lining carries glandular saccules (which do not store water).", "confidence": "high", "sources": ["S06", "S44"] },
+      "size": { "ar": "أكبر الحجرات؛ C1 > C3 > C2 بالترتيب.", "en": "The largest compartment; C1 > C3 > C2.", "confidence": "medium", "sources": ["S12", "S44"] },
+      "appearance": { "ar": "جدار عضلي شاحب يحوي محتوى أخضر-بنّي رطب قليلًا.", "en": "A pale muscular wall containing a moist green-brown digesta.", "confidence": "low", "sources": [] }
+    },
+    "c2": {
+      "name_ar": "الحجرة الثانية (C2)",
+      "name_en": "Second compartment (C2)",
+      "system": "dig",
+      "position": { "ar": "أصغر الحجرات، وتقع بين C1 وC3 في الجزء الأمامي من البطن.", "en": "The smallest compartment, lying between C1 and C3 in the cranial abdomen.", "confidence": "low", "sources": ["S12"] },
+      "orientation": { "ar": "كيس صغير قصير بين الحجرتين.", "en": "A small, short sac between the two other compartments.", "confidence": "low", "sources": ["S12"] },
+      "shape": { "ar": "كيس غدّي صغير؛ وليست كرشًا ولا شبكية كما في الأبقار.", "en": "A small glandular sac; it is not a cow's rumen or reticulum.", "confidence": "high", "sources": ["S08", "S12"] },
+      "size": { "ar": "أصغر الحجرات.", "en": "The smallest of the compartments.", "confidence": "medium", "sources": ["S12"] },
+      "appearance": { "ar": "جدار شاحب، محتواه أفتح من محتوى C1.", "en": "Pale wall with paler contents than C1.", "confidence": "low", "sources": [] }
+    },
+    "c3": {
+      "name_ar": "الحجرة الثالثة (C3)",
+      "name_en": "Third compartment (C3)",
+      "system": "dig",
+      "position": { "ar": "حجرة أنبوبية تمتدّ من C2 نحو الأمام/اليمين، ونهايتها الخلفية الجزء الغدّي الفعّال.", "en": "A tubular compartment running from C2 cranially/rightwards, its caudal end being the secreting glandular part.", "confidence": "low", "sources": ["S12", "S07"] },
+      "orientation": { "ar": "أنبوبية ملتوية قليلًا، تنتهي عند الأمعاء الدقيقة.", "en": "Somewhat coiled tube ending at the small intestine.", "confidence": "low", "sources": ["S12"] },
+      "shape": { "ar": "أنبوب طويل؛ جزءه الأمامي ممتصّ وجزؤه الخلفي غدّي يفرز الحمض والإنزيمات.", "en": "A long tube, with an absorptive cranial part and a glandular caudal part secreting acid and enzymes.", "confidence": "high", "sources": ["S07", "S12"] },
+      "size": { "ar": "أطول من C2 وأصغر من C1.", "en": "Longer than C2, smaller than C1.", "confidence": "medium", "sources": ["S12"] },
+      "appearance": { "ar": "جدار أنبوبي وردي باهت، مع تكون محتوى أكثر سوائلية في نهايته.", "en": "Pale pink tubular wall, with more fluid contents towards its end.", "confidence": "low", "sources": [] }
+    },
+    "intestine": {
+      "name_ar": "الأمعاء الدقيقة",
+      "name_en": "Small intestine",
+      "system": "dig",
+      "position": { "ar": "في وسط وأسفل البطن، بين المعدة والأمعاء الغليظة، ومعلّقة بالثرب.", "en": "In the middle and lower abdomen between the stomach and the large intestine, suspended in the omentum.", "confidence": "medium", "sources": ["S12", "S44"] },
+      "orientation": { "ar": "ملفوفة في صفائح الثرب.", "en": "Coiled within the omental sheets.", "confidence": "medium", "sources": ["S12"] },
+      "shape": { "ar": "أنبوب ملفوف طويل، سطحه مخملي متعدّد الثنيات.", "en": "A long coiled tube with a velvety, folded surface.", "confidence": "medium", "sources": ["S12"] },
+      "size": { "ar": "طويلة لكن دون قياس مسجَّل في الجمل؛ ولا تُذكر أرقام طول.", "en": "Long, but no dromedary length measurement was reached; no figure is given.", "confidence": "low", "sources": ["S42"] },
+      "appearance": { "ar": "وردية باهتة، رطبة، مع أوعية دقيقة ظاهرة.", "en": "Pale pink and wet, with fine visible vessels.", "confidence": "low", "sources": [] }
+    },
+    "colon": {
+      "name_ar": "الأمعاء الغليظة",
+      "name_en": "Large intestine",
+      "system": "dig",
+      "position": { "ar": "في الجزء الخلفي والأيمن من البطن، والقسم الأعور في الجهة اليمنى خلف الأمعاء الدقيقة.", "en": "In the caudal and right part of the abdomen; the caecum sits on the right behind the small intestine.", "confidence": "medium", "sources": ["S11", "S44"] },
+      "orientation": { "ar": "القولون ملتفّ في دوامة داخل البطن.", "en": "The colon is coiled into a spiral within the abdomen.", "confidence": "medium", "sources": ["S11"] },
+      "shape": { "ar": "أنبوب أعور + قولون حلزوني كثيف الالتفاف، ثم مستقيم.", "en": "Caecum plus a tightly coiled spiral colon, then the rectum.", "confidence": "medium", "sources": ["S11"] },
+      "size": { "ar": "الأعور نحو ٣٫٢٪ من طول الأمعاء الغليظة.", "en": "The caecum is about 3.2 % of the length of the large intestine.", "confidence": "medium", "sources": ["S11"] },
+      "appearance": { "ar": "جدار عضلي شاحب يحتوي روثًا يابسًا كلما تقدّم نحو النهاية.", "en": "Pale muscular wall with increasingly dry dung towards the end.", "confidence": "low", "sources": ["S44"] }
+    },
+    "liver": {
+      "name_ar": "الكبد",
+      "name_en": "Liver",
+      "system": "dig",
+      "position": { "ar": "في الجانب الأيمن من البطن تحت الحجاب الحاجز؛ وبدون حوصلة صفراوية.", "en": "On the right side of the abdomen under the diaphragm; there is no gallbladder.", "confidence": "medium", "sources": ["S43", "S41"] },
+      "orientation": { "ar": "ملاصق للحجاب، وفصوصه موزّعة أفقيًّا.", "en": "Applied to the diaphragm, with its lobes arranged horizontally.", "confidence": "low", "sources": [] },
+      "shape": { "ar": "فصوص كبدية معتادة (جانبي، رباعي، مذيّل) لكن دون حوصلة.", "en": "The usual hepatic lobes (left lateral and medial, right, quadrate and caudate) but no gallbladder.", "confidence": "high", "sources": ["S41", "S43"] },
+      "size": { "ar": "عضو كبير نسبيًّا؛ تُقاس أبعاده بالموجات فوق الصوتية سريريًّا.", "en": "A relatively large organ; its dimensions are measured clinically by ultrasound.", "confidence": "low", "sources": ["S43"] },
+      "appearance": { "ar": "أحمر-بنّي داكن، ملس، مع حافة حادة.", "en": "Dark red-brown, smooth, with a sharp edge.", "confidence": "low", "sources": [] }
+    },
+    "pancreas": {
+      "name_ar": "البنكرياس",
+      "name_en": "Pancreas",
+      "system": "dig",
+      "position": { "ar": "بين ثنايا الثرب، ملاصقًا للحجرة الأولى والطحال والكلية اليسرى.", "en": "In the folds of the omentum, against the first compartment, the spleen and the left kidney.", "confidence": "medium", "sources": ["S40"] },
+      "orientation": { "ar": "شريطي ممتدّ على الجانب الأيسر الأمامي، وله فصّان الأيسر أكبر.", "en": "An elongated band on the left cranial side with two lobes, the left larger.", "confidence": "medium", "sources": ["S40"] },
+      "shape": { "ar": "شريطي/مستطيل مع فصّين، يبدو في الموجات فوق الصوتية شريطًا شديد الصدى يحوي الوريد البابي.", "en": "Band-like to rectangular with two lobes; on ultrasound it appears as a hyperechoic band containing the portal vein.", "confidence": "medium", "sources": ["S40"] },
+      "size": { "ar": "سماكة جسم البنكرياس ٣٫٦٠ ± ٠٫٢٤ سم (١٤ جملًا من ٢٢).", "en": "Pancreatic body thickness 3.60 ± 0.24 cm (14 of 22 camels).", "confidence": "medium", "sources": ["S40"] },
+      "appearance": { "ar": "شاحب وردي-رمادي، دقيق الأنسجة.", "en": "Pale pink-grey with fine texture.", "confidence": "low", "sources": [] }
+    },
+    "kidneys": {
+      "name_ar": "الكليتان",
+      "name_en": "Kidneys",
+      "system": "uri",
+      "position": { "ar": "في الجزء الأمامي من البطن خلف الصفاق على جانبي العمود الفقري تحت الفقرات الصدرية الأخيرة والقطنية الأولى.", "en": "Cranial abdomen, retroperitoneal, on either side of the vertebral column under the last thoracic and first lumbar vertebrae.", "confidence": "medium", "sources": ["S32", "S33"] },
+      "orientation": { "ar": "مستطيلتان ممتدّتان طوليًّا على جانبي العمود.", "en": "Elongated longitudinally along either side of the spine.", "confidence": "medium", "sources": ["S33"] },
+      "shape": { "ar": "كلية أحادية الحلمة: تتّحد الحلمات في نتوء حلمي واحد داخل حوض كلوي هلالي ذي ٢٠-٢٤ جيبًا شعاعيًّا.", "en": "Unipapillary: the papillae fuse into one renal crest inside a crescent-shaped pelvis with 20-24 radiating recesses.", "confidence": "high", "sources": ["S32"] },
+      "size": { "ar": "متوسطة الحجم مقارنة بالجسم؛ قياساتها المحدّدة تُؤخذ بالموجات فوق الصوتية سريريًّا.", "en": "Medium-sized for the body; specific dimensions are taken clinically by ultrasound.", "confidence": "low", "sources": ["S33"] },
+      "appearance": { "ar": "بنّية-حمراء، سطح أملس، مع لبّ عميق شاحب القشرة.", "en": "Brown-red with a smooth surface, a deep medulla and a paler cortex.", "confidence": "low", "sources": [] }
+    },
+    "ureters": {
+      "name_ar": "الحالبان",
+      "name_en": "Ureters",
+      "system": "uri",
+      "position": { "ar": "من حوض كل كلية، خلف الصفاق على الجانب البطني من العضلات القطنية حتى المثانة في الحوض.", "en": "From each renal pelvis, retroperitoneal, down the ventral side of the lumbar muscles to the bladder in the pelvis.", "confidence": "medium", "sources": ["S33", "S34"] },
+      "orientation": { "ar": "نازلان إلى الخلف مع ميل طفيف نحو خط الوسط.", "en": "Running caudally with a slight medial slant.", "confidence": "medium", "sources": ["S34"] },
+      "shape": { "ar": "أنبوبان رفيعان يدخلان المثانة بزاوية مائلة.", "en": "Two thin tubes entering the bladder at an oblique angle.", "confidence": "medium", "sources": ["S34"] },
+      "size": { "ar": "رفيعان وطويلان بحسب مسافة الكلية عن المثانة؛ لا قياس مذكور للجمل.", "en": "Thin and long according to the distance from kidney to bladder; no camel-specific length was reached.", "confidence": "low", "sources": [] },
+      "appearance": { "ar": "شاحبان، نصف شفّافين عند امتلائهما بالبول.", "en": "Pale and slightly translucent when filled with urine.", "confidence": "low", "sources": [] }
+    },
+    "bladder": {
+      "name_ar": "المثانة",
+      "name_en": "Bladder",
+      "system": "uri",
+      "position": { "ar": "في الحوض على أرضية البطن، أمام الحوض العاني، وتشغل مساحة وسطية بجانب العظم العاني.", "en": "In the pelvis on the abdominal floor, in front of the pubis, occupying a mid-ventral position beside the pubic bone.", "confidence": "low", "sources": ["S34"] },
+      "orientation": { "ar": "متّجهة إلى الأمام عند الامتلاء، وتنزلق إلى الحوض عندما تفرغ.", "en": "Tipped cranially when full; it retracts into the pelvis as it empties.", "confidence": "low", "sources": ["S34"] },
+      "shape": { "ar": "كيس عضلي بيضاوي، وقاعه هو أدنى نقطة.", "en": "An oval muscular sac with the fundus at its lowest point.", "confidence": "medium", "sources": ["S34"] },
+      "size": { "ar": "تتغيّر بحسب كمية البول؛ ولا تتوفّر سعة قياس موثوقة في الجمل.", "en": "Varies with urine volume; no verified camel capacity was reached.", "confidence": "low", "sources": [] },
+      "appearance": { "ar": "شاحبة وردية متوتّرة عند الامتلاء، ورقيقة مترهّلة عند الفراغ.", "en": "Pale pink and tense when full, thin and flaccid when empty.", "confidence": "low", "sources": [] }
+    },
+    "uterus": {
+      "name_ar": "الرحم",
+      "name_en": "Uterus",
+      "system": "repro",
+      "position": { "ar": "في الحوض عند الصغيرة غير الحامل، وفي البطن عند الأنثى البالغة غير الحامل بمستوى الفقرات القطنية الخامسة إلى السابعة.", "en": "Pelvic in the young nulliparous female; abdominal at the level of the 5th to 7th lumbar vertebrae in the mature non-pregnant one.", "confidence": "high", "sources": ["S54"] },
+      "orientation": { "ar": "قرنان يمتدّان إلى الأمام والجانب، والقرن الأيسر أطول من الأيمن.", "en": "Two horns extending cranially and laterally; the left horn is distinctly longer than the right.", "confidence": "high", "sources": ["S54"] },
+      "shape": { "ar": "ذو قرنين (bicornuate) بجسم قصير وقرنين مخروطيين منحنيين.", "en": "Bicornuate with a short body and two curved, tapering horns.", "confidence": "high", "sources": ["S54"] },
+      "size": { "ar": "الجسم ٢-٣٫٥ سم؛ القرنان ٦-١٠ سم يمينًا و٨-١٥ سم يسارًا.", "en": "Body 2-3.5 cm; horns 6-10 cm on the right and 8-15 cm on the left.", "confidence": "high", "sources": ["S54"] },
+      "appearance": { "ar": "عضلي شاحب وردي-رمادي، سطح صقلي عند غير الحامل، ويتوسّع كثيرًا في الحمل.", "en": "Pale pink-grey muscle, serosal surface smooth in the non-pregnant animal, expanding greatly in pregnancy.", "confidence": "low", "sources": [] }
+    },
+    "ovaries": {
+      "name_ar": "المبيضان",
+      "name_en": "Ovaries",
+      "system": "repro",
+      "position": { "ar": "على مسافة نحو ٣٦ سم من فتحة الفرج، والمبيض الأيسر أقرب إلى الأمام والبطن من الأيمن.", "en": "About 36 cm from the vulval opening; the left ovary lies more cranio-ventrally than the right.", "confidence": "high", "sources": ["S54"] },
+      "orientation": { "ar": "داخل كيس مبيضي من الرباط العريض، والقناة الرحمية تجاوره.", "en": "Enclosed in an ovarian bursa of the broad ligament beside the oviduct.", "confidence": "high", "sources": ["S54"] },
+      "shape": { "ar": "بيضاوي إلى دائري مسطّح جانبيًّا، بسطح غير منتظم بسبب الجريبات.", "en": "Oval to round, flattened laterally, with an irregular surface from the follicles.", "confidence": "high", "sources": ["S54"] },
+      "size": { "ar": "٢٫٦-٦ سم طولًا، ٢-٤ سم عرضًا، ٠٫٥-٠٫٩ سم سُمكًا، ٣-٤ غرامات.", "en": "2.6-6 cm long, 2-4 cm wide, 0.5-0.9 cm thick, 3-4 g.", "confidence": "high", "sources": ["S54"] },
+      "appearance": { "ar": "وردي-شاحب، ويبرز الجريب الناضج ككرة شفّافة بارزة، والجسم الأصفر أكثر اصفرارًا وكتلةً.", "en": "Pale pink; a mature follicle protrudes as a translucent ball while the corpus luteum is a yellower, denser body.", "confidence": "medium", "sources": ["S54"] }
+    },
+    "udder": {
+      "name_ar": "الضرع",
+      "name_en": "Udder",
+      "system": "repro",
+      "position": { "ar": "في المنطقة الإربية بين الفخذين، وينقسم إلى نصفين لكل منهما ربعان وحلمتان.", "en": "In the inguinal region between the thighs, divided into two halves each with two quarters and two teats.", "confidence": "high", "sources": ["S56", "S57"] },
+      "orientation": { "ar": "ملتصق بالجسم ولا يتدلّى بين الفخذين كما في الأبقار.", "en": "Attached close to the body and not pendulous between the thighs as in cattle.", "confidence": "medium", "sources": ["S56"] },
+      "shape": { "ar": "غدّة مكوّنة من أربعة أرباع، ولكلّ حلمة قناتان مستقلّتان.", "en": "A four-quarter gland; each teat has two independent canals and cisterns.", "confidence": "high", "sources": ["S56"] },
+      "size": { "ar": "طول الحلمة ٥٠-٥٨ مم وقطرها ٣٩-٤٦ مم؛ عمق الضرع نحو ٢٥ سم وطوله نحو ٣٧ سم في الجمل الهندي.", "en": "Teat length 50-58 mm and diameter 39-46 mm; udder depth about 25 cm and length about 37 cm in the Indian dromedary.", "confidence": "medium", "sources": ["S57"] },
+      "appearance": { "ar": "جلد رقيق قليل الوبر، والحلمات وردية فاتحة، والحوض اللبني يمتلئ عند الإدرار.", "en": "Thin, sparsely haired skin, pale pink teats and a cistern that fills at milk let-down.", "confidence": "low", "sources": [] }
+    },
+    "testes": {
+      "name_ar": "الخصيتان",
+      "name_en": "Testes",
+      "system": "repro",
+      "position": { "ar": "في المنطقة العجانية تحت فتحة الشرج، وكيس الصفن غير متدلٍّ بين الفخذين.", "en": "In the perineal region under the anus; the scrotum is not pendulous between the thighs.", "confidence": "high", "sources": ["S54"] },
+      "orientation": { "ar": "موجّهتان إلى الخلف والأعلى (caudo-dorsal).", "en": "Directed caudo-dorsally.", "confidence": "high", "sources": ["S54"] },
+      "shape": { "ar": "بيضاوية، والبربخ ممتدّ على حافتها الظهرية.", "en": "Ovoid, with the epididymis along the dorsal border.", "confidence": "high", "sources": ["S54"] },
+      "size": { "ar": "الطول ٧-١٠ سم، ووزن كل خصية ٨٠-١٠٠ غرام، وتتفاوت مع العمر والموسم.", "en": "Length 7-10 cm, each testis 80-100 g, varying with age and season.", "confidence": "high", "sources": ["S54"] },
+      "appearance": { "ar": "وردية-شاحبة داخل كيس صفن ناعم، وتكبر وتنتأ في موسم الهياج.", "en": "Pale pink within smooth scrotal skin; they enlarge and protrude in the rut.", "confidence": "medium", "sources": ["S54", "S63"] }
+    },
+    "dulla": {
+      "name_ar": "الشقشقة (الدُّلّا)",
+      "name_en": "Dulla (soft palate)",
+      "system": "repro",
+      "position": { "ar": "امتداد من الحنك الرخو عند سقف الفم، يمتدّ إلى الخلف نحو البلعوم.", "en": "An extension of the soft palate at the roof of the mouth, running caudally towards the pharynx.", "confidence": "medium", "sources": ["S85", "S72"] },
+      "orientation": { "ar": "متّجه إلى الخلف والأسفل، ويمكن للذكر نفخه وإخراجه من جانب الفم.", "en": "Directed caudally and downwards; the male can inflate it and push it out of the side of the mouth.", "confidence": "medium", "sources": ["S85"] },
+      "shape": { "ar": "طيّة غشائية مرنة تتكوّم، وتظهر عند الإخراج ككيس وردي.", "en": "A flexible membranous fold that balloons; it appears as a pink bladder when exteriorised.", "confidence": "medium", "sources": ["S85"] },
+      "size": { "ar": "أكبر بكثير في الذكر البالغ منها في الأنثى، ولا يُخرجه البعير ذو السنامين ولا اللاما.", "en": "Far larger in the adult male than the female; it is not exteriorised in the Bactrian camel or the llama.", "confidence": "medium", "sources": ["S85"] },
+      "appearance": { "ar": "وردي شاحب رطب، يزداد احتقانًا عند الإخراج.", "en": "Pale pink and wet, becoming congested when pushed out.", "confidence": "medium", "sources": ["S85"] }
+    },
+    "brain": {
+      "name_ar": "الدماغ",
+      "name_en": "Brain",
+      "system": "nerv",
+      "position": { "ar": "داخل تجويف الجمجمة، وقاعدته تحمل الشبكة السباتية داخل الجيب الكهفي.", "en": "Inside the cranial cavity, its base carrying the carotid rete within the cavernous sinus.", "confidence": "medium", "sources": ["S50", "S51"] },
+      "orientation": { "ar": "المخ إلى الأمام والمخيخ والبصلة إلى الخلف، والعمود الفقري يكمل النخاع الشوكي.", "en": "Cerebrum forwards, cerebellum and medulla caudally; the spinal cord continues down the vertebral canal.", "confidence": "medium", "sources": ["S50"] },
+      "shape": { "ar": "كتلة نصف كروية بفصوص وتلافيف وضلع مستعرضة، وتحت القاعدة شبكة أوعية متشابكة.", "en": "A rounded mass with lobes and convolutions, crossed by transverse ridges, over a tangled vascular rete at its base.", "confidence": "low", "sources": ["S50"] },
+      "size": { "ar": "صغير نسبيًّا إلى كتلة الجسم.", "en": "Small relative to the body mass.", "confidence": "medium", "sources": ["S24"] },
+      "appearance": { "ar": "رمادي-وردي طري، والسائل الدماغي الشوكي حوله شفّاف.", "en": "Grey-pink and soft, with clear cerebrospinal fluid around it.", "confidence": "low", "sources": [] }
+    },
+    "eyes": {
+      "name_ar": "العينان",
+      "name_en": "Eyes",
+      "system": "nerv",
+      "position": { "ar": "في محجر عظمي واسع على جانبي الرأس، تحت حاجب عظمي بارز، وأمامه محارة أنفية قريبة.", "en": "In a wide bony orbit on the sides of the head under a jutting bony brow, with the nasal concha close in front.", "confidence": "high", "sources": ["S83", "S84"] },
+      "orientation": { "ar": "جانبية مع مجال رؤية واسع، والعصب البصري يخرج إلى الخلف لداخل الجمجمة.", "en": "Lateral with a wide field of view; the optic nerve exits caudally into the skull.", "confidence": "medium", "sources": ["S83"] },
+      "shape": { "ar": "كروية، بقرنية محدّبة وعدسة كثيفة كروية في المركز.", "en": "Spherical with a convex cornea and a dense, round lens in the centre.", "confidence": "high", "sources": ["S83"] },
+      "size": { "ar": "عين كبيرة في محجر واسع، وهي سمة من سمات الجمل.", "en": "A large eye in a wide orbit, characteristic of the camel.", "confidence": "medium", "sources": ["S83"] },
+      "appearance": { "ar": "قرنية شفّافة، وبياض مصفرّ قليلًا، وقرنية محيطية مصبّغة قرب الحوف، وغشاء داخلي سميك (ديسميت).", "en": "Clear cornea, slightly yellow sclera, a pigmented peripheral cornea near the limbus and a thickened Descemet's membrane.", "confidence": "medium", "sources": ["S84"] }
+    },
+    "ears": {
+      "name_ar": "الأذنان",
+      "name_en": "Ears",
+      "system": "nerv",
+      "position": { "ar": "على جانبي الرأس خلف زاويتي الفك، يتّصل الصيوان بعضلات وأربع مجموعات، ويقود إلى العظم الصدغي.", "en": "On the sides of the head behind the angle of the jaw; the pinna attaches to four muscle groups and the canal leads into the petrous bone.", "confidence": "high", "sources": ["S79", "S80"] },
+      "orientation": { "ar": "مرتفعان إلى الخلف عند الراحة، ويمكن للجمل تحريكهما.", "en": "Held slightly back and up at rest and movable.", "confidence": "medium", "sources": ["S79"] },
+      "shape": { "ar": "صيوان صغير مستدير بثلاث غضاريف، ثم قناة سمعية ثم أذن داخلية بقوقعة عريضة بثلاث لفات.", "en": "A small rounded pinna with three cartilages, then the ear canal, then an inner ear with a broad, three-turn cochlea.", "confidence": "high", "sources": ["S79", "S80"] },
+      "size": { "ar": "صغير نسبيًّا مقارنة بحجم الرأس، لكن القوقعة عريضة والغشاء القاعدي طويل (يُعين على السمع المنخفض).", "en": "Relatively small for the head, but the cochlea is broad and the basilar membrane long (favouring low-frequency hearing).", "confidence": "high", "sources": ["S80"] },
+      "appearance": { "ar": "جلد مغطّى بشعر قصير، والصيوان شاحب وشدّيد من الداخل، والقناة مبطّنة بالشعر عند بعض الإبل.", "en": "Skin covered in short hair; the pinna is pale inside and the canal hair-lined in some animals.", "confidence": "low", "sources": [] }
+    },
+    "pollGlands": {
+      "name_ar": "غدّتا القفا",
+      "name_en": "Poll glands",
+      "system": "endo",
+      "position": { "ar": "في النسيج تحت الجلد في منطقة القفا خلف الرأس، واحدة على كل جانب.", "en": "In the subcutaneous tissue of the poll behind the head, one on each side.", "confidence": "medium", "sources": ["S64"] },
+      "orientation": { "ar": "جسمان بيضاويان متوازيان على جانبي القفا.", "en": "Two ovoid bodies parallel on either side of the poll.", "confidence": "low", "sources": [] },
+      "shape": { "ar": "كتلة غدّية فصّية ذات فصوص سنخية وقنوات إفرازية.", "en": "A lobulated gland with acinar lobules and secretory ducts.", "confidence": "medium", "sources": ["S64"] },
+      "size": { "ar": "صغيرة خارج الموسم وتتضخّم وتزيد نشاطها في موسم الهياج.", "en": "Small outside the season, enlarging and becoming active in the rut.", "confidence": "medium", "sources": ["S64", "S65"] },
+      "appearance": { "ar": "إفراز أصفر شاحب مائي برائحة مميّزة عند نشاطها (في الجمل ذي السنامين)، وتُبرَز أكثر في الذكور النشطة.", "en": "A pale-yellow, watery, strongly scented secretion when active (in the Bactrian camel), most marked in active males.", "confidence": "medium", "sources": ["S65", "S66"] }
+    },
+    "adrenals": {
+      "name_ar": "الغدّتان الكظريتان",
+      "name_en": "Adrenal glands",
+      "system": "endo",
+      "position": { "ar": "ملاصقتان للقطب الأمامي لكل كلية داخل الدهن المحيط.", "en": "Sitting on the cranial pole of each kidney within the surrounding fat.", "confidence": "medium", "sources": ["S67", "S68"] },
+      "orientation": { "ar": "مستعرضتان على سطح الكلية الأمامي.", "en": "Flattened across the cranial surface of the kidney.", "confidence": "low", "sources": [] },
+      "shape": { "ar": "جسم صغير بطبقة قشرية مقسّمة ومنطقة لبّية، ولها في بعض الأنواع أربع مناطق قشرية.", "en": "A small body with a zoned cortex and a medulla; some camels show four cortical zones.", "confidence": "medium", "sources": ["S68"] },
+      "size": { "ar": "صغيرة جدًّا مقارنة بالكلى.", "en": "Very small compared with the kidney.", "confidence": "low", "sources": [] },
+      "appearance": { "ar": "أصفر-بنّي شاحب، أكثر شحوبًا من الكلية المجاورة.", "en": "Pale yellow-brown, lighter than the adjacent kidney.", "confidence": "low", "sources": [] }
+    },
+    "thyroid": {
+      "name_ar": "الغدّة الدرقية",
+      "name_en": "Thyroid gland",
+      "system": "endo",
+      "position": { "ar": "فصّان على جانبَي القصبة الهوائية في الجزء الأمامي من العنق.", "en": "Two lobes on either side of the trachea in the cranial part of the neck.", "confidence": "medium", "sources": ["S69"] },
+      "orientation": { "ar": "طوليان ملاصقان للقصبة.", "en": "Longitudinal alongside the trachea.", "confidence": "medium", "sources": ["S69"] },
+      "shape": { "ar": "فصّان بيضاويان، وربما شريط رقيق بينهما في بعض الأفراد.", "en": "Two ovoid lobes, sometimes linked by a thin strip.", "confidence": "low", "sources": [] },
+      "size": { "ar": "صغير الحجم؛ يتغيّر نشاطه لا حجمه مع الموسم والعطش.", "en": "Small; its activity, not its size, changes with season and dehydration.", "confidence": "medium", "sources": ["S69"] },
+      "appearance": { "ar": "أحمر-بنّي داكن إلى بنّي محمرّ، دقيق الأنسجة.", "en": "Dark red-brown to reddish, finely granular.", "confidence": "low", "sources": [] }
+    },
+    "lymph": {
+      "name_ar": "العقد اللمفاوية",
+      "name_en": "Lymph nodes",
+      "system": "lymph",
+      "position": { "ar": "مجموعات على مسار الأوعية اللمفية: في الرأس النكفية وتحت الفك وخلف البلعوم، وعقد أمام الكتف وأمام الفخذ وفي أحشاء البطن.", "en": "Groups along the lymph vessels: parotid, mandibular and lateral retropharyngeal in the head, plus prescapular, prefemoral and abdominal groups.", "confidence": "medium", "sources": ["S70", "S71"] },
+      "orientation": { "ar": "متراصّة في سلاسل على مسار اللمف.", "en": "Arranged in chains along the lymph pathways.", "confidence": "medium", "sources": ["S71"] },
+      "shape": { "ar": "بيضاوية أو كروية بفصوص؛ عقد الرأس مفصولة فصيصًا وتشبه العقد الدموية اللمفاوية، وللجمل عقد دموية لمفاوية حقيقية.", "en": "Ovoid to spherical and lobulated; the head nodes lack the usual cortex/medulla arrangement and resemble haemolymph nodes, and the camel also has true haemal nodes.", "confidence": "high", "sources": ["S70", "S71"] },
+      "size": { "ar": "تتفاوت بحسب الموضع؛ لا قياس مذكور للجمل في المصادر المتاحة.", "en": "Varies with site; no camel measurement was reached.", "confidence": "low", "sources": [] },
+      "appearance": { "ar": "شاحبة رمادية-وردية، وعند الالتهاب تتورّم وقد تخرج منها مادة جُبنية صفراء.", "en": "Pale grey-pink; inflamed nodes swell and may discharge caseous yellow material.", "confidence": "low", "sources": [] }
+    },
+    "skeleton": {
+      "name_ar": "الهيكل العظمي",
+      "name_en": "Skeleton",
+      "system": "musc",
+      "position": { "ar": "الإطار العظمي كاملًا؛ والفقرات العنقية السبع تشغل نحو نصف طول العمود الفقري، والغارب عند مقدّمة الظهر.", "en": "The whole bony frame; the seven cervical vertebrae make up about half the length of the vertebral column, and the withers sit at the front of the back.", "confidence": "high", "sources": ["S81"] },
+      "orientation": { "ar": "العمود الفقري أفقي، والفقرات العنقية مرتفعة إلى الأمام، والقوائم أسطوانية تحمل الوزن.", "en": "The vertebral column is horizontal, the cervical series rising forwards, and the limbs are vertical weight-bearing columns.", "confidence": "medium", "sources": ["S81"] },
+      "shape": { "ar": "هيكل بعنق طويل من سبع فقرات، وأضلاع تحيط بالصدر، وحوض وحلقة كتفية؛ ولا عظم في السنام.", "en": "A long neck of seven vertebrae, ribs around the chest, a pelvis and a scapular ring; no bone inside the hump.", "confidence": "high", "sources": ["S81", "S44"] },
+      "size": { "ar": "العنق نحو ٤٦٫٧٪ من طول العمود الفقري في الجمل العربي.", "en": "The neck is about 46.7 % of the total length of the vertebral column in the dromedary.", "confidence": "high", "sources": ["S81"] },
+      "appearance": { "ar": "عظم أبيض مصفرّ، مغطّى بغشاء سمحي، وتظهر عليه نتوءات وأخاديد العضلات.", "en": "Pale yellow-white bone with a periosteal covering and muscle tubercles and grooves.", "confidence": "low", "sources": [] }
+    },
+    "muscles": {
+      "name_ar": "العضلات الكبرى",
+      "name_en": "Major muscles",
+      "system": "musc",
+      "position": { "ar": "كتل عضلية عالية على الكتف والعضد والفخذ والساق قرب الجسم.", "en": "Muscle masses high on the shoulder, arm, thigh and leg close to the body.", "confidence": "medium", "sources": ["S77"] },
+      "orientation": { "ar": "طولية على القوائم، وتتحوّل تدريجيًّا إلى أوتار تحت الرسغ والعرقوب.", "en": "Longitudinal along the limbs, gradually changing to tendon below the carpus and hock.", "confidence": "medium", "sources": ["S77"] },
+      "shape": { "ar": "بطون عضلية سميكة في الأعلى، وأوتار رقيقة مغمّدة بأغماد زليلية عند المفاصل.", "en": "Thick muscle bellies above, thin tendons sheathed in synovial tendon sheaths at the joints.", "confidence": "medium", "sources": ["S77"] },
+      "size": { "ar": "تقلّ الكتلة العضلية كلّما اتّجهنا نحو الأسفل حتى تكاد تنعدم تحت الركبة والعرقوب.", "en": "Muscle mass decreases towards the foot until there is almost none below the knee and hock.", "confidence": "medium", "sources": ["S77"] },
+      "appearance": { "ar": "أحمر داكن رطب، والأوتار بيضاء لامعة.", "en": "Dark red and moist, with glistening white tendons.", "confidence": "low", "sources": [] }
+    },
+    "skin": {
+      "name_ar": "الجلد",
+      "name_en": "Skin",
+      "system": "musc",
+      "position": { "ar": "يغطّي الجسم كله، وسميك مشخص قليلًا عند الظهر والسنام وعلى مناطق الاحتكاك.", "en": "Covers the whole body; it is thick and slightly oily over the back, hump and pressure points.", "confidence": "medium", "sources": ["S36", "S37"] },
+      "orientation": { "ar": "لا ينطبق (سطح).", "en": "Not applicable (a surface).", "confidence": "high", "sources": [] },
+      "shape": { "ar": "سطح يشمل غددًا عرقية وقرنية في مناطق الاحتكاك.", "en": "A surface containing sweat glands and cornified patches at pressure points.", "confidence": "medium", "sources": ["S37"] },
+      "size": { "ar": "لا ينطبق.", "en": "Not applicable.", "confidence": "high", "sources": [] },
+      "appearance": { "ar": "لون الجلد رمادي-وردي إلى بنّي، مع مناطق سميكة شاحبة في الثفنات.", "en": "Grey-pink to brown skin with pale, thickened areas at the calluses.", "confidence": "low", "sources": ["S36"] }
+    },
+    "coat": {
+      "name_ar": "الوبر",
+      "name_en": "Coat",
+      "system": "musc",
+      "position": { "ar": "يغطّي أغلب الجسم من الرأس إلى الأطراف، ويتكثّف على الرقبة والظهر والسنام.", "en": "Covers most of the body from head to limbs, thickening on the neck, back and hump.", "confidence": "medium", "sources": ["S74"] },
+      "orientation": { "ar": "اتجاه عامّ إلى الخلف والأسفل حسب السطح.", "en": "Generally directed caudally and ventrally according to the surface.", "confidence": "low", "sources": [] },
+      "shape": { "ar": "ألياف أولية أطول وثانوية أدقّ؛ نسبة الثانوية إلى الأولية نحو ٦٫٨٥.", "en": "Longer primary fibres and finer secondary fibres, with a secondary-to-primary ratio of about 6.85.", "confidence": "medium", "sources": ["S74"] },
+      "size": { "ar": "متوسط قطر الليفة نحو ١٩ ميكرومتر، وكثافة الجريبات الكلية نحو ٢٥ جريبًا/مم².", "en": "Mean fibre diameter about 19 µm and total follicle density about 25 follicles/mm².", "confidence": "medium", "sources": ["S74"] },
+      "appearance": { "ar": "ألوان من الأسود والبنّي والأحمر والشعري إلى الأبيض، خشنة الملمس عند الفحص.", "en": "Colours range from black, brown and red to pale/white, with a coarse handle.", "confidence": "medium", "sources": ["S74"] }
+    },
+    "pads": {
+      "name_ar": "الخفّ والثفنات",
+      "name_en": "Feet and callus pads",
+      "system": "musc",
+      "position": { "ar": "وسادة عريضة في كل قدم بإصبعين وظفرين صغيرين، وعلى الصدر (الكركرة) والمرفقين والرسغين والركبتين ثفنات متصلّبة.", "en": "A broad pad on each foot with two digits and two small nails; hardened calluses on the chest (sternal pad), elbows, carpi and stifles.", "confidence": "medium", "sources": ["S78"] },
+      "orientation": { "ar": "الوسادة إلى الأمام والأسفل، والثفنات على الأسطح الملامسة للأرض عند البروك.", "en": "The pad faces forwards and downwards; the calluses sit on the surfaces that meet the ground when the camel couches.", "confidence": "medium", "sources": ["S78"] },
+      "shape": { "ar": "وسادة عريضة سميكة من نسيج مطّاطي يشبه الجلّ ينبسط عند الحمل ويعود عند رفعه.", "en": "A broad, thick pad of gel-like elastic tissue that flattens under load and recovers when unloaded.", "confidence": "medium", "sources": ["S76"] },
+      "size": { "ar": "تنبسط على مساحة كبيرة لتوزيع الوزن؛ وفي حيوان قريب (الغواناكو) وُصفت الوسادة بأنها ٤٥ مم طولًا و٢٠ مم عرضًا و٨ مم سماكة.", "en": "It spreads over a large contact area; in the closely related guanaco it was measured at about 45 mm long, 20 mm wide and 8 mm thick.", "confidence": "low", "sources": ["S76"] },
+      "appearance": { "ar": "وسادة شاحبة سميكة القرنية، والثفنات جلد مصفرّ متقرّن خالٍ من الوبر.", "en": "A pale, thickly cornified pad; the calluses are yellow, cornified, hairless skin.", "confidence": "low", "sources": ["S78"] }
+    },
+    "hump": {
+      "name_ar": "السنام",
+      "name_en": "Hump",
+      "system": "fat",
+      "position": { "ar": "على الظهر فوق الفقرات، وواحد فقط في الجمل العربي.", "en": "On the back over the vertebrae; a single hump in the Arabian camel.", "confidence": "high", "sources": ["S38", "S44"] },
+      "orientation": { "ar": "بارز للأعلى على الجزء الخلفي من الظهر، ويميل إلى الجانب في الجفاف الطويل.", "en": "Projecting upwards over the caudal part of the back, tipping to one side in prolonged scarcity.", "confidence": "medium", "sources": ["S38"] },
+      "shape": { "ar": "كتلة من الدهن والنسيج الضامّ بلا عظم ولا ماء.", "en": "A mass of fat and connective tissue with no bone and no water.", "confidence": "high", "sources": ["S38", "S44"] },
+      "size": { "ar": "كبير وبارز، ويتغيّر حجمه بتغيّر حالة التغذية؛ ونسبة الدهن من المادة الجافة نحو ٩٢-٩٧٫٦٪.", "en": "Large and prominent, changing with nutritional state; fat made up about 92-97.6 % of its dry matter.", "confidence": "medium", "sources": ["S38", "S39"] },
+      "appearance": { "ar": "مغطّى بالوبر، وشاحبة/بيضاء دهنية من الداخل عند الفتح.", "en": "Covered by the coat; pale, fatty white tissue on cross-section.", "confidence": "low", "sources": [] }
+    }
+  }
+}

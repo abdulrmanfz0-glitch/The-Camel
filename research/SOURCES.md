@@ -155,3 +155,61 @@ AI-generated pages or retracted papers.
   (lung 87.87 %, liver 9 % of hydatid infections in 152 camels).
 * **S87** was added during the audit for the nasal bot fly of camels (*Cephalopina titillator*,
   nasopharyngeal myiasis), which verifies the atlas's "nasal bot larvae attach at the pharynx" line.
+
+## Round 3 additions (S88–S110)
+
+Added during research round 3 (health audit, topography, physiology rates, misconceptions, glossary).
+The priority was official bodies for the zoonotic advice (WHO, and a Saudi official source) and
+peer-reviewed camel literature for the clinical claims.
+
+| id | title | author / organisation | year | url | type |
+|----|-------|----------------------|------|-----|------|
+| S88 | Middle East respiratory syndrome coronavirus (MERS-CoV) — fact sheet | WHO | 2025 (11 Dec) | https://www.who.int/news-room/fact-sheets/detail/middle-east-respiratory-syndrome-coronavirus-(mers-cov) | official-body |
+| S89 | Brucellosis — fact sheet | WHO | n.d. (accessed 2026) | https://www.who.int/news-room/fact-sheets/detail/brucellosis | official-body |
+| S90 | Rabies — fact sheet | WHO | n.d. (accessed 2026) | https://www.who.int/news-room/fact-sheets/detail/rabies | official-body |
+| S91 | Echinococcosis — fact sheet | WHO | n.d. (accessed 2026) | https://www.who.int/news-room/fact-sheets/detail/echinococcosis | official-body |
+| S92 | Crimean-Congo haemorrhagic fever — fact sheet | WHO | n.d. (accessed 2026) | https://www.who.int/news-room/fact-sheets/detail/crimean-congo-haemorrhagic-fever | official-body |
+| S93 | دليل الصحة الحيوانية (Animal Health Guide, issued under the Saudi Agriculture Law) | وزارة البيئة والمياه والزراعة / المركز الوطني للوقاء (Saudi Ministry of Environment, Water and Agriculture / Weqaya) | 2024 | https://www.uqn.gov.sa/details?p=24606 | official-body (Arabic) |
+| S94 | The impact of bacterial and viral diseases on dromedary camel (*Camelus dromedarius*) welfare: a comprehensive review | Shah SFA, Tharwat M, Rehman A, Alshanbari FA — *Front Vet Sci* 13:1795334 | 2026 | https://pubmed.ncbi.nlm.nih.gov/42290783/ | review |
+| S95 | The impact of parasitic diseases on dromedary camel (*Camelus dromedarius*) welfare: a comprehensive review | Nawaz S, Tharwat M — *Front Vet Sci* 12:1732337 | 2025 | https://pubmed.ncbi.nlm.nih.gov/41659962/ | review |
+| S96 | Depraved appetite in dromedary camels: clinical, ultrasonographic, and postmortem findings | Tharwat M, El-Ghareeb WR, Almundarij TI — *Open Vet J* 14(2):652-663 | 2024 | https://pubmed.ncbi.nlm.nih.gov/38549572/ | journal-article |
+| S97 | Prevalence and risk factors of bacterial pathogens causing camel calf diarrhea in eastern Ethiopia | Yosef DK, Ahad AA, Arog HA — *Vet Med Int* 2025:5519712 | 2025 | https://pubmed.ncbi.nlm.nih.gov/41497376/ | journal-article |
+| S98 | Impact of trypanosomiasis on male camel infertility | Abdel-Hakeem SS, Megahed G, Al-Hakami AM, Tolba MEM, Karar YFM — *Front Vet Sci* 11:1506532 | 2025 | https://pubmed.ncbi.nlm.nih.gov/39885842/ | journal-article |
+| S99 | Differential gene expression in dromedary camels infested with sarcoptic mange | Mehta SC, Dahiya SS — *Trop Anim Health Prod* 57(8):471 | 2025 | https://pubmed.ncbi.nlm.nih.gov/41201778/ | journal-article |
+| S100 | Pneumo-/enteritis in dromedary camels (*Camelus dromedarius*) | Haridy M, Alhasyani TO, Alkheraif AA, Albarrak SM — *Front Vet Sci* 13:1908854 | 2026 | https://pubmed.ncbi.nlm.nih.gov/42750963/ | review |
+| S101 | Fatalities in dromedary camels across the Arabian Peninsula caused by plastic waste | Eerkes-Medrano D et al. — *J Camel Pract Res*, DOI 10.5958/2277-8934.2021.00008.4 | 2021 | https://doi.org/10.5958/2277-8934.2021.00008.4 | journal-article |
+| S102 | The plight of camels eating plastic waste | Eerkes-Medrano D et al. — *J Arid Environ*, DOI 10.1016/j.jaridenv.2020.104374 | 2021 | https://doi.org/10.1016/j.jaridenv.2020.104374 | journal-article |
+| S103 | Nasopharyngeal myiasis due to *Cephalopina titillator* in south-eastern Iran: prevalence, histopathological and molecular assessment | *J Parasit Dis*, PMID 37193486 | 2023 | https://pubmed.ncbi.nlm.nih.gov/37193486/ | journal-article |
+| S104 | Prevalence and bacterial isolation from hydatid cysts in dromedary camels slaughtered at Sharkia abattoirs, Egypt | *J Parasit Dis*, PMID 33746409 | 2021 | https://pubmed.ncbi.nlm.nih.gov/33746409/ | journal-article |
+| S105 | Pathology, bacteriology and molecular studies on caseous lymphadenitis in *Camelus dromedarius* in the Emirate of Abu Dhabi, UAE, 2015–2020 | *PLoS One* 16(6):e0252893, PMID 34101753 | 2021 | https://pubmed.ncbi.nlm.nih.gov/34101753/ | journal-article |
+| S106 | Sudden death due to enterotoxemia among Arabian camels and associated risk factors | *Open Vet J* 14(8), PMID 39308733 | 2024 | https://pubmed.ncbi.nlm.nih.gov/39308733/ | journal-article |
+| S107 | An outbreak of dermatophytosis in camels (*Camelus dromedarius*) at Qassim Region, Central Saudi Arabia | *J Appl Anim Res*, DOI 10.1080/09712119.2015.1021806 | 2015 | https://doi.org/10.1080/09712119.2015.1021806 | journal-article |
+| S108 | Expanding the role of ultrasonography in cardiopulmonary assessment in dromedary camels | *Front Vet Sci* 12:1671030, PMID 41078488 | 2025 | https://pubmed.ncbi.nlm.nih.gov/41078488/ | review |
+| S109 | Enhancing dromedary camel healthcare: ultrasound-guided diagnostic and therapeutic interventions in the thoracic and abdominal cavities | Tharwat M, Barakat H — *Front Vet Sci* 13:1735753, PMID 41716324 | 2026 | https://pubmed.ncbi.nlm.nih.gov/41716324/ | review |
+| S110 | Prevalence of mastitis and its associated risk factors in lactating camels in Northern Egypt | Selim A, Marzok M, Gattan HS, Ismail H — *PLoS One* 20(10):e0333826 | 2025 | https://pubmed.ncbi.nlm.nih.gov/41056284/ | journal-article |
+
+### Round-3 usage notes
+
+* **S88–S92** are WHO fact sheets; they were read in full on the WHO site and are used for the human-health
+  advice on MERS, brucellosis, rabies, echinococcosis and CCHF.
+* **S93** is the Saudi national animal-health guide (issued 2024 under the Agriculture Law, run by the
+  Weqaya centre of the Ministry of Environment, Water and Agriculture). It was read as the official Saudi
+  source for the fact that brucellosis and rabies are on the Saudi **notifiable-disease** list and that
+  suspected cases must be reported to the veterinary authorities.
+  * **The Saudi Ministry of Health web pages could not be opened from this environment** — the MOH
+    awareness URLs tried returned HTTP 404 and the MOH sitemap does not contain them (see `NOTES.md`).
+    WHO and the Saudi MEWA/Weqaya guide were therefore used for the human-health advice, and that gap is
+    recorded rather than papered over.
+* **S94, S95, S100, S108, S109** are peer-reviewed reviews; S94 is the paper behind the project's own
+  `welfare` source key.
+* **S101** and **S102** are the two companion papers behind the project's `plastic` source key; S101
+  supplies the 30,000-camel / 300-death / 6.2–53.6 kg figures quoted on the `impaction` card.
+* **S103, S104, S105, S106** are the papers behind the project's `nasalbot`, `hydatid`, `cla` and
+  `entero` keys; their abstracts were read this round.
+* **S107** is the paper behind the project's `ringworm` key. Only its title and metadata could be
+  reached (the publisher page is paywalled), so the species-level claim on that card stays
+  **unsupported** in `AUDIT.md`.
+* **S108** is the project's `lungUS` key and was read in full this round; it supplies the camel heart
+  rate (35–45 bpm at rest) and the heart's position between the 3rd and 6th ribs.
+* **S110** supplies the mastitis pathogen ranking used in the audit (Streptococcus spp. 26.1 %,
+  *E. coli* 25 %, *S. agalactiae* 5.5 %; 390 lactating camels).

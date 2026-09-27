@@ -261,3 +261,120 @@ project's own sources. The full claim-by-claim disease audit is not done and is 
    `cla`, `cchf`, `dehyd`, `nasalBot`, `legs`) and either confirm or replace them with S-numbered
    sources from `SOURCES.md`.
 4. The three-vs-four compartment question, if the Slovenian Veterinary Research review can be obtained.
+
+---
+
+# Round 3 — health audit, topography, physiology rates, misconceptions, glossary
+
+Round 3 had five jobs: (A, highest priority) audit all 21 disease cards, (B) build a topography file for
+the 3D placement, (C) find dromedary physiology rates for the animation, (D) list misconceptions, and
+(E) build an Arabic glossary. All five were delivered; what follows is what could not be settled.
+
+## 1. What round 3 added
+
+* `AUDIT.md` → new **Health** section: **136 claim rows** over the 21 cards — 111 verified,
+  24 partially correct, **0 incorrect**, 1 unsupported — plus the project-wide re-check that every card
+  still ends with a vet referral and that no card contains a dose or a protocol.
+* `TOPOGRAPHY.json` → all 39 project organ ids with position, orientation, shape, approximate size and
+  in-life colour/texture, each field carrying its own confidence and source ids.
+* `physiology.json` → three verified rates written into the matching `animation_cues` (heart, C1, C2,
+  mouth); the round-2 summary in `AUDIT.md` was updated after two rows were upgraded.
+* `MISCONCEPTIONS.json` → 21 beliefs with the truth, the organ id and sources.
+* `GLOSSARY.json` → all 39 organs with standard, alternative and (where sourced) traditional Arabic terms.
+* `SOURCES.md` → S88–S110 (WHO fact sheets, the Saudi animal-health guide, ten camel papers, and the
+  papers behind the project's own v3 keys).
+
+## 2. Part C — the rates, and what was not found
+
+| rate | value found | source | action |
+|---|---|---|---|
+| resting heart rate | **35–45 bpm at rest** | S108 (review of normal echocardiographic findings) | written into `heart.animation_cues` |
+| forestomach C1/C2 contraction cycle | **cycle ≈ 5 min with 7 A-type and 5 B-type contractions and a pause of ≈ 2.3 min** | S05 (dromedaries) | written into `stomach_c1` and `stomach_c2` |
+| rumination cycle | **8.3 h/day, ≈ 67 boluses/h, ≈ 45 s per bolus, ≈ 68 chews/min** | S01 (five camels) | written into `mouth.animation_cues` |
+| resting respiratory rate | **not found** as a dromedary reference range | S20 gives 4–28/min only under its experimental conditions; S108 reports 10/min in one clinical case | **no number added**; the animation should keep describing rhythm, not a rate |
+
+The resting respiratory rate remains the one gap. A 2025 preprint on vital signs in Sudanese dromedaries
+(Research Square, `10.21203/rs.3.rs-5812412/v1`) appeared in the search but is **not peer reviewed**, so it
+was not used under the mission's standards — it is noted here as a lead for round 4.
+
+## 3. Retries on the round-2 "unsupported" rows
+
+* **Upgraded to verified:** the lungs' lack of deep fissures and the right accessory lobe (S108).
+* **Upgraded to partially correct:** the heart's position — S108 puts it between the 3rd and 6th ribs
+  (3rd–5th intercostal spaces) against the **ventral third** of the chest wall, with the apex caudal and
+  slightly left; "between the elbows" is still in no source.
+* **Still unsupported after an explicit retry:** the thoracic/lumbar/sacral/caudal vertebral counts
+  (12/7/5/15–20); the jugular groove as a venipuncture site; the lymph node "about 9 cm"; the shorn-camel
+  "about 50 % more water"; the cheek papillae; the two rows of eyelashes and the third eyelid; the
+  hair-lined pinna folded back in a storm; the callus pads on chest/elbows/knees/stifles; the withers
+  spines of the first thoracic vertebrae; the uterine "≈ 95 % left horn"; and the "*Haemonchus
+  longistipes* is the camel's most important worm" ranking. Search terms tried included "camel vertebral
+  formula", "camel jugular venipuncture", "camel lymph node size", "shorn camel water", "camel
+  eyelash/nictitating membrane" and "camel ear pinna anatomy" (the last two return the pinna and inner-ear
+  papers already used, which do not contain the missing details).
+
+## 4. Conflicts and findings from the health audit
+
+1. **Heart weight conflict (new).** Round 1 recorded 3.1 ± 0.189 kg from six hearts (S26); S108 states
+   "approximately 4–6 kg, about 0.7 % of body weight". These are probably different measurements
+   (ventricular mass vs whole organ including epicardial fat), but it is a conflict and is listed on the
+   `heart` row of `TOPOGRAPHY.json` and in `AUDIT.md` for the build team to reconcile.
+2. **Mastitis pathogens.** S110 (390 lactating camels) shows *Streptococcus* spp. 26.1 % and *E. coli*
+   25 % as the commonest isolates, with *S. agalactiae* the least frequent (5.5 %). The card names only
+   staphylococci and streptococci; the correction is in `AUDIT.md`.
+3. **Hydatid.** S104 (6,416 camels at Sharkia) gives lungs 78.2 % vs liver 21.8 %, which agrees with the
+   round-2 correction (S86: lungs 87.87 %) and confirms that the liver is **not** the second commonest
+   site in the sense the card used.
+4. **Nasal bot season.** S103 found the highest infestation rate in **winter**, so the card's "fly
+   season" advice should be phrased carefully.
+5. **Ringworm.** The paper behind the project's own `ringworm` key (S107) is paywalled; only its
+   title/metadata could be reached, so the card's two *Trichophyton* species remain **unsupported**.
+6. **MERS.** WHO (S88) confirms dromedary camels are the primary reservoir, that infected camels usually
+   show no signs, that there is no licensed vaccine or specific treatment, and that the project's human
+   advice matches WHO's wording for people at greater risk.
+7. **Impaction.** S101 confirms the card's numbers (more than 30,000 camels evaluated since 2008, 300
+   documented deaths, gastroliths 6.2–53.6 kg) and adds an estimated ~1 % regional mortality.
+8. **Camelpox, brucellosis and rabies** are on the Saudi notifiable-disease list (S93), which supports the
+   cards' "inform the authorities" lines.
+
+## 5. Source-access notes for round 3
+
+* **The Saudi Ministry of Health web pages could not be opened from this environment.** The MOH awareness
+  URLs tried returned HTTP 404, and the MOH sitemap (`sitemap0.xml`, 82 KB) contains no MERS, COVID or
+  brucellosis awareness page. The human-health advice was therefore verified against **WHO fact sheets**
+  (S88–S92) and the **Saudi national animal-health guide** issued by the Ministry of Environment, Water
+  and Agriculture / Weqaya (S93). Round 4 should retry the MOH site, which appears to have been
+  restructured.
+* MDPI serves HTTP 403 to this environment, so open-access MDPI papers were read through their PubMed or
+  PMC records where available.
+* The classical Arabic chapter (`فقه اللغة وسر العربية`, الباب الخامس عشر) loaded on Wikisource but its
+  body text could not be extracted this round, so the traditional terms in `GLOSSARY.json` come from the
+  Arabic Encyclopedia (S44), the FAO Arabic camelid page (S48) and the IVIS soft-palate chapter (S85);
+  three terms (الغارب، الثفنات، الكركرة) are marked `project:atlas.js` because they come from the project's
+  own Arabic text and still need an independent lexical source.
+* Everything else was read through approved network access to PubMed E-utilities, Europe PMC, Crossref,
+  WHO, the FAO AGRIS record and the Saudi national documents portal.
+
+## 6. Caveats on Parts B, D and E
+
+* **TOPOGRAPHY.json** is honest about its weakest field: colour/texture in life is marked `low` almost
+  everywhere because no dromedary source reached states organ colour. Position fields are `high` only
+  where a dromedary source gives landmarks (heart, lungs, spleen, pancreas, uterus, ovaries, udder,
+  testes, kidneys, nasal cavity, eye, ear, skeleton); the rest are `medium` or `low` and should be
+  treated as modelling estimates.
+* **MISCONCEPTIONS.json** has 21 items, but they cluster on 12 organs — that reflects where the evidence
+  is, not an attempt to cover every organ.
+* **GLOSSARY.json** is confident on standard terms and deliberately sparse on traditional ones, because
+  a reputable herder-lexicon source was not reached. That is a round-4 task.
+
+## 7. Round-4 checklist
+
+1. Retry the Saudi MOH pages (MERS, brucellosis) and find the official Saudi brucellosis/MERS guidance.
+2. Find a reputable Arabic source for traditional camel anatomical vocabulary (hers: classical lexicons,
+   Saudi dictionaries, or the King Faisal University camel centre publications).
+3. Source the remaining unsupported rows: the vertebral formula, the jugular groove, the lymph-node size,
+   the shorn-camel figure, the eyelashes/third eyelid, the pinna hair-lining, the callus pads and the
+   withers spines.
+4. Obtain the full text of S107 (camel dermatophytosis, Qassim) to settle the *Trichophyton* species.
+5. The four long-standing questions: three-vs-four stomach compartments; selective brain cooling; uterine
+   laterality percentage; and the complete dromedary vertebral formula.

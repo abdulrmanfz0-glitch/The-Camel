@@ -68,8 +68,8 @@
       "camel_specific_ar": "شفة الإبل العليا مشقوقة إلى نصفين، وهذا يساعدها على التقاط النباتات الشوكية والأعلاف الخشنة. وفي دراسة على خمسة جمال، استمر الاجترار نحو 8.3 ساعة في اليوم، وارتفعت نحو 67 لقمة في الساعة، ومُضغت كل لقمة نحو 45 ثانية بمعدل 68 مضغة في الدقيقة.",
       "camel_specific_en": "The camel's upper lip is split into two halves, which helps it take thorny plants and coarse forage. In one study of five camels, rumination lasted about 8.3 h per day, about 67 boluses per hour were regurgitated, and each bolus was chewed for about 45 s at about 68 chews per minute.",
       "animation_cues": {
-        "ar": "مضغ جانبي بطيء ومنتظم، ولقمة تُبلع ثم تعود من المعدة لتمضغ مرة أخرى قبل أن تُبلع ثانية.",
-        "en": "Slow, regular lateral chewing; a bolus is swallowed, then returns from the forestomach to be chewed again before being re-swallowed."
+        "ar": "مضغ جانبي بطيء ومنتظم، ولقمة تُبلع ثم تعود من المعدة لتمضغ مرة أخرى قبل أن تُبلع ثانية. وفي دورة الاجترار المسجَّلة على خمسة جمال: نحو 8.3 ساعة اجترار في اليوم، ونحو 67 لقمة في الساعة، ومضغ كل لقمة نحو 45 ثانية بمعدل 68 مضغة في الدقيقة.",
+        "en": "Slow, regular lateral chewing; a bolus is swallowed, then returns from the forestomach to be chewed again before being re-swallowed. In the rumination cycle measured on five camels: about 8.3 h of rumination per day, about 67 boluses per hour, and each bolus chewed for about 45 s at about 68 chews per minute."
       },
       "confidence": "high",
       "source_ids": ["S01", "S44", "S42"]
@@ -266,8 +266,8 @@
       "camel_specific_ar": "جدار C1 في الإبل مغطّى بأكياس غدّية بظهارة عمودية بسيطة، وليس بظهارة حرشفية مطبّقة كما في كرش المجترات. وقد سُميت هذه الأكياس قديماً «أكياس الماء» لأن البعض ظنّ أنها تخزّن الماء، وثبت بعد ذلك أنها ليست مخزناً للماء، بل مناطق امتصاص وتخمير.",
       "camel_specific_en": "The C1 wall in camels carries glandular saccules lined by simple columnar epithelium rather than the stratified squamous epithelium of the ruminant rumen. These saccules were once called \"water sacs\" on the assumption that they stored water; that idea was later shown to be wrong, and they are absorptive and fermentative structures.",
       "animation_cues": {
-        "ar": "تموّجات انقباضية دورية تعصر الأكياس الأمامية والخلفية بالتناوب، مع توقّف قصير ثم إعادة الدورة، وطبقات محتوى تنساب داخلها.",
-        "en": "Slow cyclical contractions squeezing the cranial and caudal sacs in turn, with a short pause before the cycle repeats, while layered contents churn inside."
+        "ar": "تموّجات انقباضية دورية تعصر الأكياس الأمامية والخلفية بالتناوب، مع توقّف قصير ثم إعادة الدورة، وطبقات محتوى تنساب داخلها. وقياس على جمال عربية أعطى دورة حركية مدّتها نحو 5 دقائق تضمّ 7 انقباضات من النوع A و5 من النوع B، بينها توقّف نحو 2.3 دقيقة — فيُبنى إيقاع الحركة على هذه الدورة.",
+        "en": "Slow cyclical contractions squeezing the cranial and caudal sacs in turn, with a short pause before the cycle repeats, while layered contents churn inside. In dromedaries the motility cycle lasts about 5 minutes and contains 7 A-type and 5 B-type contractions with a pause of about 2.3 minutes, so the animation should follow that rhythm."
       },
       "confidence": "high",
       "source_ids": ["S02", "S05", "S06", "S09", "S10", "S03", "S12", "S44"]
@@ -324,8 +324,8 @@
       "camel_specific_ar": "في الإبليات تغطّي خلايا غدّية أجزاء من C1 وC2، بينما يكون سطح المعدة الأمامية في المجترات كله ظهارة حرشفية مطبّقة غير غدّية. هذه الفروق في البنية هي أحد أسباب وصف الإبل بأنها «شبيهة بالمجترات» لا مجترّة بالمعنى الدقيق.",
       "camel_specific_en": "In camelids, glandular cells cover parts of C1 and C2, whereas in ruminants the whole forestomach surface is non-glandular stratified squamous epithelium. These structural differences are part of why camels are described as \"pseudoruminants\" rather than true ruminants.",
       "animation_cues": {
-        "ar": "انقباضات بطيئة متزامنة مع C1 تمرّ كموجة على الجدار الأيمن.",
-        "en": "Slow contractions synchronised with C1, passing as a wave across the right-sided wall."
+        "ar": "انقباضات بطيئة متزامنة مع C1 تمرّ كموجة على الجدار الأيمن، وتشارك C2 في الدورة نفسها: دورة مدّتها نحو 5 دقائق في C1 وC2 معًا (7 انقباضات A و5 B وتوقّف نحو 2.3 دقيقة).",
+        "en": "Slow contractions synchronised with C1, passing as a wave across the right-sided wall and sharing the same cycle: about a 5-minute cycle in C1 and C2 together (7 A-type and 5 B-type contractions with a pause of about 2.3 minutes)."
       },
       "confidence": "high",
       "source_ids": ["S08", "S03", "S12"]
@@ -808,11 +808,11 @@
       "camel_specific_ar": "تغطّي طبقة دهنية تحت الشغاف قاعدة القلب والأخدود التاجي والأخاديد الطولية بين البطينين، وقد بلغ دهن الأخدود التاجي نحو 28.7% من مساحة مقطعه في الدراسة نفسها، ومحيط الأخدود 51.14 ± 0.72 سم. هذه القياسات مبنية على ستة قلوب فقط، وتُقرأ كتقدير لا كقيمة ثابتة، أما قدرة الدورة الدموية على تحمّل التغيّرات الأسموزية السريعة بعد الشرب فهي موثّقة في أدبيات الإبل.",
       "camel_specific_en": "Subepicardial fat covers the heart base, the coronary groove and the longitudinal interventricular grooves; in the same study the coronary groove fat made up about 28.7% of that groove's cross-sectional area and the groove circumference measured 51.14 ± 0.72 cm. These are measurements from only six hearts and are best read as estimates, while the circulation's tolerance of rapid osmotic shifts after drinking is separately documented in the camel literature.",
       "animation_cues": {
-        "ar": "نبض منتظم على مرحلتين: انقباض البطينين ثم انبساطهما، مع فتح الصمامات وإغلاقها في كل دورة.",
-        "en": "A regular two-phase beat: ventricular contraction followed by relaxation, with valves opening and closing each cycle."
+        "ar": "نبض منتظم على مرحلتين: انقباض البطينين ثم انبساطهما، مع فتح الصمامات وإغلاقها في كل دورة. ومعدّل النبض في الراحة نحو 35-45 نبضة في الدقيقة، وهو أبطأ من كثير من الثدييات المماثلة في الحجم؛ فيُضبط إيقاع الحركة على هذا البطء.",
+        "en": "A regular two-phase beat: ventricular contraction followed by relaxation, with valves opening and closing each cycle. The resting heart rate is about 35-45 beats per minute — slow for an animal of this size — so the animation should run at that calm pace."
       },
       "confidence": "medium",
-      "source_ids": ["S26", "S29", "S35"]
+      "source_ids": ["S26", "S29", "S35", "S108"]
     },
     {
       "id": "lungs",
