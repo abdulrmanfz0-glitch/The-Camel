@@ -1,0 +1,2827 @@
+{
+  "organs": [
+    {
+      "id": "mouth",
+      "name_ar": "الفم",
+      "name_en": "Mouth",
+      "location": {
+        "ar": "في مقدمة الرأس، ويضم الشفتين والأسنان وخاصة الأضراس الطاحنة، وتحده شفة عليا مشقوقة.",
+        "en": "At the front of the head. It contains the lips and the teeth, mainly the grinding cheek teeth, and is bordered by a cleft upper lip."
+      },
+      "relative_size": {
+        "ar": "تجويف صغير مقارنة بالمعدة، لكن أضراسه كبيرة وتعمل بفعالية على الأعلاف الخشنة.",
+        "en": "A small cavity compared with the forestomach, but its cheek teeth are large and effective on coarse forage."
+      },
+      "function_ar": "يلتقط الغذاء ويمزّقه ويطحنه، ويخلطه باللعاب قبل البلع. وهو أيضاً المكان الذي يعود إليه الطعام المجترّ ليُمضغ مرة أخرى.",
+      "function_en": "Grasps, tears and grinds food and mixes it with saliva before swallowing. It is also where regurgitated cud returns to be chewed again.",
+      "how_it_works": [
+        {
+          "text_ar": "تلتقط الشفة العليا المشقوقة والأسنان الأمامية النباتات، بما فيها النباتات الشوكية.",
+          "text_en": "The cleft upper lip and front teeth grasp plants, including thorny ones."
+        },
+        {
+          "text_ar": "تطحن الأضراس الأعلاف بحركات جانبية للفك تشبه الطحن، فتقطّع الألياف.",
+          "text_en": "Cheek teeth grind the forage with lateral jaw movements that shear plant fibres."
+        },
+        {
+          "text_ar": "يختلط الطعام باللعاب فيتكوّن لقمة طرية قابلة للبلع.",
+          "text_en": "Saliva mixes with the food to form a soft, swallowable bolus."
+        },
+        {
+          "text_ar": "تُدفع اللقمة إلى المريء عند البلع.",
+          "text_en": "The bolus is pushed into the oesophagus during swallowing."
+        },
+        {
+          "text_ar": "أثناء الاجترار تعود اللقمة من المعدة إلى الفم، فتُعاد عملية المضغ ثم تُبلع من جديد.",
+          "text_en": "During rumination the bolus returns from the forestomach to the mouth, is chewed again and is swallowed again."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "food",
+          "from": "environment",
+          "note_ar": "أعلاف خشنة وشجيرات ونباتات شوكية",
+          "note_en": "coarse forage, shrubs and thorny plants"
+        },
+        {
+          "flow": "food",
+          "from": "stomach_c1",
+          "note_ar": "لقمة مجترّة (الاجترار)",
+          "note_en": "regurgitated cud (rumination)"
+        },
+        {
+          "flow": "water",
+          "from": "salivary_glands",
+          "note_ar": "لعاب يبلّل الطعام",
+          "note_en": "saliva that wets the food"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "food",
+          "to": "esophagus",
+          "note_ar": "لقمة مبلّلة وممضوغة",
+          "note_en": "a moistened, chewed bolus"
+        }
+      ],
+      "connected_organs": ["salivary_glands", "esophagus", "stomach_c1"],
+      "camel_specific_ar": "شفة الإبل العليا مشقوقة إلى نصفين، وهذا يساعدها على التقاط النباتات الشوكية والأعلاف الخشنة. وفي دراسة على خمسة جمال، استمر الاجترار نحو 8.3 ساعة في اليوم، وارتفعت نحو 67 لقمة في الساعة، ومُضغت كل لقمة نحو 45 ثانية بمعدل 68 مضغة في الدقيقة.",
+      "camel_specific_en": "The camel's upper lip is split into two halves, which helps it take thorny plants and coarse forage. In one study of five camels, rumination lasted about 8.3 h per day, about 67 boluses per hour were regurgitated, and each bolus was chewed for about 45 s at about 68 chews per minute.",
+      "animation_cues": {
+        "ar": "مضغ جانبي بطيء ومنتظم، ولقمة تُبلع ثم تعود من المعدة لتمضغ مرة أخرى قبل أن تُبلع ثانية.",
+        "en": "Slow, regular lateral chewing; a bolus is swallowed, then returns from the forestomach to be chewed again before being re-swallowed."
+      },
+      "confidence": "high",
+      "source_ids": ["S01", "S44", "S42"]
+    },
+    {
+      "id": "salivary_glands",
+      "name_ar": "الغدد اللعابية",
+      "name_en": "Salivary glands",
+      "location": {
+        "ar": "مجموعة غدد حول الفم والفك وفي الرقبة، وأبرزها الغدة النكفية.",
+        "en": "A group of glands around the mouth and jaw and in the neck; the parotid gland is the most prominent."
+      },
+      "relative_size": {
+        "ar": "غدد متوسطة الحجم موزّعة في الرأس والرقبة.",
+        "en": "Moderately sized glands distributed through the head and neck."
+      },
+      "function_ar": "تُفرز اللعاب الذي يبلّل الغذاء ويسهّل بلعه، ويستمر في الوصول إلى المعدة الأمامية فيحفظ فيها السائل اللازم للتخمير الميكروبي. وللعاب دور مهم في حفظ سوائل الجسم أثناء العطش.",
+      "function_en": "Produces saliva that wets and lubricates food, and keeps delivering fluid to the forestomach so that microbial fermentation can continue. Saliva also matters for body-fluid balance during water shortage.",
+      "how_it_works": [
+        {
+          "text_ar": "يصل الدم الحامل للماء والأملاح إلى خلايا الغدد اللعابية.",
+          "text_en": "Blood carrying water and electrolytes reaches the salivary gland cells."
+        },
+        {
+          "text_ar": "تفرز الخلايا سائلاً لعابياً غنياً بالأملاح وبيكربونات تنظّم حموضة المعدة.",
+          "text_en": "The cells secrete a fluid rich in electrolytes and bicarbonate that buffers forestomach acidity."
+        },
+        {
+          "text_ar": "يتدفّق اللعاب عبر القنوات إلى تجويف الفم.",
+          "text_en": "Saliva flows through ducts into the mouth cavity."
+        },
+        {
+          "text_ar": "يختلط اللعاب بالطعام ويُبلع معه.",
+          "text_en": "Saliva mixes with the food and is swallowed with it."
+        },
+        {
+          "text_ar": "يصل اللعاب إلى الكرش فيحافظ على سيولة محتواه وعلى نشاط الميكروبات.",
+          "text_en": "Saliva reaches the forestomach, keeping its contents fluid and its microbes active."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "blood",
+          "note_ar": "ماء وأملاح من الدم",
+          "note_en": "water and electrolytes from the blood"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "water",
+          "to": "mouth",
+          "note_ar": "لعاب يبلّل الطعام",
+          "note_en": "saliva that moistens food"
+        }
+      ],
+      "connected_organs": ["mouth", "esophagus", "stomach_c1", "blood"],
+      "camel_specific_ar": "في اليوم الحادي عشر من تجربة حرمان من الماء، انخفض أكل الحشيش إلى 9.6% من معدله الطبيعي، ومع ذلك ظلّ تدفّق اللعاب بنحو 2 لتر في الساعة، وبهذا استمر ترطيب المعدة الأمامية وتخميرها. هذه قيمة من دراسة واحدة على عدد محدود من الحيوانات.",
+      "camel_specific_en": "On the eleventh day of an 11-day water-deprivation experiment, hay intake had fallen to 9.6% of the control level, yet saliva flow of about 2 L/h was maintained, keeping the forestomach fluid and fermentation going. This figure comes from a single study with a small number of animals.",
+      "animation_cues": {
+        "ar": "قطرات لعاب مستمرة تسير في قنوات دقيقة، وتزداد أثناء الأكل وبعد الشرب.",
+        "en": "A steady trickle of saliva moving through fine ducts, increasing during eating and after drinking."
+      },
+      "confidence": "medium",
+      "source_ids": ["S04", "S45", "S01"]
+    },
+    {
+      "id": "esophagus",
+      "name_ar": "المريء",
+      "name_en": "Oesophagus",
+      "location": {
+        "ar": "أنبوب عضلي يصل البلعوم بالمعدة، ويمرّ في الرقبة ثم في الصدر.",
+        "en": "A muscular tube connecting the pharynx to the stomach; it runs down the neck and then through the thorax."
+      },
+      "relative_size": {
+        "ar": "طويل بحسب طول رقبة الجمل، وهو أنبوبي نحيف.",
+        "en": "Long, in keeping with the camel's long neck, and narrow and tubular."
+      },
+      "function_ar": "ينقل الطعام المبلوع إلى المعدة الأمامية، ويعمل في الاتجاهين: ينقل اللقمة نزولاً عند البلع، ويعيد لقم الاجترار والغازات صعوداً إلى الفم.",
+      "function_en": "Carries swallowed food down to the forestomach and works in both directions: it moves a bolus downwards during swallowing and carries cud and gas upwards during rumination and eructation.",
+      "how_it_works": [
+        {
+          "text_ar": "تدخل اللقمة إلى المريء عند البلع.",
+          "text_en": "The bolus enters the oesophagus during swallowing."
+        },
+        {
+          "text_ar": "تتقلّص العضلات في موجة دفعية (peristalsis) تدفع اللقمة نزولاً.",
+          "text_en": "The muscle contracts in a peristaltic wave that pushes the bolus downwards."
+        },
+        {
+          "text_ar": "تصل اللقمة إلى المعدة الأولى C1.",
+          "text_en": "The bolus arrives at the first forestomach compartment, C1."
+        },
+        {
+          "text_ar": "أثناء الاجترار تسير موجة معاكسة (antiperistaltic) فتُعيد اللقمة إلى الفم.",
+          "text_en": "During rumination an antiperistaltic wave carries a bolus back up to the mouth."
+        },
+        {
+          "text_ar": "وأثناء التكريع تسير موجة سريعة معاكسة تنقل الغاز إلى الأعلى.",
+          "text_en": "During eructation a fast antiperistaltic wave carries gas upwards."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "food",
+          "from": "mouth",
+          "note_ar": "لقمة ممضوغة",
+          "note_en": "a chewed bolus"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "food",
+          "to": "stomach_c1",
+          "note_ar": "دفعة تُبلع إلى المعدة الأمامية",
+          "note_en": "a swallowed load entering the forestomach"
+        },
+        {
+          "flow": "food",
+          "to": "mouth",
+          "note_ar": "لقمة مجترّة تعود للفم",
+          "note_en": "a cud bolus travelling back to the mouth"
+        }
+      ],
+      "connected_organs": ["mouth", "stomach_c1", "stomach_c2"],
+      "camel_specific_ar": "في الإبل توجد غدد مخاطية تحت الظهارة على امتداد المريء وفي كل جوانبه، خلافاً لما هو مألوف في المجترات، وظهارته شديدة التقرّن. والعضلات المكوّنة لجدار المريء مخططة في كامل مسارها، والطبقة الخارجية منها دائرية غالباً بينما الطبقة الداخلية طولية.",
+      "camel_specific_en": "In camels, mucous glands lie beneath the epithelium along the whole length and all around the wall of the oesophagus, contrary to what is generally reported for ruminants, and the epithelium is heavily keratinised. The muscle coat is striated along its entire course, with the outer layer mainly circular and the inner layer mainly longitudinal.",
+      "animation_cues": {
+        "ar": "موجة تقلّص تسير نزولاً عند البلع، وموجة أسرع تسير صعوداً بلقمة الاجترار.",
+        "en": "A downward contraction wave during swallowing, and a faster upward wave carrying a rumination bolus."
+      },
+      "confidence": "high",
+      "source_ids": ["S14", "S01"]
+    },
+    {
+      "id": "stomach_c1",
+      "name_ar": "المعدة الأولى (C1) — الكرش",
+      "name_en": "Stomach compartment 1 (C1)",
+      "location": {
+        "ar": "تشغل الجزء الأكبر من النصف الأيسر من تجويف البطن، وهي أول ما يصل إليه الطعام بعد المريء.",
+        "en": "Occupies most of the left side of the abdominal cavity and is the first compartment food reaches after the oesophagus."
+      },
+      "relative_size": {
+        "ar": "أكبر أجزاء المعدة في الجمل وحيد السنام، وتنقسم إلى كيس أمامي وكيس خلفي.",
+        "en": "The largest part of the stomach in the dromedary; it is divided into a cranial and a caudal sac."
+      },
+      "function_ar": "فيها يحدث التخمير الميكروبي الرئيسي للألياف، فتتحوّل الكربوهيدرات والألياف إلى أحماض دهنية قصيرة السلسلة يستفيد منها الحيوان. وتمتصّ أيضاً الماء والصوديوم وجزءاً من هذه الأحماض.",
+      "function_en": "This is where the main microbial fermentation of fibre takes place, converting carbohydrates and fibre into short-chain fatty acids the animal can use. It also absorbs water, sodium and part of those fatty acids.",
+      "how_it_works": [
+        {
+          "text_ar": "يدخل الطعام المبلوع مع اللعاب إلى C1، ويعمل عليه المجتمع الميكروبي.",
+          "text_en": "Swallowed food enters C1 with saliva, and the microbial community breaks it down."
+        },
+        {
+          "text_ar": "تُخمَّر الألياف والكربوهيدرات وتتكوّن أحماض دهنية قصيرة السلسلة وغازات.",
+          "text_en": "Fibre and carbohydrates ferment, producing short-chain fatty acids and gases."
+        },
+        {
+          "text_ar": "تُخلط المحتويات بحركات عضلية دورية تُعرف بتتابعات الانقباض من النوع A والنوع B مع فترات توقّف.",
+          "text_en": "Contents are mixed by cyclical muscular activity described as A-contraction and B-contraction sequences separated by pauses."
+        },
+        {
+          "text_ar": "يُمتص الماء والصوديوم والأحماض الدهنية عبر أكياس غدّية في جدار C1.",
+          "text_en": "Water, sodium and fatty acids are absorbed through glandular saccules in the C1 wall."
+        },
+        {
+          "text_ar": "تنتقل الجزيئات الصغيرة والسائل إلى C2 ثم إلى C3.",
+          "text_en": "Fine particles and fluid pass on to C2 and then to C3."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "food",
+          "from": "esophagus",
+          "note_ar": "لقم مبلوعة",
+          "note_en": "swallowed boluses"
+        },
+        {
+          "flow": "water",
+          "from": "salivary_glands",
+          "note_ar": "لعاب غني بالأملاح",
+          "note_en": "electrolyte-rich saliva"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "chyme",
+          "to": "stomach_c2",
+          "note_ar": "محتوى مخمّر وسائل",
+          "note_en": "fermented, fluid contents"
+        }
+      ],
+      "connected_organs": ["esophagus", "stomach_c2", "salivary_glands", "mouth"],
+      "camel_specific_ar": "جدار C1 في الإبل مغطّى بأكياس غدّية بظهارة عمودية بسيطة، وليس بظهارة حرشفية مطبّقة كما في كرش المجترات. وقد سُميت هذه الأكياس قديماً «أكياس الماء» لأن البعض ظنّ أنها تخزّن الماء، وثبت بعد ذلك أنها ليست مخزناً للماء، بل مناطق امتصاص وتخمير.",
+      "camel_specific_en": "The C1 wall in camels carries glandular saccules lined by simple columnar epithelium rather than the stratified squamous epithelium of the ruminant rumen. These saccules were once called \"water sacs\" on the assumption that they stored water; that idea was later shown to be wrong, and they are absorptive and fermentative structures.",
+      "animation_cues": {
+        "ar": "تموّجات انقباضية دورية تعصر الأكياس الأمامية والخلفية بالتناوب، مع توقّف قصير ثم إعادة الدورة، وطبقات محتوى تنساب داخلها.",
+        "en": "Slow cyclical contractions squeezing the cranial and caudal sacs in turn, with a short pause before the cycle repeats, while layered contents churn inside."
+      },
+      "confidence": "high",
+      "source_ids": ["S02", "S05", "S06", "S09", "S10", "S03", "S12", "S44"]
+    },
+    {
+      "id": "stomach_c2",
+      "name_ar": "المعدة الثانية (C2)",
+      "name_en": "Stomach compartment 2 (C2)",
+      "location": {
+        "ar": "تقع في الجانب الأيمن من تجويف البطن، وهي متّصلة جزئياً بـ C1.",
+        "en": "Lies on the right side of the abdominal cavity and is partly continuous with C1."
+      },
+      "relative_size": {
+        "ar": "أصغر حجرات المعدة في الجمل وحيد السنام وفق قياسات تشريحية حديثة.",
+        "en": "The smallest gastric compartment in the dromedary according to recent anatomical measurements."
+      },
+      "function_ar": "تُكمل استقبال المحتوى المخمّر من C1، وتشارك في امتصاص الأحماض الدهنية والماء والأملاح عبر خلايا غدّية.",
+      "function_en": "Receives fermented contents from C1 and, through glandular cells, takes part in absorbing fatty acids, water and electrolytes.",
+      "how_it_works": [
+        {
+          "text_ar": "تستقبل C2 الطبقة السائلة والجزيئات الدقيقة القادمة من C1.",
+          "text_en": "C2 receives the fluid and fine particles leaving C1."
+        },
+        {
+          "text_ar": "تفرز وتعمل عليها خلايا غدّية تغطّي أجزاء من سطحها.",
+          "text_en": "Glandular cells covering parts of its surface secrete and act on the contents."
+        },
+        {
+          "text_ar": "تُمتص الأحماض الدهنية والماء والصوديوم إلى الدم.",
+          "text_en": "Fatty acids, water and sodium are absorbed into the blood."
+        },
+        {
+          "text_ar": "يمرّ ما تبقّى إلى C3.",
+          "text_en": "The remaining material passes on to C3."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "chyme",
+          "from": "stomach_c1",
+          "note_ar": "محتوى مخمّر",
+          "note_en": "fermented contents"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "chyme",
+          "to": "stomach_c3",
+          "note_ar": "محتوى أصبح أكثر سيولة",
+          "note_en": "more fluid contents"
+        }
+      ],
+      "connected_organs": ["stomach_c1", "stomach_c3"],
+      "camel_specific_ar": "في الإبليات تغطّي خلايا غدّية أجزاء من C1 وC2، بينما يكون سطح المعدة الأمامية في المجترات كله ظهارة حرشفية مطبّقة غير غدّية. هذه الفروق في البنية هي أحد أسباب وصف الإبل بأنها «شبيهة بالمجترات» لا مجترّة بالمعنى الدقيق.",
+      "camel_specific_en": "In camelids, glandular cells cover parts of C1 and C2, whereas in ruminants the whole forestomach surface is non-glandular stratified squamous epithelium. These structural differences are part of why camels are described as \"pseudoruminants\" rather than true ruminants.",
+      "animation_cues": {
+        "ar": "انقباضات بطيئة متزامنة مع C1 تمرّ كموجة على الجدار الأيمن.",
+        "en": "Slow contractions synchronised with C1, passing as a wave across the right-sided wall."
+      },
+      "confidence": "high",
+      "source_ids": ["S08", "S03", "S12"]
+    },
+    {
+      "id": "stomach_c3",
+      "name_ar": "المعدة الثالثة (C3) — المعدة الغدّية",
+      "name_en": "Stomach compartment 3 (C3)",
+      "location": {
+        "ar": "أنبوب ممتد في نهاية المعدة الأمامية، ويفتح منها الطريق إلى الأمعاء الدقيقة.",
+        "en": "An elongated tube at the end of the forestomach, opening the way into the small intestine."
+      },
+      "relative_size": {
+        "ar": "قسم أنبوبي طويل، ويُوصف بأن نحو 80% منه الأمامية ذات ثنيات غدّية، ونحو 20% الخلفية هي الجزء الذي يفرز الحمض والإنزيمات.",
+        "en": "A long tubular compartment: roughly the cranial 80% carries glandular folds, and the terminal roughly 20% is the region that secretes acid and enzymes."
+      },
+      "function_ar": "تُمثّل المعدة الحقيقية للجمل، فتُفرز حمض الهيدروكلوريك والإنزيمات البروتينية وتبدأ الهضم المعدي، بعد أن تتولّى الأجزاء الأمامية منها الامتصاص.",
+      "function_en": "It functions as the camel's true stomach: it secretes hydrochloric acid and proteases and starts gastric digestion, while its cranial regions are highly absorptive.",
+      "how_it_works": [
+        {
+          "text_ar": "تدخل المحتويات من C2 إلى أنبوب C3.",
+          "text_en": "Contents flow from C2 into the tubular C3."
+        },
+        {
+          "text_ar": "تُمتص مزيد من الأحماض الدهنية والماء على الثنيات الأمامية.",
+          "text_en": "More fatty acids and water are absorbed along the cranial folds."
+        },
+        {
+          "text_ar": "في الجزء الخلفي تفرز الغدد الحمض والإنزيمات.",
+          "text_en": "In the caudal part, glands secrete acid and enzymes."
+        },
+        {
+          "text_ar": "يتحوّل المحتوى إلى كيموس حمضي ينتقل إلى الاثنا عشر.",
+          "text_en": "The contents become acidic chyme and pass into the duodenum."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "chyme",
+          "from": "stomach_c2",
+          "note_ar": "محتوى قادم من الحجرة الثانية",
+          "note_en": "contents from the second compartment"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "chyme",
+          "to": "small_intestine",
+          "note_ar": "كيموس حمضي",
+          "note_en": "acidic chyme"
+        }
+      ],
+      "connected_organs": ["stomach_c2", "small_intestine"],
+      "camel_specific_ar": "الإبل لا تملك المعدة الثالثة الحقيقية (الـ omasum) الموجودة في المجترات، ولهذا تُوصف معدتها بأنها ثلاثية الحجرات (C1 وC2 وC3) بدلاً من أربع. وتقوم نهاية C3 بعمل المعدة الغدّية، أي ما يعادل «الأنفحة» في المجترات.",
+      "camel_specific_en": "Camels do not have the omasum found in true ruminants, which is why their stomach is described as three-chambered (C1, C2 and C3) instead of four-chambered. The caudal C3 does the work of the glandular stomach, the equivalent of the ruminant abomasum.",
+      "animation_cues": {
+        "ar": "موجات دفعية ضيقة تدفع الكيموس في أنبوب طويل، مع تدفّق سائل من الغدد في جزئه الخلفي.",
+        "en": "Narrow propulsive waves pushing chyme along a long tube, with fluid flowing from glands in its caudal part."
+      },
+      "confidence": "high",
+      "source_ids": ["S12", "S03", "S13", "S44", "S07"]
+    },
+    {
+      "id": "small_intestine",
+      "name_ar": "الأمعاء الدقيقة",
+      "name_en": "Small intestine",
+      "location": {
+        "ar": "ملتفّة في وسط تجويف البطن، تبدأ بالاثنا عشر بعد C3 وتنتهي عند الأعور.",
+        "en": "Coiled in the middle of the abdominal cavity; it starts at the duodenum after C3 and ends at the caecum."
+      },
+      "relative_size": {
+        "ar": "أنبوب طويل وملتفّ؛ وتُقاس نسبة الأعور إليه وإلى الأمعاء الغليظة معاً بنحو 1% في دراسة تشريحية واحدة.",
+        "en": "A long, coiled tube; in one anatomical study the caecum was measured at about 1% of the combined small- and large-intestine length."
+      },
+      "function_ar": "تُكمل هضم الكيموس بعصارة البنكرياس والصفراء، وتمتصّ السكريات والأحماض الأمينية والدهون والماء إلى الدم. وهي آخر مرحلة امتصاص رئيسية قبل الأمعاء الغليظة.",
+      "function_en": "Completes digestion of chyme with pancreatic juice and bile, and absorbs sugars, amino acids, fats and water into the blood. It is the last major absorptive stage before the large intestine.",
+      "how_it_works": [
+        {
+          "text_ar": "يدخل الكيموس الحمضي إلى الاثنا عشر.",
+          "text_en": "Acidic chyme enters the duodenum."
+        },
+        {
+          "text_ar": "تُعادل الحموضة بالصفراء القادمة من الكبد وبإفرازات البنكرياس القلوية.",
+          "text_en": "Acidity is neutralised by bile from the liver and by alkaline pancreatic secretion."
+        },
+        {
+          "text_ar": "تفكّك الإنزيمات البروتينات والدهون والكربوهيدرات إلى جزيئات صغيرة.",
+          "text_en": "Enzymes break proteins, fats and carbohydrates into small molecules."
+        },
+        {
+          "text_ar": "تُمتص الجزيئات عبر الخملات المعوية إلى الدم.",
+          "text_en": "The molecules are absorbed through the intestinal villi into the blood."
+        },
+        {
+          "text_ar": "ينتقل ما تبقّى إلى الأمعاء الغليظة.",
+          "text_en": "The remaining material passes into the large intestine."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "chyme",
+          "from": "stomach_c3",
+          "note_ar": "كيموس حمضي",
+          "note_en": "acidic chyme"
+        },
+        {
+          "flow": "bile",
+          "from": "liver",
+          "note_ar": "صفراء تتدفّق باستمرار لعدم وجود حويصل صفراوي",
+          "note_en": "bile flowing continuously because there is no gallbladder"
+        },
+        {
+          "flow": "digestive juice",
+          "from": "pancreas",
+          "note_ar": "إنزيمات هاضمة وبيكربونات",
+          "note_en": "digestive enzymes and bicarbonate"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "digesta",
+          "to": "large_intestine",
+          "note_ar": "بقايا غير مهضومة",
+          "note_en": "undigested residue"
+        },
+        {
+          "flow": "blood",
+          "to": "blood",
+          "note_ar": "مواد غذائية ممتصّة",
+          "note_en": "absorbed nutrients"
+        }
+      ],
+      "connected_organs": ["stomach_c3", "large_intestine", "liver", "pancreas", "blood"],
+      "camel_specific_ar": "لا يمتلك الجمل حويصلاً صفراوياً، فتصبّ الصفراء في الاثنا عشر باستمرار بدلاً من أن تُخزَّن وتُفرَز عند الحاجة إلى هضم دسم. أما القياسات المفصّلة لطول الأمعاء الدقيقة في الإبل فهي قليلة في المصادر المتاحة لهذه المهمة، ولذلك لم نُدرج عدداً لطولها.",
+      "camel_specific_en": "The camel has no gallbladder, so bile drains into the duodenum continuously instead of being stored and released when a fatty meal arrives. Detailed measurements of dromedary small-intestine length were scarce in the sources available for this mission, so no length figure is given.",
+      "animation_cues": {
+        "ar": "انقباضات دودية تدفع الكيموس في حلقات ملتفّة، وتدفّق صفراء وإنزيمات من الجدار إلى التجويف.",
+        "en": "Segmental contractions pushing chyme through coiled loops, with bile and enzymes flowing from the wall into the lumen."
+      },
+      "confidence": "medium",
+      "source_ids": ["S42", "S43", "S44", "S11"]
+    },
+    {
+      "id": "large_intestine",
+      "name_ar": "الأمعاء الغليظة (الأعور والقولون)",
+      "name_en": "Large intestine (caecum and colon)",
+      "location": {
+        "ar": "خلف الأمعاء الدقيقة؛ ويبدأ الأعور عند مستوى الفقرة القطنية الخامسة ويتّجه نحو الحوض.",
+        "en": "Behind the small intestine; the caecum begins at the level of the fifth lumbar vertebra and runs towards the pelvis."
+      },
+      "relative_size": {
+        "ar": "الأعور قصير وعلى شكل حرف S، وقد شكّل نحو 3.2% من طول الأمعاء الغليظة في دراسة تشريحية واحدة.",
+        "en": "The caecum is short and S-shaped and made up about 3.2% of large-intestine length in one anatomical study."
+      },
+      "function_ar": "يمتصّ الماء والأملاح من بقايا الهضم، ويكمل التخمير الميكروبي للكربوهيدرات الذائبة والألياف. وبهذه الطريقة يُستعاد أكبر قدر ممكن من الماء قبل تكوين البراز.",
+      "function_en": "Absorbs water and electrolytes from digestive residue and continues microbial digestion of soluble carbohydrates and fibre. In this way as much water as possible is reclaimed before faeces are formed.",
+      "how_it_works": [
+        {
+          "text_ar": "تصل البقايا إلى الأعور عند ملتقى الأعور والقولون.",
+          "text_en": "Residue arrives at the caecum at the caeco-colic junction."
+        },
+        {
+          "text_ar": "تخمّر الميكروبات بقايا الكربوهيدرات والألياف في الأعور والقولون.",
+          "text_en": "Microbes ferment remaining carbohydrates and fibre in the caecum and colon."
+        },
+        {
+          "text_ar": "يُمتصّ الماء والصوديوم وبعض الأحماض الدهنية إلى الدم.",
+          "text_en": "Water, sodium and some fatty acids are absorbed into the blood."
+        },
+        {
+          "text_ar": "يتقدّم المحتوى في القولون حتى يصبح شبه جاف.",
+          "text_en": "The contents move along the colon and become nearly dry."
+        },
+        {
+          "text_ar": "يتكوّن البراز شبه الجاف ويُخرج.",
+          "text_en": "Nearly dry faeces are formed and expelled."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "digesta",
+          "from": "small_intestine",
+          "note_ar": "بقايا غير مهضومة",
+          "note_en": "undigested residue"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "water",
+          "to": "blood",
+          "note_ar": "ماء ممتصّ يعود إلى الدم",
+          "note_en": "absorbed water returning to the blood"
+        },
+        {
+          "flow": "faeces",
+          "to": "environment",
+          "note_ar": "براز شبه جاف",
+          "note_en": "nearly dry faeces"
+        }
+      ],
+      "connected_organs": ["small_intestine", "blood"],
+      "camel_specific_ar": "براز الإبل شبه جاف، وهذه خاصية مهمة في الاقتصاد المائي: كل غرام ماء يُستعاد من الأمعاء الغليظة هو ماء لا يُفقد إلى البيئة. ولا يعني ذلك أن الإبل لا تشرب؛ فقد سُجّل في تجربة أن جمالاً حُرمت الماء 11 يوماً شربت نحو 97 لتراً في دقائق عند إعادة الشرب.",
+      "camel_specific_en": "Camel faeces are nearly dry, which matters for water economy: every gram of water reclaimed in the large intestine is water not lost to the environment. This does not mean camels do not drink; in one experiment camels deprived of water for 11 days drank about 97 L within a few minutes when water was offered again.",
+      "animation_cues": {
+        "ar": "حركة دودية بطيئة تُضيّق مسار القولون وتُجفّف المحتوى تدريجياً حتى يصبح شبه جاف.",
+        "en": "Slow peristalsis narrowing the colonic path and progressively drying the contents until they are nearly dry."
+      },
+      "confidence": "medium",
+      "source_ids": ["S11", "S44", "S04"]
+    },
+    {
+      "id": "liver",
+      "name_ar": "الكبد",
+      "name_en": "Liver",
+      "location": {
+        "ar": "في مقدمة تجويف البطن على الجانب الأيمن قريباً من الحجاب الحاجز.",
+        "en": "In the cranial part of the abdominal cavity on the right side, close to the diaphragm."
+      },
+      "relative_size": {
+        "ar": "عضو كبير الحجم، وهو أكبر غدّة في الجسم.",
+        "en": "A large organ; the biggest gland in the body."
+      },
+      "function_ar": "يعالج المواد الغذائية الممتصّة من الأمعاء ويصنع البروتينات وينظّف الدم من السموم، وينتج الصفراء اللازمة لهضم الدهون. ويقوم أيضاً بتخزين الفيتامينات والحديد.",
+      "function_en": "Processes nutrients absorbed from the gut, makes blood proteins, clears toxins from the blood and produces the bile needed to digest fat. It also stores vitamins and iron.",
+      "how_it_works": [
+        {
+          "text_ar": "يصل الدم الغني بالمواد الغذائية من الأمعاء إلى الكبد عبر الوريد البابي.",
+          "text_en": "Nutrient-rich blood from the gut reaches the liver through the portal vein."
+        },
+        {
+          "text_ar": "تعالج خلايا الكبد هذه المواد وتخزّن بعضها أو تحوّله.",
+          "text_en": "Liver cells process these substances, storing or converting some of them."
+        },
+        {
+          "text_ar": "تنتج خلايا الكبد الصفراء باستمرار.",
+          "text_en": "Liver cells produce bile continuously."
+        },
+        {
+          "text_ar": "تسير الصفراء في قناة مباشرة إلى الاثنا عشر.",
+          "text_en": "Bile travels in a duct straight to the duodenum."
+        },
+        {
+          "text_ar": "يخرج الدم المنقّى إلى الدورة الدموية العامة.",
+          "text_en": "The cleaned blood leaves into the general circulation."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "small_intestine",
+          "note_ar": "دم بابي غني بالمواد الغذائية",
+          "note_en": "portal blood rich in nutrients"
+        },
+        {
+          "flow": "blood",
+          "from": "blood",
+          "note_ar": "دم شرياني يغذّي الكبد",
+          "note_en": "arterial blood supplying the liver"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "bile",
+          "to": "small_intestine",
+          "note_ar": "صفراء تصبّ مباشرة في الاثنا عشر",
+          "note_en": "bile draining directly into the duodenum"
+        },
+        {
+          "flow": "blood",
+          "to": "blood",
+          "note_ar": "دم مُعالَج يعود إلى الدورة",
+          "note_en": "processed blood returning to the circulation"
+        }
+      ],
+      "connected_organs": ["small_intestine", "blood", "pancreas"],
+      "camel_specific_ar": "جميع الإبليات، ومنها الجمل وحيد السنام، لا تمتلك حويصلاً صفراوياً. لذلك لا تُخزَّن الصفراء، بل تتدفّق باستمرار في الأمعاء، ولهذا فإن وصف «الكبد مع حويصل» لا ينطبق على الإبل. ويُذكر في الأدبيات أن لفصوص الكبد ترتيباً يشمل الفص الجانبي والإنسي الأيسر والفص الأيمن والفص المذنّب والفص المربّع.",
+      "camel_specific_en": "All camelids, including the dromedary, lack a gallbladder. Bile is therefore not stored but flows continuously into the intestine, so the familiar \"liver with gallbladder\" description does not apply to camels. The literature also describes the liver as having left lateral and medial lobes, a right lobe, a caudate lobe and a quadrate lobe.",
+      "animation_cues": {
+        "ar": "تدفّق صفراء متصل لا ينقطع من الكبد إلى الأمعاء، ودم يمرّ في شبكة الخلايا ثم يخرج منقّى.",
+        "en": "A continuous, unbroken stream of bile from liver to intestine, and blood passing through the cell network and leaving cleansed."
+      },
+      "confidence": "high",
+      "source_ids": ["S42", "S43", "S44", "S41"]
+    },
+    {
+      "id": "pancreas",
+      "name_ar": "البنكرياس",
+      "name_en": "Pancreas",
+      "location": {
+        "ar": "يمتدّ جسم البنكرياس في البطن ويمكن رؤيته بالموجات فوق الصوتية أسفل الكلية اليمنى وخلف الضلع الثاني عشر.",
+        "en": "The body of the pancreas lies in the abdomen and can be imaged by ultrasound just below the right kidney and behind the twelfth rib."
+      },
+      "relative_size": {
+        "ar": "متوسط سماكة الجسم 3.60 ± 0.24 سم في جمال صغيرة (14 حيواناً)، وهي أقل من البالغة في الدراسة نفسها.",
+        "en": "Mean body thickness was 3.60 ± 0.24 cm in young camels (14 animals), significantly less than in adults in the same study."
+      },
+      "function_ar": "يفرز عصارة هاضمة غنية بالإنزيمات والبيكربونات تفكّك البروتينات والدهون والكربوهيدرات في الأمعاء الدقيقة. وتفرز أجزاؤه الغدّية الداخلية هرمونات تنظّم سكر الدم.",
+      "function_en": "Secretes digestive juice rich in enzymes and bicarbonate that breaks down proteins, fats and carbohydrates in the small intestine. Its endocrine part releases hormones that regulate blood sugar.",
+      "how_it_works": [
+        {
+          "text_ar": "تصل إشارات من الأمعاء إلى البنكرياس عند دخول الكيموس الحمضي.",
+          "text_en": "Signals from the intestine reach the pancreas when acidic chyme arrives."
+        },
+        {
+          "text_ar": "تفرز الخلايا القنوية عصارة قلوية تحتوي على إنزيمات.",
+          "text_en": "Duct cells secrete alkaline fluid containing enzymes."
+        },
+        {
+          "text_ar": "تسير العصارة في قناة إلى الاثنا عشر.",
+          "text_en": "The juice flows through a duct into the duodenum."
+        },
+        {
+          "text_ar": "تعادل الحموضة وتفكّك الدهون والبروتينات والكربوهيدرات.",
+          "text_en": "It neutralises acid and breaks down fats, proteins and carbohydrates."
+        },
+        {
+          "text_ar": "تفرز الخلايا الجزرية هرمونات إلى الدم لتنظيم سكر الدم.",
+          "text_en": "Islet cells release hormones into the blood to regulate blood sugar."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "blood",
+          "note_ar": "دم يجلب الإشارات والمواد الأولية",
+          "note_en": "blood bringing signals and raw materials"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "digestive juice",
+          "to": "small_intestine",
+          "note_ar": "إنزيمات وبيكربونات",
+          "note_en": "enzymes and bicarbonate"
+        },
+        {
+          "flow": "blood",
+          "to": "blood",
+          "note_ar": "هرمونات إلى الدورة الدموية",
+          "note_en": "hormones entering the circulation"
+        }
+      ],
+      "connected_organs": ["small_intestine", "liver", "blood"],
+      "camel_specific_ar": "يظهر البنكرياس في التصوير فوق الصوتي للجمل كشريط ممتد مفرط الصدى يحتوي داخله على الوريد البابي. القيمة المذكورة لسماكة الجسم مأخوذة من دراسة تصويرية واحدة على 22 جملاً، فهي قيمة مرجعية أولية لا قاعدة ثابتة.",
+      "camel_specific_en": "On ultrasound the camel pancreas appears as an elongated hyperechoic band containing the portal vein. The thickness figure above comes from a single imaging study of 22 camels and should be treated as preliminary reference data rather than a fixed rule.",
+      "animation_cues": {
+        "ar": "تدفّق عصارة على شكل نبضات مع كل دفعة كيموس تدخل الاثنا عشر.",
+        "en": "Juice flowing in pulses, matched to each surge of chyme entering the duodenum."
+      },
+      "confidence": "medium",
+      "source_ids": ["S40"]
+    },
+    {
+      "id": "spleen",
+      "name_ar": "الطحال",
+      "name_en": "Spleen",
+      "location": {
+        "ar": "في الجانب الأيسر من البطن، قريباً من المعدة.",
+        "en": "In the left side of the abdomen, close to the stomach."
+      },
+      "relative_size": {
+        "ar": "عضو متوسط الحجم مستطيل الشكل ذو مقطع مثلث؛ وقد نقصت مؤشرات طوله وعرضه كلما زاد وزن الجسم في دراسة على 25 طحالاً.",
+        "en": "A medium-sized organ, rectangular with a triangular cross-section; its length and width indices decreased as body weight increased in a study of 25 spleens."
+      },
+      "function_ar": "ينقّي الدم من كريات الدم الحمراء المتقدّمة في العمر، ويشارك في الدفاع المناعي. ويعمل أيضاً مخزناً للصفائح الدموية ومركزاً لتكوينها عند الحاجة.",
+      "function_en": "Filters aged red blood cells out of the blood and takes part in immune defence. It also acts as a reservoir for platelets and a site where they are produced when needed.",
+      "how_it_works": [
+        {
+          "text_ar": "يدخل الدم الشرياني إلى الطحال عبر الشريان الطحالي.",
+          "text_en": "Arterial blood enters the spleen through the splenic artery."
+        },
+        {
+          "text_ar": "تُرشَّح الكريات القديمة أو التالفة وتُزال.",
+          "text_en": "Old or damaged red cells are filtered out and removed."
+        },
+        {
+          "text_ar": "تلتقي الخلايا المناعية بمسبّبات العدوى في النسيج اللمفاوي.",
+          "text_en": "Immune cells meet pathogens in the lymphoid tissue."
+        },
+        {
+          "text_ar": "تُخزَّن صفائح دموية وكاريوكينات عملاقة داخل الطحال.",
+          "text_en": "Platelets and megakaryocytes are held within the spleen."
+        },
+        {
+          "text_ar": "يعود الدم المنقّى إلى الوريد الطحالي ثم إلى الدورة.",
+          "text_en": "The filtered blood returns through the splenic vein to the circulation."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "heart",
+          "note_ar": "دم شرياني",
+          "note_en": "arterial blood"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "blood",
+          "to": "blood",
+          "note_ar": "دم منقّى يعود إلى الدورة",
+          "note_en": "filtered blood returning to the circulation"
+        }
+      ],
+      "connected_organs": ["blood", "heart", "stomach_c1"],
+      "camel_specific_ar": "وُصف الطحال في الإبل بأنه مستطيل ذو مقطع مثلث وحواف مدوّرة وسطح أملس، ومحفظته مكوّنة من نسيج ضام ومن طبقة داخلية من خلايا عضلية ملساء. وقد وُجدت في طحال الجمل أعداد كبيرة من الكاريوكينات العملاقة والصفائح الدموية، وتنقص هذه الأعداد مع التقدّم في العمر.",
+      "camel_specific_en": "The dromedary spleen has been described as rectangular with a triangular cross-section, rounded edges and a smooth surface, with a capsule made of connective tissue and an inner layer of smooth muscle cells. Large numbers of megakaryocytes and platelets were found in camel spleens, and these numbers fell with age.",
+      "animation_cues": {
+        "ar": "تدفّق دم داخل الجيوب الطحالية، مع توقّف قصير للكريات الخاضعة للفحص ثم خروج الدم المنقّى.",
+        "en": "Blood flowing through splenic sinuses, with a brief pause as cells are inspected, then filtered blood leaving."
+      },
+      "confidence": "medium",
+      "source_ids": ["S30", "S31"]
+    },
+    {
+      "id": "heart",
+      "name_ar": "القلب",
+      "name_en": "Heart",
+      "location": {
+        "ar": "في وسط تجويف الصدر بين الرئتين، وتميل قمّته نحو الأسفل والخلف.",
+        "en": "In the middle of the thoracic cavity between the lungs, with its apex directed downwards and backwards."
+      },
+      "relative_size": {
+        "ar": "بلغ متوسط وزن القلب 3.1 ± 0.189 كغ في ستة قلوب جمال، مع دهن واضح تحت الشغاف حول قاعدة القلب والأخدود التاجي. القيمة مبنية على عيّنة صغيرة، ولم تُنشر أوزان أجسام الحيوانات معها، فلا تُقارن تلقائياً بوزن الجسم.",
+        "en": "Mean heart weight was 3.1 ± 0.189 kg in six camel hearts, with prominent subepicardial fat around the heart base and the coronary groove. The value comes from a small sample whose body weights were not reported, so it should not be scaled against body mass."
+      },
+      "function_ar": "مضخّة مزدوجة تدفع الدم غير المؤكسج إلى الرئتين والدم المؤكسج إلى بقية الجسم. وبهذا يحمل الأكسجين والغذاء إلى كل خلية ويجمع الفضلات منها.",
+      "function_en": "A double pump that sends deoxygenated blood to the lungs and oxygenated blood to the rest of the body, delivering oxygen and nutrients to every cell and collecting waste from them.",
+      "how_it_works": [
+        {
+          "text_ar": "يعود الدم غير المؤكسج من الجسم إلى الأذين الأيمن.",
+          "text_en": "Deoxygenated blood returns from the body into the right atrium."
+        },
+        {
+          "text_ar": "يدفعه البطين الأيمن إلى الرئتين عبر الشريان الرئوي.",
+          "text_en": "The right ventricle pumps it to the lungs through the pulmonary artery."
+        },
+        {
+          "text_ar": "يعود الدم المؤكسج من الرئتين إلى الأذين الأيسر.",
+          "text_en": "Oxygenated blood returns from the lungs into the left atrium."
+        },
+        {
+          "text_ar": "يدفعه البطين الأيسر إلى الجسم عبر الأورطي.",
+          "text_en": "The left ventricle pumps it to the body through the aorta."
+        },
+        {
+          "text_ar": "تُغلق الصمامات بين كل انقباض وانبساط لمنع رجوع الدم.",
+          "text_en": "Valves close between each contraction and relaxation to stop backflow."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "blood",
+          "note_ar": "دم عائد من الجسم عبر الأوردة",
+          "note_en": "venous blood returning from the body"
+        },
+        {
+          "flow": "blood",
+          "from": "lungs",
+          "note_ar": "دم مؤكسج من الرئتين",
+          "note_en": "oxygenated blood from the lungs"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "blood",
+          "to": "lungs",
+          "note_ar": "دم إلى الرئتين لتبادل الغازات",
+          "note_en": "blood sent to the lungs for gas exchange"
+        },
+        {
+          "flow": "blood",
+          "to": "blood",
+          "note_ar": "دم مؤكسج إلى الجسم",
+          "note_en": "oxygenated blood to the body"
+        }
+      ],
+      "connected_organs": ["lungs", "blood", "spleen", "kidneys", "brain"],
+      "camel_specific_ar": "تغطّي طبقة دهنية تحت الشغاف قاعدة القلب والأخدود التاجي والأخاديد الطولية بين البطينين، وقد بلغ دهن الأخدود التاجي نحو 28.7% من مساحة مقطعه في الدراسة نفسها، ومحيط الأخدود 51.14 ± 0.72 سم. هذه القياسات مبنية على ستة قلوب فقط، وتُقرأ كتقدير لا كقيمة ثابتة، أما قدرة الدورة الدموية على تحمّل التغيّرات الأسموزية السريعة بعد الشرب فهي موثّقة في أدبيات الإبل.",
+      "camel_specific_en": "Subepicardial fat covers the heart base, the coronary groove and the longitudinal interventricular grooves; in the same study the coronary groove fat made up about 28.7% of that groove's cross-sectional area and the groove circumference measured 51.14 ± 0.72 cm. These are measurements from only six hearts and are best read as estimates, while the circulation's tolerance of rapid osmotic shifts after drinking is separately documented in the camel literature.",
+      "animation_cues": {
+        "ar": "نبض منتظم على مرحلتين: انقباض البطينين ثم انبساطهما، مع فتح الصمامات وإغلاقها في كل دورة.",
+        "en": "A regular two-phase beat: ventricular contraction followed by relaxation, with valves opening and closing each cycle."
+      },
+      "confidence": "medium",
+      "source_ids": ["S26", "S29", "S35"]
+    },
+    {
+      "id": "lungs",
+      "name_ar": "الرئتان",
+      "name_en": "Lungs",
+      "location": {
+        "ar": "تملآن معظم تجويف الصدر على جانبي القلب، ويتصلان بالقصبة الهوائية عبر الشعب.",
+        "en": "Fill most of the thoracic cavity on both sides of the heart and connect to the trachea through the bronchi."
+      },
+      "relative_size": {
+        "ar": "كبيرتان لتعبئة صدر عميق، وسطحهما الخارجي يوصف بأنه غير مفصّص بعمق كما في رئة المجترات.",
+        "en": "Large, filling a deep thorax, with an outer surface described as not deeply lobed, unlike the ruminant lung."
+      },
+      "function_ar": "تبادل الغازات: ينتقل الأكسجين من الهواء إلى الدم ويتحرّر ثاني أكسيد الكربون من الدم إلى الهواء. وتشارك الرئة أيضاً في فقدان الحرارة والماء مع هواء الزفير.",
+      "function_en": "Gas exchange: oxygen moves from air into blood, and carbon dioxide moves from blood into air. The lung is also a route for heat and water loss in exhaled air.",
+      "how_it_works": [
+        {
+          "text_ar": "يدخل الهواء عبر القصبة الهوائية ثم الشعب ثم القصيبات.",
+          "text_en": "Air enters through the trachea, then the bronchi, then the bronchioles."
+        },
+        {
+          "text_ar": "يصل الهواء إلى الحويصلات الهوائية الرقيقة الجدار.",
+          "text_en": "Air reaches the thin-walled alveoli."
+        },
+        {
+          "text_ar": "ينتقل الأكسجين إلى الدم وثاني أكسيد الكربون إلى الحويصلات.",
+          "text_en": "Oxygen moves into the blood and carbon dioxide into the alveoli."
+        },
+        {
+          "text_ar": "يزداد معدل التنفس مع ارتفاع حرارة الجسم، وتتحوّل الإبل إلى لهاث سريع ضحل.",
+          "text_en": "Breathing rate rises with body temperature, and the camel shifts to rapid, shallow panting."
+        },
+        {
+          "text_ar": "يخرج الهواء الدافئ الرطب عبر الأنف فتستعيد الأسطح الأنفية جزءاً من حرارته ومائه.",
+          "text_en": "Warm moist air leaves through the nose, where the nasal surfaces reclaim part of its heat and water."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "air",
+          "from": "trachea",
+          "note_ar": "هواء مشهوق",
+          "note_en": "inhaled air"
+        },
+        {
+          "flow": "blood",
+          "from": "heart",
+          "note_ar": "دم غير مؤكسج من البطين الأيمن",
+          "note_en": "deoxygenated blood from the right ventricle"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "air",
+          "to": "trachea",
+          "note_ar": "هواء زفيري غني بثاني أكسيد الكربون",
+          "note_en": "exhaled air rich in carbon dioxide"
+        },
+        {
+          "flow": "blood",
+          "to": "heart",
+          "note_ar": "دم مؤكسج يعود إلى الأذين الأيسر",
+          "note_en": "oxygenated blood returning to the left atrium"
+        },
+        {
+          "flow": "water",
+          "to": "nasal_passages",
+          "note_ar": "بخار ماء وحرارة يُستعاد جزء منهما",
+          "note_en": "water vapour and heat, part of which is reclaimed"
+        }
+      ],
+      "connected_organs": ["trachea", "nasal_passages", "heart", "blood"],
+      "camel_specific_ar": "عند الإجهاد الحراري يتغيّر نمط تنفس الجمل تغيّراً كبيراً: فوق حرارة جسم 37.5 °م كانت التهوية الدقيقة في الحيوانات المصابة بالجفاف نحو نصف ما هي عليه في المرطبة، ويزداد معدل التنفس مع الحرارة حتى نحو 60 نفساً في الدقيقة، وينخفض حجم المدّ حتى يقترب من حجم الفضاء الميت فوق 25 نفساً في الدقيقة. ووجد الباحثون أن هواء الزفير كان في الغالب غير مشبع ببخار الماء.",
+      "camel_specific_en": "In heat stress the camel's breathing pattern changes markedly: above a body temperature of 37.5 °C minute ventilation was about half as much in dehydrated as in hydrated animals, respiratory frequency rose with temperature up to about 60 breaths per minute, and tidal volume fell until it approached dead-space volume above 25 breaths per minute. Exhaled air was almost always found to be unsaturated.",
+      "animation_cues": {
+        "ar": "انبساط وانقباض متناغم للرئتين، يتحوّل من تنفس هادئ عميق إلى لهاث سريع ضحل مع ارتفاع حرارة الجسم، مع حركة الهواء داخل الحويصلات والشعيرات.",
+        "en": "Coordinated inflation and deflation of the lungs, shifting from slow deep breathing to rapid shallow panting as body temperature rises, with air moving through alveoli and capillaries."
+      },
+      "confidence": "medium",
+      "source_ids": ["S42", "S23", "S21", "S19", "S46"]
+    },
+    {
+      "id": "trachea",
+      "name_ar": "القصبة الهوائية",
+      "name_en": "Trachea (windpipe)",
+      "location": {
+        "ar": "تمتدّ من الحنجرة أسفل الرقبة إلى الصدر حيث تتفرّع إلى الرئتين.",
+        "en": "Runs from the larynx down the neck into the thorax, where it divides into the two lungs."
+      },
+      "relative_size": {
+        "ar": "أنبوب طويل متوسط القطر، يدعمه 66-75 حلقة غضروفية هيالينية ناقصة في الجمل وحيد السنام.",
+        "en": "A long, medium-bore tube supported by 66-75 incomplete hyaline cartilage rings in the dromedary."
+      },
+      "function_ar": "يمرّر الهواء من الأنف إلى الرئتين وبالعكس، ويرطّب الهواء ويدفئه وينقّيه من الجزيئات. كما يحمي مجرى الهواء من الانغلاق بفضل حلقاته الغضروفية.",
+      "function_en": "Carries air from the nose to the lungs and back, and warms, humidifies and filters it. Its cartilage rings keep the airway from collapsing.",
+      "how_it_works": [
+        {
+          "text_ar": "يدخل الهواء من الحنجرة إلى القصبة الهوائية.",
+          "text_en": "Air passes from the larynx into the trachea."
+        },
+        {
+          "text_ar": "تلتقط طبقة المخاط الجزيئات الصغيرة الغريبة.",
+          "text_en": "A mucus layer traps small foreign particles."
+        },
+        {
+          "text_ar": "تحرّك الأهداب الطبقة المخاطية صعوداً نحو البلعوم.",
+          "text_en": "Cilia sweep the mucus layer upwards towards the pharynx."
+        },
+        {
+          "text_ar": "تدفّق إفرازات الغدد المخاطية يحافظ على رطوبة السطح.",
+          "text_en": "Secretion from mucous glands keeps the surface moist."
+        },
+        {
+          "text_ar": "يتوزّع الهواء بين الرئتين عبر الشعبتين الهوائيتين.",
+          "text_en": "Air is distributed to both lungs through the two bronchi."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "air",
+          "from": "nasal_passages",
+          "note_ar": "هواء مشهوق مرطّب جزئياً",
+          "note_en": "partly humidified inhaled air"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "air",
+          "to": "lungs",
+          "note_ar": "هواء إلى الشعبتين والرئتين",
+          "note_en": "air to the bronchi and lungs"
+        },
+        {
+          "flow": "air",
+          "to": "nasal_passages",
+          "note_ar": "هواء زفيري إلى الأنف",
+          "note_en": "exhaled air travelling out through the nose"
+        }
+      ],
+      "connected_organs": ["nasal_passages", "lungs"],
+      "camel_specific_ar": "تتكوّن القصبة الهوائية في الجمل من 66 إلى 75 حلقة غضروفية ناقصة، وتبلغ سماكة الطبقتين المخاطية وتحت المخاطية 517.2 ± 61.6 ميكرومتر في عشرين عيّنة. والبطانة ظهارة عمودية مهدّبة متعدّدة الطبقات الظاهرية غنية بالخلايا الكأسية المفرزة للمخاط، والعضلة القصبية ملتصقة بالصفيحة الداخلية للغضروف.",
+      "camel_specific_en": "The camel trachea is built of 66 to 75 incomplete cartilage rings, and the mucosal plus submucosal layers measured 517.2 ± 61.6 micrometres across twenty samples. The lining is a pseudostratified ciliated columnar epithelium rich in mucus-secreting goblet cells, and the trachealis muscle is attached to the inner sheet of the cartilage.",
+      "animation_cues": {
+        "ar": "موجة أهداب تزحف صعوداً نحو البلعوم في طبقة مخاط رقيقة، مع اتّساع وضيق بسيط في مقطع الأنبوب مع كل نفس.",
+        "en": "A ciliary wave creeping upward in a thin mucus layer, with the tube's bore widening and narrowing slightly with each breath."
+      },
+      "confidence": "high",
+      "source_ids": ["S15", "S18"]
+    },
+    {
+      "id": "nasal_passages",
+      "name_ar": "الممرات الأنفية",
+      "name_en": "Nasal passages",
+      "location": {
+        "ar": "من فتحتي الأنف حتى الخلف، وتحتوي المحارات الأنفية الظهرية والوسطى والبطنية، وتمتدّ الجيوب الأنفية حولها.",
+        "en": "Extend from the nostrils to the back of the head; contain the dorsal, middle and ventral nasal conchae, with the paranasal sinuses around them."
+      },
+      "relative_size": {
+        "ar": "الممرات الأنفية ضيقة، وتُفسَّر هذه الضيق بأنها سمة تكيّف مع البيئة الصحراوية.",
+        "en": "The meatuses are narrow, an appearance interpreted in the anatomical literature as an adaptation to a desert environment."
+      },
+      "function_ar": "تدفّئ الهواء المستنشق وترطّبه وتنقّيه قبل وصوله إلى الرئة. وعند الزفير تعمل بمثابة مبادل حراري ومائي، فتستعيد جزءاً من حرارة الهواء ومائه، وهذا من أهم أسباب اقتصار الإبل على ماء قليل.",
+      "function_en": "Warms, humidifies and filters inhaled air before it reaches the lung. On exhalation it acts as a heat and water exchanger, reclaiming part of the heat and water in the outgoing air, which is one of the main reasons camels need so little water.",
+      "how_it_works": [
+        {
+          "text_ar": "يدخل الهواء من فتحتي الأنف ويمرّ في ممرات ضيقة بين المحارات.",
+          "text_en": "Air enters the nostrils and passes through narrow meatuses between the conchae."
+        },
+        {
+          "text_ar": "عند الشهيق تُبرَّد أسطح الممرات بالهواء وتطلق بخار الماء إليه فتصبح جاهزة لاستعادته.",
+          "text_en": "On inhalation the surfaces are cooled by the air and give off water vapour, which prepares them to take water back."
+        },
+        {
+          "text_ar": "عند الزفير يمرّ الهواء الدافئ الرطب على هذه الأسطح الأبرد فيفقد حرارته.",
+          "text_en": "On exhalation the warm, moist air passes over these cooler surfaces and gives up heat."
+        },
+        {
+          "text_ar": "تحتفظ الأسطح بجزء من بخار الماء، فيخرج الهواء غير مشبع تماماً.",
+          "text_en": "The surfaces retain part of the water vapour, so the outgoing air is not fully saturated."
+        },
+        {
+          "text_ar": "يعود الدم الوريدي البارد من الأنف إلى الجيوب الوريدية قرب الجمجمة لتبريد الدم الذاهب إلى الدماغ.",
+          "text_en": "Cool venous blood from the nose returns to the venous sinuses near the skull to cool the blood heading for the brain."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "air",
+          "from": "environment",
+          "note_ar": "هواء خارجي ساخن وجاف",
+          "note_en": "hot, dry outside air"
+        },
+        {
+          "flow": "air",
+          "from": "trachea",
+          "note_ar": "هواء زفيري دافئ رطب",
+          "note_en": "warm moist exhaled air"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "air",
+          "to": "trachea",
+          "note_ar": "هواء مشهوق مرطّب ومدفّأ",
+          "note_en": "humidified, warmed inhaled air"
+        },
+        {
+          "flow": "air",
+          "to": "environment",
+          "note_ar": "هواء زفيري أقل حرارة ورطوبة",
+          "note_en": "cooler, drier exhaled air"
+        },
+        {
+          "flow": "blood",
+          "to": "brain",
+          "note_ar": "دم وريدي مبرّد يتّجه إلى جيوب الجمجمة",
+          "note_en": "cooled venous blood heading for the cranial sinuses"
+        }
+      ],
+      "connected_organs": ["trachea", "lungs", "brain", "environment"],
+      "camel_specific_ar": "قاس باحثون هواء الزفير في جمال صحراوية فوجدوا أن الجمع بين تبريد الهواء ونزع جزء من بخاره يوفّر نحو 60% من الماء مقارنة بإخراج هواء مشبع تماماً بحرارة الجسم، وأن رطوبة الزفير قد تنخفض ليلاً إلى نحو 75%. وبلغ فقدان الماء بالتنفس بين نحو 0.06 و1.2 غ/دقيقة بحسب حرارة الجسم وحالة الجفاف، وتراوح معدل التنفس بين نحو 4 و28 نفساً في الدقيقة في الدراسة نفسها. كما تبيّن أن المحارات الأنفية في الجمل ذات تجاويف جيبية في المحارة الظهرية والوسطى، بينما لا تحتوي المحارة البطنية على جيب.",
+      "camel_specific_en": "Researchers measured exhaled air in desert camels and found that combining cooling with removal of some water vapour saves about 60% of the water compared with exhaling fully saturated air at body temperature, with exhaled humidity falling to roughly 75% at night. Respiratory water loss ranged from about 0.06 to 1.2 g/min depending on body temperature and dehydration, and respiratory frequency ranged from about 4 to 28 per minute in the same study. The camel's dorsal and middle nasal conchae also contain conchal sinuses, while the ventral concha does not.",
+      "animation_cues": {
+        "ar": "هواء ساخن يدخل فيبرد ويرطب، ثم يخرج فيمرّ على أسطح باردة تفصل بخار الماء عنه كقطرات تعود إلى الأنسجة.",
+        "en": "Hot air entering, cooling and moistening; on the way out it passes over cool surfaces that strip water vapour from it as droplets returning to the tissue."
+      },
+      "confidence": "high",
+      "source_ids": ["S21", "S20", "S16", "S17", "S24", "S22"]
+    },
+    {
+      "id": "blood",
+      "name_ar": "الدم",
+      "name_en": "Blood",
+      "location": {
+        "ar": "سائل يدور داخل القلب والأوعية الدموية ويمرّ في كل الأعضاء.",
+        "en": "A fluid circulating inside the heart and blood vessels and passing through every organ."
+      },
+      "relative_size": {
+        "ar": "ليس عضواً بل نسيج سائل ناقل يربط جميع الأعضاء.",
+        "en": "Not an organ but a fluid connective tissue that links all the organs."
+      },
+      "function_ar": "ينقل الأكسجين والغذاء إلى الخلايا، وينقل ثاني أكسيد الكربون والفضلات إلى الرئتين والكليتين، ويوزّع الحرارة والهرمونات. ويساعد في الدفاع عن الجسم وتخثّر الجروح.",
+      "function_en": "Carries oxygen and nutrients to cells, carries carbon dioxide and waste to the lungs and kidneys, and distributes heat and hormones. It also defends the body and clots at wounds.",
+      "how_it_works": [
+        {
+          "text_ar": "تُحمّل كريات الدم الحمراء الأكسجين في الرئتين.",
+          "text_en": "Red blood cells pick up oxygen in the lungs."
+        },
+        {
+          "text_ar": "يُدفع الدم المؤكسج من البطين الأيسر إلى الجسم.",
+          "text_en": "Oxygenated blood is pumped from the left ventricle to the body."
+        },
+        {
+          "text_ar": "ينزل الأكسجين إلى الخلايا وتنتقل إليها المواد الغذائية.",
+          "text_en": "Oxygen and nutrients move out into the cells."
+        },
+        {
+          "text_ar": "تُحمّل الفضلات وثاني أكسيد الكربون وتُعاد إلى القلب.",
+          "text_en": "Waste and carbon dioxide are loaded and carried back to the heart."
+        },
+        {
+          "text_ar": "تُصفّى الفضلات في الكليتين وتُطرح الرئة ثاني أكسيد الكربون.",
+          "text_en": "Waste is filtered in the kidneys while the lungs unload carbon dioxide."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "water",
+          "from": "large_intestine",
+          "note_ar": "ماء مُستعاد من الأمعاء",
+          "note_en": "water reclaimed from the intestine"
+        },
+        {
+          "flow": "water",
+          "from": "stomach_c1",
+          "note_ar": "ماء ممتصّ من المعدة الأمامية",
+          "note_en": "water absorbed from the forestomach"
+        },
+        {
+          "flow": "oxygen",
+          "from": "lungs",
+          "note_ar": "أكسجين من الحويصلات",
+          "note_en": "oxygen from the alveoli"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "blood",
+          "to": "kidneys",
+          "note_ar": "دم يُصفّى لتكوين البول",
+          "note_en": "blood filtered to form urine"
+        },
+        {
+          "flow": "heat",
+          "to": "skin",
+          "note_ar": "حرارة تُنقل إلى الجلد",
+          "note_en": "heat carried to the skin"
+        },
+        {
+          "flow": "blood",
+          "to": "heart",
+          "note_ar": "دم غير مؤكسج يعود إلى القلب",
+          "note_en": "deoxygenated blood returning to the heart"
+        }
+      ],
+      "connected_organs": ["heart", "lungs", "kidneys", "liver", "spleen", "skin", "brain"],
+      "camel_specific_ar": "كريات الدم الحمراء في الإبل بيضوية الشكل لا دائرية. وفي تجربة مخبرية على الدم الكامل، بقيت هذه الكريات سليمة وحافظت على شكلها البيضوي عند مزجها بمحاليل NaCl متناقصة التركيز حتى 0.25%، وبلغ متوسط مساحتها الأساسية نحو 15 ميكرومتراً مربعاً في محلول 0.9%. كما تتغيّر هشاشتها الأسموزية مع الجفاف، وهذه الخصائص تشرح قدرة الجمل على تحمّل التغيّر السريع في تركيز الدم عند إعادة الشرب. وعموماً يُذكر أن الجمل يتحمّل فقدان نحو 25% من وزن جسمه قبل أن تلحقه أضرار كبيرة، وأن ما يفقده أساساً ماء من أنسجة جسمه لا من دمه.",
+      "camel_specific_en": "Camel red blood cells are elliptical rather than round. In a laboratory experiment with whole blood they stayed intact and kept their elliptical shape when mixed with NaCl solutions down to 0.25%, and their average basal area was about 15 square micrometres in 0.9% NaCl. Their osmotic fragility also changes with dehydration, and these properties help explain how a camel tolerates the rapid change in blood concentration that follows drinking. More broadly, the camel is reported to tolerate losing about 25% of its body mass before serious damage occurs, and the water it loses comes mainly from body tissues rather than from its blood.",
+      "animation_cues": {
+        "ar": "خلايا حمراء بيضوية تنزلق في صفوف داخل الأوعية، وتغيّر مقاسها قليلاً عند تغيّر تركيز الدم، مع تدفّق مستمر لا يتوقّف.",
+        "en": "Elliptical red cells sliding in single file through vessels, changing size slightly as blood concentration changes, in an unbroken flow."
+      },
+      "confidence": "high",
+      "source_ids": ["S29", "S27", "S28", "S44", "S42"]
+    },
+    {
+      "id": "kidneys",
+      "name_ar": "الكليتان",
+      "name_en": "Kidneys",
+      "location": {
+        "ar": "في تجويف البطن خلف الصفاق على الجانبين، والكلية الإبلية ناعمة السطح ووحيدة الحلمة.",
+        "en": "Retroperitoneal in the abdominal cavity on both sides; the camel kidney is smooth-surfaced and unipapillary."
+      },
+      "relative_size": {
+        "ar": "متوسطة الحجم، لكن بنيتها الداخلية مميّزة بأن الحلمات الكلوية اندمجت لتكوّن قمة كلوية واحدة يحيط بها حوض واسع.",
+        "en": "Medium-sized, but unusual internally: the renal papillae fuse into a single renal crest surrounded by a large pelvis."
+      },
+      "function_ar": "تصفّي الدم من الفضلات وتنتج البول، وتنظّم كمية الماء والأملاح في الجسم. وفي الجمل تعمل الكلية على تركيز البول بشدة فتحفظ الماء بدلاً من طرحه.",
+      "function_en": "Filters waste from the blood and produces urine, and regulates the body's water and salt content. In the camel the kidney concentrates urine strongly, conserving water instead of losing it.",
+      "how_it_works": [
+        {
+          "text_ar": "يدخل الدم إلى الكلية عبر الشريان الكلوي.",
+          "text_en": "Blood enters the kidney through the renal artery."
+        },
+        {
+          "text_ar": "تُرشَّح البلازما في الكبيبات فيتكوّن سائل أولي.",
+          "text_en": "Plasma is filtered in the glomeruli, forming primary fluid."
+        },
+        {
+          "text_ar": "يُعاد امتصاص معظم الماء والأملاح في الأنابيب والنخاع.",
+          "text_en": "Most of the water and electrolytes are reabsorbed in the tubules and medulla."
+        },
+        {
+          "text_ar": "تعيد القمة الكلوية الغنية بالعُرى الطويلة وأوعية المستقيمة تدوير اليوريا لزيادة تركيز النخاع.",
+          "text_en": "The renal crest, rich in long loops of Henle and vasa recta, recycles urea to raise the medullary concentration."
+        },
+        {
+          "text_ar": "يخرج بول مركّز إلى الحالب ثم إلى المثانة، بينما يعود الماء إلى الدم.",
+          "text_en": "Concentrated urine leaves through the ureter to the bladder while water returns to the blood."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "heart",
+          "note_ar": "دم يحمل الفضلات",
+          "note_en": "blood carrying waste"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "urine",
+          "to": "bladder",
+          "note_ar": "بول مركّز",
+          "note_en": "concentrated urine"
+        },
+        {
+          "flow": "water",
+          "to": "blood",
+          "note_ar": "ماء مُستعاد إلى الدم",
+          "note_en": "water reclaimed into the blood"
+        }
+      ],
+      "connected_organs": ["bladder", "blood", "heart"],
+      "camel_specific_ar": "كلية الجمل وحيدة الحلمة: تتّحد حلماتها الكلوية في قمة كلوية واحدة بارزة تحتوي أعداداً كبيرة من العُرى الطويلة وأوعية المستقيمة، ويحيط بها حوض كلوي هلالي يتكوّن من 20 إلى 24 تجويفاً جانبيًا إشعاعياً. وتفسّر هذه البنية بأنها توفّر مساحة كبيرة لإعادة تدوير اليوريا ورفع تركيز النخاع، وهو ما يدعم إنتاج بول مركّز للغاية وتوفير الماء.",
+      "camel_specific_en": "The camel kidney is unipapillary: its renal papillae fuse into one projecting renal crest that contains large numbers of long loops of Henle and vasa recta, and this crest sits inside a crescent-shaped renal pelvis that forms 20 to 24 radiating collateral recesses. This architecture is interpreted as providing a large surface for urea recycling and for raising medullary concentration, which supports very concentrated urine and water conservation.",
+      "animation_cues": {
+        "ar": "تدفّق دم يرشّح السائل في الكبيبات، ثم يعود معظم الماء عبر الأنابيب إلى الأوعية، ويخرج خيط بول مركّز في الحالب.",
+        "en": "Blood flowing through the glomeruli to filter fluid, then most of the water returning through the tubules into the vessels while a thin stream of concentrated urine leaves through the ureter."
+      },
+      "confidence": "high",
+      "source_ids": ["S32", "S33", "S34", "S35"]
+    },
+    {
+      "id": "bladder",
+      "name_ar": "المثانة",
+      "name_en": "Urinary bladder",
+      "location": {
+        "ar": "في الحوض أسفل البطن، وتستقبل البول من الحالبين قبل إخراجه.",
+        "en": "In the pelvis in the lower abdomen; it receives urine from the ureters before expulsion."
+      },
+      "relative_size": {
+        "ar": "كيس عضلي قليل الحجم نسبياً، وقابل للتوسّع حسب كمية البول.",
+        "en": "A relatively small muscular sac that can expand with the amount of urine it holds."
+      },
+      "function_ar": "تخزّن البول مؤقتاً ثم تطرحه، وهي بذلك آخر محطة قبل خروج الماء من الجسم مع البول. ويجعل البول المركّز هذه الخسارة صغيرة.",
+      "function_en": "Stores urine temporarily and then expels it, making it the last checkpoint before water leaves the body in urine. Concentrated urine keeps that loss small.",
+      "how_it_works": [
+        {
+          "text_ar": "يصل البول من الكليتين عبر الحالبين.",
+          "text_en": "Urine arrives from both kidneys through the ureters."
+        },
+        {
+          "text_ar": "تتمدّد عضلة المثانة لتخزين البول.",
+          "text_en": "The bladder muscle relaxes to store the urine."
+        },
+        {
+          "text_ar": "تصل إشارات عصبية عند امتلاء المثانة.",
+          "text_en": "Nerve signals appear when the bladder fills."
+        },
+        {
+          "text_ar": "تنقبض المثانة وترتخي العضلة العاصرة فيُخرج البول.",
+          "text_en": "The bladder contracts and the sphincter relaxes, releasing urine."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "urine",
+          "from": "kidneys",
+          "note_ar": "بول مركّز",
+          "note_en": "concentrated urine"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "urine",
+          "to": "environment",
+          "note_ar": "بول مركّز جداً إلى الخارج",
+          "note_en": "very concentrated urine leaving the body"
+        }
+      ],
+      "connected_organs": ["kidneys"],
+      "camel_specific_ar": "بول الجمل مركّز جداً، ولهذا تُعدّ خسارته للماء بالبول أقل بكثير مما تُفقده حيوانات أخرى بالحجم نفسه. ولم نجد في المصادر المتاحة قياساً مبوّباً لسعة المثانة في الجمل وحيد السنام، ولذلك لا نُدرج رقماً لسعتها.",
+      "camel_specific_en": "Camel urine is very concentrated, so water loss in urine is much smaller than in other animals of similar size. No clearly sourced bladder-capacity measurement for the dromedary was found in the available literature, so no capacity figure is given.",
+      "animation_cues": {
+        "ar": "قناة رقيقة ينزل فيها البول المركّز إلى كيس صغير يتمدّد ببطء ثم يفرغ دفعة واحدة.",
+        "en": "A thin stream of concentrated urine trickling into a small sac that slowly expands and then empties in one release."
+      },
+      "confidence": "medium",
+      "source_ids": ["S34", "S44", "S33"]
+    },
+    {
+      "id": "skin",
+      "name_ar": "الجلد",
+      "name_en": "Skin",
+      "location": {
+        "ar": "يغطّي سطح الجسم كله، ويُحمل عليه الوبر.",
+        "en": "Covers the whole body surface and carries the coat."
+      },
+      "relative_size": {
+        "ar": "أكبر سطح في الجسم، ويختلف توزّع الغدد العرقية عليه بحسب المنطقة.",
+        "en": "The body's largest surface; sweat-gland activity differs between regions of it."
+      },
+      "function_ar": "يعمل حاجزاً يحمي الجسم من الحرارة والرياح والجزيئات، ويشارك في تنظيم حرارة الجسم عبر التعرّق وتبخّره. وله دور في تقليل فقدان الماء لأنه لا يبدأ التعرّق إلا عند ارتفاع حرارة الجسم.",
+      "function_en": "Acts as a barrier against heat, wind and particles, and helps regulate body temperature through sweating and evaporation. It also limits water loss because sweating only starts once body temperature is already high.",
+      "how_it_works": [
+        {
+          "text_ar": "ترتفع حرارة الجسم تدريجياً خلال النهار بدل أن تبقى ثابتة.",
+          "text_en": "Body temperature rises gradually during the day instead of staying fixed."
+        },
+        {
+          "text_ar": "يبدأ التعرّق فقط عند بلوغ الحرارة حداً مرتفعاً.",
+          "text_en": "Sweating starts only when body temperature reaches a high threshold."
+        },
+        {
+          "text_ar": "يخرج العرق من الغدد العرقية بكميات تختلف بحسب المنطقة من الجسم.",
+          "text_en": "Sweat leaves the sweat glands in amounts that differ between body regions."
+        },
+        {
+          "text_ar": "يتبخّر العرق فيسحب الحرارة من الجلد.",
+          "text_en": "Sweat evaporates and removes heat from the skin."
+        },
+        {
+          "text_ar": "تتغيّر هذه العملية بين الليل والنهار بحسب حرارة البيئة.",
+          "text_en": "This process varies between night and day with environmental temperature."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "heat",
+          "from": "blood",
+          "note_ar": "حرارة تنقلها الدم إلى الجلد",
+          "note_en": "heat carried to the skin by the blood"
+        },
+        {
+          "flow": "water",
+          "from": "blood",
+          "note_ar": "ماء يصل إلى الغدد العرقية",
+          "note_en": "water reaching the sweat glands"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "water",
+          "to": "environment",
+          "note_ar": "عرق يتبخّر عن السطح",
+          "note_en": "sweat evaporating from the surface"
+        },
+        {
+          "flow": "heat",
+          "to": "environment",
+          "note_en": "heat leaving with the evaporating water",
+          "note_ar": "حرارة تخرج مع تبخّر الماء"
+        }
+      ],
+      "connected_organs": ["blood", "hump"],
+      "camel_specific_ar": "وُجد في الإبل تباين واضح في معدل التعرّق بحسب منطقة الجسم وبحسب وقت اليوم، كما وُجدت علاقة بين حرارة الجلد ونشاط الغدد العرقية. والأهم أن الجمل لا يبتدئ في التعرّق حتى تبلغ حرارة جسمه حداً مرتفعاً، وحرارة الجسم نفسها تتغيّر يومياً بين نحو 34 و41 °م، وهذا يقلّل الماء المفقود بالتبخّر.",
+      "camel_specific_en": "Camel sweating rate varies clearly with body region and time of day, and skin temperature has been linked to sweat-gland activity. Most importantly, the camel does not begin to sweat until body temperature has already reached a high level, and body temperature itself swings daily between roughly 34 and 41 °C, which reduces evaporative water loss.",
+      "animation_cues": {
+        "ar": "قطرات عرق قليلة تظهر أولاً في مناطق مختارة من الجلد ثم تتبخّر، وتزداد وتنقص مع دورة اليوم.",
+        "en": "A few sweat droplets appearing first in selected skin regions and evaporating, increasing and decreasing with the daily cycle."
+      },
+      "confidence": "medium",
+      "source_ids": ["S36", "S37", "S44"]
+    },
+    {
+      "id": "hump",
+      "name_ar": "السنام",
+      "name_en": "Hump (fat store)",
+      "location": {
+        "ar": "كتلة بارزة على الظهر فوق الفقرات، وواحدة فقط في الجمل العربي وحيد السنام.",
+        "en": "A prominent mass on the back over the vertebrae; the Arabian camel has a single one."
+      },
+      "relative_size": {
+        "ar": "كبير الحجم وبارز، ويتغيّر حجمه وانتفاخه تبعاً لحالة التغذية.",
+        "en": "Large and prominent, changing in size and firmness with the animal's nutritional state."
+      },
+      "function_ar": "مخزن للدهون يُستخدم عند نقص الغذاء، إذ تُحرَّق الدهون لتوفير الطاقة. وتُنتج أكسدة الدهون ماءً أيضياً يساهم في موازنة الماء داخلياً.",
+      "function_en": "A fat store used when food is scarce, as the fat is burned to provide energy. Oxidising fat also produces metabolic water that contributes to the animal's internal water balance.",
+      "how_it_works": [
+        {
+          "text_ar": "يخزّن الجمل الطاقة الزائدة في صورة دهون في السنام عند وفرة الغذاء.",
+          "text_en": "When food is plentiful the camel stores excess energy as fat in the hump."
+        },
+        {
+          "text_ar": "عند نقص الغذاء تُحرَّر الدهون وتُحمل في الدم.",
+          "text_en": "When food is scarce the fat is mobilised and carried in the blood."
+        },
+        {
+          "text_ar": "تُؤكسد الأحماض الدهنية داخل الخلايا لتوليد الطاقة.",
+          "text_en": "Fatty acids are oxidised inside cells to generate energy."
+        },
+        {
+          "text_ar": "ينتج عن الأكسدة ثاني أكسيد الكربون وماء أيضي.",
+          "text_en": "Oxidation produces carbon dioxide and metabolic water."
+        },
+        {
+          "text_ar": "ينخفض حجم السنام ويميل عند طول الجفاف، ثم يعود بالغذاء.",
+          "text_en": "The hump shrinks and droops during prolonged scarcity and refills with feeding."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "nutrients",
+          "from": "blood",
+          "note_ar": "طاقة زائدة تُخزَّن دهناً",
+          "note_en": "excess energy stored as fat"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "energy",
+          "to": "blood",
+          "note_ar": "أحماض دهنية تُطلق عند الحاجة",
+          "note_en": "fatty acids released when needed"
+        },
+        {
+          "flow": "water",
+          "to": "blood",
+          "note_ar": "ماء أيضي ناتج عن أكسدة الدهن",
+          "note_en": "metabolic water produced by fat oxidation"
+        }
+      ],
+      "connected_organs": ["blood", "skin", "liver"],
+      "camel_specific_ar": "السنام مخزن دهون لا مخزن ماء. وبلغت نسبة الدهن من المادة الجافة نحو 92% في جمال عمرها أقل من سنة، و97.4-97.6% في الأعمار الأكبر، وكانت الأحماض الدهنية المشبعة أكثر من غير المشبعة. أما ما يُروَّج عن «خزّان ماء» في السنام أو في أكياس المعدة الأولى فقد ثبت عدم صحّته؛ فالماء المتكوّن من أكسدة الدهون ماء أيضي ينتج عند الحاجة، وليس ماءً مخزّناً.",
+      "camel_specific_en": "The hump is a fat store, not a water tank. Fat made up about 92% of dry matter in camels under one year old and 97.4-97.6% in older groups, with saturated fatty acids exceeding unsaturated ones. The popular idea of a \"water reservoir\" in the hump, or in the saccules of the first stomach compartment, has been shown to be wrong: water formed by fat oxidation is metabolic water produced on demand, not stored water.",
+      "animation_cues": {
+        "ar": "كتلة دهنية تنكمش تدريجياً عند الجفاف ثم تمتلئ من جديد، مع تدفّق دهون إلى الدم عند الحاجة.",
+        "en": "A fat mass slowly shrinking during scarcity and refilling later, with fat flowing into the blood when needed."
+      },
+      "confidence": "high",
+      "source_ids": ["S38", "S39", "S44", "S42"]
+    },
+    {
+      "id": "brain",
+      "name_ar": "الدماغ",
+      "name_en": "Brain",
+      "location": {
+        "ar": "داخل تجويف الجمجمة، ويصله الدم عبر الشرايين السباتية التي تمرّ في شبكة سباتية قرب الجيوب الوريدية.",
+        "en": "Inside the cranial cavity; blood reaches it through the carotid arteries, which pass through a carotid rete near the venous sinuses."
+      },
+      "relative_size": {
+        "ar": "صغير نسبياً أمام كتلة الجسم الكبيرة، وهو عضو حسّاس للحرارة.",
+        "en": "Small relative to the large body mass, and a heat-sensitive organ."
+      },
+      "function_ar": "مركز التحكّم في الجسم: ينظّم التنفس والدورة الدموية والحرارة والعطش والسلوك. ولأنه حسّاس للحرارة، تمتلك الإبل آلية لتبريد الدم الواصل إليه.",
+      "function_en": "The body's control centre: it regulates breathing, circulation, temperature, thirst and behaviour. Because it is heat-sensitive, camels have a mechanism for cooling the blood that reaches it.",
+      "how_it_works": [
+        {
+          "text_ar": "يرتفع عند الإجهاد الحراري تدفّق الدم إلى الأنف وعلى أسطحه.",
+          "text_en": "Under heat stress, blood flow to the nasal surfaces increases."
+        },
+        {
+          "text_ar": "يبرد الدم بتبخّر الماء من سطح الأنف في أثناء الشهيق.",
+          "text_en": "That blood is cooled by water evaporating from the nasal surface."
+        },
+        {
+          "text_ar": "يعود الدم الأنفي البارد عبر الأوردة الأنفية وأوردة الزاوية إلى جيوب الجمجمة.",
+          "text_en": "Cooled blood returns through the nasal and angular veins to the cranial sinuses."
+        },
+        {
+          "text_ar": "في الجيب الكهفي يبرد الدم الشرياني المارّ في الشبكة السباتية بفعل الدم الوريدي الأبرد.",
+          "text_en": "In the cavernous sinus, the arterial blood passing through the carotid rete is cooled by the colder venous blood."
+        },
+        {
+          "text_ar": "وصل الدم المبرّد إلى الدماغ فيحميه من الإجهاد الحراري.",
+          "text_en": "The cooled blood then reaches the brain and shelters it from heat stress."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "heart",
+          "note_ar": "دم شرياني عبر الشبكة السباتية",
+          "note_en": "arterial blood through the carotid rete"
+        },
+        {
+          "flow": "blood",
+          "from": "nasal_passages",
+          "note_ar": "دم وريدي مبرّد من الأنف",
+          "note_en": "cooled venous blood from the nose"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "blood",
+          "to": "blood",
+          "note_ar": "دم وريدي يعود إلى الدورة",
+          "note_en": "venous blood returning to the circulation"
+        }
+      ],
+      "connected_organs": ["nasal_passages", "heart", "blood", "skin"],
+      "camel_specific_ar": "يُوصف الجمل بأنه يلجأ إلى تبريد الدماغ الانتقائي عند الإجهاد الحراري: يُبرَّد الدم في تجويف الأنف ويُحوَّل عبر الأوردة الأنفية إلى جيوب الجمجمة، فيبرّد الدم الشرياني في الشبكة السباتية. لكن دراسة أخرى على جمال مجهدة حرارياً وجدت أن حرارة الدماغ كانت عادة أعلى من حرارة الجسم بنحو 0.2-0.5 °م مع انعكاسات متفرقة تشير إلى تبريد، وأن تضيّق أوعية المحارات في بيئة حارة قد يمنع التبريد. لذلك يُصنَّف هذا البند بثقة متوسطة.",
+      "camel_specific_en": "The camel is described as using selective brain cooling under heat stress: blood is cooled in the nasal cavity and diverted through the nasal veins to the cranial sinuses, where it cools the arterial blood in the carotid rete. A separate study of heat-stressed camels, however, found brain temperature usually 0.2-0.5 °C above body temperature with occasional reversals indicating cooling, and concluded that turbinate vasoconstriction in a hot environment may prevent carotid-rete brain cooling. This item is therefore rated medium confidence.",
+      "animation_cues": {
+        "ar": "دم بارد يتدفّق من الأنف إلى جيوب الجمجمة ويلامس شبكة شرايين متشابكة، فتنتقل البرودة إلى الدم الصاعد إلى الدماغ.",
+        "en": "Cool blood flowing from the nose into the cranial sinuses and over a meshwork of arteries, transferring cold to the blood climbing towards the brain."
+      },
+      "confidence": "medium",
+      "source_ids": ["S24", "S23", "S25"]
+    },
+    {
+      "id": "larynx",
+      "name_ar": "الحنجرة",
+      "name_en": "Larynx",
+      "location": {
+        "ar": "في أعلى العنق تحت الفك، بين البلعوم أمامها والقصبة الهوائية خلفها؛ وتقع عالية في العنق الطويل.",
+        "en": "High in the neck under the jaw, between the pharynx in front and the trachea behind; it sits high because of the long neck."
+      },
+      "relative_size": {
+        "ar": "أنبوب قصير من غضاريف، لكن لسان المزمار فيه يحمل غددًا عميقة واسعة الفتحات، وهي بنية غير معتادة بين الثدييات.",
+        "en": "A short tube of cartilages, but the epiglottis carries deep glands with wide surface openings, a structure that is unusual among mammals."
+      },
+      "function_ar": "بوّابة مجرى الهواء: تفتح ليمرّ الهواء وتنغلق عند البلع فلا يدخل الطعام إلى الرئتين، وفيها الحبال الصوتية التي يخرج منها رغاء الجمل وهديره.",
+      "function_en": "The gate of the airway: it opens for air and closes during swallowing so food does not enter the lungs; its vocal folds generate the camel's roar and grumbling.",
+      "how_it_works": [
+        {
+          "text_ar": "يمرّ الهواء من البلعوم إلى تجويف الحنجرة عبر فتحة المزمار.",
+          "text_en": "Air passes from the pharynx into the laryngeal cavity through the glottis."
+        },
+        {
+          "text_ar": "يميل لسان المزمار على الفتحة أثناء البلع فيسدّها ويحمي المجرى الهوائي.",
+          "text_en": "During swallowing the epiglottis tilts over the opening, sealing it and protecting the airway."
+        },
+        {
+          "text_ar": "تنقبض عضلات الحنجرة فتقترب الحبال الصوتية؛ ويهتزّ الهواء المارّ بها فينشأ الصوت.",
+          "text_en": "Laryngeal muscles contract and bring the vocal folds together; the air passing between them vibrates and produces sound."
+        },
+        {
+          "text_ar": "يتابع الهواء طريقه إلى القصبة الهوائية ثم إلى الرئتين.",
+          "text_en": "The air then continues into the trachea and on to the lungs."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "air",
+          "from": "nasal_passages",
+          "note_ar": "هواء داخل من الأنف والبلعوم",
+          "note_en": "incoming air from the nose and pharynx"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "air",
+          "to": "trachea",
+          "note_ar": "هواء إلى القصبة الهوائية",
+          "note_en": "air on its way to the trachea"
+        }
+      ],
+      "connected_organs": [
+        "trachea",
+        "nasal_passages",
+        "mouth",
+        "esophagus"
+      ],
+      "camel_specific_ar": "لسان مزمار الجمل غير معتاد: تحته غدد عميقة ذات فتحات سطحية واسعة، وتمتدّ أجزاء من قنواتها داخل الغضروف نفسه، ويُرجَّح أن ذلك تكيّف لترطيب سريع وفعّال لسطح المخاطية في بيئة قاحلة. ورُصدت في لسان المزمار حلمات تذوّق لا تُظهرها الصبغات الروتينية. وللجمل كذلك لوزتان حلقيتان كبيرتان ومتطوّرتان مقارنة بغيره من الحيوانات المستأنسة.",
+      "camel_specific_en": "The camel's epiglottis is unusual: deep glands with wide surface openings lie beneath it, and parts of their ducts run inside the cartilage itself, probably an adaptation for fast, efficient hydration of the mucosa in an arid environment. Taste buds were also found in the camel epiglottis that routine stains fail to reveal. The camel's pharyngeal tonsils are likewise large and well developed compared with other domestic species.",
+      "animation_cues": {
+        "ar": "لسان مزمار يميل على الفتحة فيغلقها لحظة البلع ثم يعود، مع حبال صوتية تهتزّ فيخرج الرغاء.",
+        "en": "An epiglottis tilting over the opening to seal it at the moment of swallowing, then lifting again, with vocal folds vibrating to produce the roar."
+      },
+      "confidence": "medium",
+      "source_ids": ["S49", "S17", "S72"]
+    },
+    {
+      "id": "vessels",
+      "name_ar": "الأوعية الدموية الكبرى",
+      "name_en": "Major blood vessels",
+      "location": {
+        "ar": "الأبهر يخرج من البطين الأيسر ويوزّع الدم على الجسم، ويعود الدم بالوريد الأجوف. وعلى جانبَي العنق يجري الوريد الوداجي سطحيًّا، وفي قاعدة الجمجمة شبكة شريانية دقيقة (الشبكة السباتية أمام الجسر).",
+        "en": "The aorta leaves the left ventricle and distributes blood to the body; blood returns through the vena cava. The jugular vein runs superficially along each side of the neck, and at the base of the skull sits a fine arterial meshwork, the rostral epidural rete mirabile."
+      },
+      "relative_size": {
+        "ar": "أوعية كبيرة قطرها مناسب لجسم ضخم، أما الشبكة السباتية فأفرعها كثيرة ومتفاغرة، وأكثرها دقّة.",
+        "en": "Large vessels sized to a big body; the carotid rete is a fine, richly anastomosed meshwork, the most detailed part of the system."
+      },
+      "function_ar": "تنقل الدم المحمّل بالأكسجين إلى الأعضاء، وتعيد الدم الوريدي إلى القلب والرئتين. وفي قاعدة الجمجمة تتبادل الشبكة الشريانية الحرارة مع الدم الوريدي القادم من الأنف.",
+      "function_en": "They carry oxygenated blood to the organs and return venous blood to the heart and lungs. At the base of the skull the arterial rete exchanges heat with venous blood returning from the nose.",
+      "how_it_works": [
+        {
+          "text_ar": "يدفع البطين الأيسر الدم إلى الأبهر، فتتوزّع أفرعه على الرأس والعنق والأحشاء والقوائم.",
+          "text_en": "The left ventricle drives blood into the aorta, whose branches distribute it to the head, neck, viscera and limbs."
+        },
+        {
+          "text_ar": "تُصرَف الأعضاء الدم في أوردة تتجمّع في الوريد الأجوف، ومنه إلى القلب.",
+          "text_en": "The organs drain their blood into veins that collect into the vena cava and return to the heart."
+        },
+        {
+          "text_ar": "يصل الدم إلى الرأس عبر الشبكة السباتية داخل الجيب الكهفي.",
+          "text_en": "Blood reaches the head through the carotid rete inside the cavernous sinus."
+        },
+        {
+          "text_ar": "أوردة الأنف الباردة تغمر الشبكة، فتنتقل البرودة إلى الدم الشرياني قبل أن يبلغ الدماغ.",
+          "text_en": "Cold nasal veins bathe the rete, so heat passes from arterial blood to venous blood before it reaches the brain."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "heart",
+          "note_ar": "دم مدفوع من القلب",
+          "note_en": "blood pumped out of the heart"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "blood",
+          "to": "blood",
+          "note_ar": "دم يتابع دورته في الجسم",
+          "note_en": "blood continuing its circuit through the body"
+        }
+      ],
+      "connected_organs": [
+        "heart",
+        "blood",
+        "brain",
+        "nasal_passages"
+      ],
+      "camel_specific_ar": "الشبكة السباتية أمام الجسر في الجمل تكوّنها أفرع الشريان الفكي العلوي (نحو 76% من الإمداد بحسب أقطار الأوعية) والفرع الشرياني العيني الخارجي (نحو 10%) والشريان السباتي الداخلي (نحو 13%). وللجمل فوق ذلك شبكتان إضافيتان، عينية وتصالبية، ونظام فقري قاعدي يغذّي البصلة والجسر والمخيخ ولا يتّصل بالنظام السباتي. وهذه المفاغرات تُبقي إمداد الدماغ ثابتًا حين يرفع الجمل رأسه أو يخفضه.",
+      "camel_specific_en": "In the camel the rostral epidural rete mirabile is formed by retial branches of the maxillary artery (about 76% of the supply by vessel diameter), the external ophthalmic artery (about 10%) and the internal carotid artery (about 13%). The dromedary also has additional ophthalmic and chiasmatic retia, and a dominant vertebrobasilar system supplying the medulla, pons and cerebellum that does not connect with the carotid system. These anastomoses keep cerebral perfusion steady when the animal raises or lowers its head.",
+      "animation_cues": {
+        "ar": "دم صاعد في شبكة شرايين متشابكة عند قاعدة الجمجمة، وأوردة أنفية باردة تغمرها فتنتقل البرودة من الشريان إلى الوريد.",
+        "en": "Blood climbing through a tangled meshwork of arteries at the skull base while cold nasal veins bathe it, transferring cold from artery to vein."
+      },
+      "confidence": "high",
+      "source_ids": ["S50", "S51"]
+    },
+    {
+      "id": "teeth",
+      "name_ar": "الأسنان",
+      "name_en": "Teeth",
+      "location": {
+        "ar": "في الفكين: وسادة سنّية صلبة في مقدّم الفك العلوي بدل القواطع، والقواطع والأنياب في مقدّم الفك السفلي، والضواحك والأضراس على جانبي الفكين.",
+        "en": "In the two jaws: a hard dental pad replaces the incisors at the front of the upper jaw, incisors and canines sit at the front of the lower jaw, and premolars and molars line the sides of both jaws."
+      },
+      "relative_size": {
+        "ar": "٢٢ سنًّا لبنيّة تُستبدل تدريجيًّا بـ٣٤ سنًّا دائمة عند البالغ.",
+        "en": "Twenty-two deciduous teeth are progressively replaced by 34 permanent teeth in the adult."
+      },
+      "function_ar": "تقتلع الأعلاف الخشنة والشجيرات الشوكية وتطحنها قبل البلع، وتعيد طحن اللقمة المجترّة، ويُقدَّر بها عمر الجمل.",
+      "function_en": "They pluck coarse forage and thorny shrubs and grind them before swallowing, re-grind the cud, and are used to estimate the camel's age.",
+      "how_it_works": [
+        {
+          "text_ar": "تقبض القواطع السفلية على النبات مقابل الوسادة السنّية العليا فتقصّه.",
+          "text_en": "The lower incisors bite the plant against the upper dental pad and shear it off."
+        },
+        {
+          "text_ar": "تنقل الشفة واللسان العلف إلى الأضراس الجانبية.",
+          "text_en": "The lip and tongue move the forage back to the cheek teeth."
+        },
+        {
+          "text_ar": "تطحن الأضراس بحركات فكّية جانبية فتقطّع الألياف إلى جزيئات أصغر.",
+          "text_en": "The cheek teeth grind with lateral jaw movements and break the fibres into smaller particles."
+        },
+        {
+          "text_ar": "مع العمر تُستبدل الأسنان اللبنية بالدائمة، ويُستدلّ على العمر من زمن البزوغ ومقدار التآكل.",
+          "text_en": "With age the deciduous teeth are replaced by permanent ones, and age is read from eruption times and the degree of wear."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "food",
+          "from": "mouth",
+          "note_ar": "علف يُقبض عليه ويُقدَّم للأضراس",
+          "note_en": "forage grasped and brought to the cheek teeth"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "food",
+          "to": "mouth",
+          "note_ar": "علف ممزّق ومطحون يخلطه اللعاب",
+          "note_en": "torn, ground forage that saliva mixes into a bolus"
+        }
+      ],
+      "connected_organs": [
+        "mouth",
+        "salivary_glands",
+        "esophagus"
+      ],
+      "camel_specific_ar": "صيغة أسنان الجمل البالغ: ٣٤ سنًّا دائمة، وهي قواطع ١/٣ وأنياب ١/١ وضواحك ٣/٢ وأضراس ٣/٣، أي قاطعان ونابان في الفك العلوي وستة قواطع ونابان في الفك السفلي. وفي الفك العلوي وسادة سنّية بدل القواطع، وأما اللبنية فهي ٢٢ سنًّا. ومتابعة ٧٠ جملًا شهرًا بشهر أظهرت أن زمن البزوغ والاستبدال ثم التآكل هي المفاتيح لتقدير العمر، وأن ذلك مهم للمربّين والطبيب البيطري على حدّ سواء. وفي مسح لـ٣١٣ رأسًا في المسلخ وُجدت أصابة واحدة على الأقل في ٢٢٫٦% منها، أكثرها كسر الأسنان (٧٫٧%) والقلح (٥٫٤%) والتهاب اللثة (٤٫٢%).",
+      "camel_specific_en": "The permanent dental formula of the adult camel is 34 teeth: incisors 1/3, canines 1/1, premolars 3/2 and molars 3/3, that is two incisors and two canines in the upper jaw and six incisors and two canines in the lower jaw; the upper jaw has a dental pad instead of incisors, and the deciduous set numbers 22. A month-by-month follow-up of 70 camels showed that eruption, replacement and wear are the keys to ageing the animal, which matters to breeders and clinicians alike. In a survey of 313 slaughtered heads, 22.6% had at least one oral disorder, most often fractured teeth (7.7%), dental tartar (5.4%) and gingivitis (4.2%).",
+      "animation_cues": {
+        "ar": "قواطع سفلية تقصّ النبات على وسادة سنّية صلبة، ثم أضراس تطحن بحركة جانبية للفك.",
+        "en": "Lower incisors shearing a plant against a hard dental pad, then cheek teeth grinding with a sideways jaw movement."
+      },
+      "confidence": "high",
+      "source_ids": ["S53", "S52"]
+    },
+    {
+      "id": "ureters",
+      "name_ar": "الحالبان",
+      "name_en": "Ureters",
+      "location": {
+        "ar": "أنبوبان يخرجان من حوض كل كلية ويسيران خلف الصفاق إلى المثانة في الحوض.",
+        "en": "Two tubes leaving the pelvis of each kidney and running retroperitoneally to the bladder in the pelvis."
+      },
+      "relative_size": {
+        "ar": "رفيعان، ومقارنة بالكليتين يحملان حجمًا صغيرًا من البول الشديد التركيز.",
+        "en": "Thin tubes that carry a small volume of highly concentrated urine relative to the work of the kidneys."
+      },
+      "function_ar": "ينقلان البول من الكليتين إلى المثانة بدفع موجي (حركة دودية)، ويمنع دخولهما إلى المثانة رجوعًا.",
+      "function_en": "They move urine from the kidneys to the bladder by peristaltic waves, and their entry into the bladder prevents backflow.",
+      "how_it_works": [
+        {
+          "text_ar": "يتجمّع البول المتكوّن في الكلية في الحوض الكلوي.",
+          "text_en": "Urine formed in the kidney collects in the renal pelvis."
+        },
+        {
+          "text_ar": "تدفع موجات عضلية في جدار الحالب البول نازلًا نحو المثانة.",
+          "text_en": "Muscular waves in the ureteric wall push the urine down towards the bladder."
+        },
+        {
+          "text_ar": "يدخل الحالب المثانةَ بميل يُعين على منع الرجوع.",
+          "text_en": "The ureter enters the bladder obliquely, which helps prevent backflow."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "urine",
+          "from": "kidneys",
+          "note_ar": "بول قليل شديد التركيز",
+          "note_en": "a small volume of highly concentrated urine"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "urine",
+          "to": "bladder",
+          "note_ar": "بول إلى المثانة",
+          "note_en": "urine delivered to the bladder"
+        }
+      ],
+      "connected_organs": [
+        "kidneys",
+        "bladder"
+      ],
+      "camel_specific_ar": "لبّ الكلية في الجمل عميق وتمتدّ فيه عُرى طويلة تعيد امتصاص الماء، فيكون البول قليلًا شديد التركيز، وهذا هو ما يحمله الحالبان فعلًا. ولذلك تُعدّ الكلى والحالبان من أوضح طرق الجمل في صون الماء. ولا توجد في المصادر التي بلغها هذا البحث قياسات مقطعية خاصة بالحالبين وحدهما في الجمل، فيُوصف دورهما هنا وظيفيًّا.",
+      "camel_specific_en": "The camel kidney has a deep medulla with long loops that reclaim water, so urine is small in volume and highly concentrated, and that is what the ureters actually carry; the kidneys and ureters are therefore among the clearest water-saving routes in the camel. No ureter-specific morphometric measurements for the dromedary were reached by this research round, so their role here is described functionally.",
+      "animation_cues": {
+        "ar": "قطرات بول مركّز تنتقل من حوض الكلية عبر أنبوب رفيع بموجات هادئة إلى المثانة.",
+        "en": "Drops of concentrated urine travelling from the renal pelvis down a thin tube in quiet waves into the bladder."
+      },
+      "confidence": "medium",
+      "source_ids": ["S32", "S33", "S34"]
+    },
+    {
+      "id": "uterus",
+      "name_ar": "الرحم",
+      "name_en": "Uterus",
+      "location": {
+        "ar": "ذو قرنين، يقع في الحوض عند الصغيرة وغير الحامل لأول مرة، وفي البطن عند الأنثى البالغة غير الحامل بمستوى الفقرات القطنية الخامسة إلى السابعة.",
+        "en": "Bicornuate; it lies in the pelvic cavity in the young nulliparous female and in the abdomen at the level of the fifth to seventh lumbar vertebrae in the mature non-pregnant one."
+      },
+      "relative_size": {
+        "ar": "الجسم قصير (٢-٣٫٥ سم)، والقرنان ٦-١٠ سم لليمين و٨-١٥ سم لليسار؛ أي إن القرن الأيسر أطول بوضوح.",
+        "en": "The body is short (2-3.5 cm) and the horns measure 6-10 cm on the right and 8-15 cm on the left, so the left horn is distinctly longer."
+      },
+      "function_ar": "يحتضن الجنين ويغذّيه حتى الولادة، ويتقلّص عند المخاض لطرد الجنين، وبطانته تفرز ما تحتاجه البويضة الملقّحة لتنغرس.",
+      "function_en": "It carries and nourishes the fetus until birth, contracts during labour to expel it, and its lining provides what the fertilised egg needs to implant.",
+      "how_it_works": [
+        {
+          "text_ar": "تنتقل البويضة الملقّحة من القناة الرحمية إلى القرنين، حيث تنغرس في البطانة.",
+          "text_en": "The fertilised egg travels from the oviduct into the horns, where it implants in the lining."
+        },
+        {
+          "text_ar": "تُغذّى الأغشية الجنينية وتصل إليها المواد عبر المشيمة من دم الأم.",
+          "text_en": "The fetal membranes are nourished and receive materials through the placenta from the mother's blood."
+        },
+        {
+          "text_ar": "ينمو الجنين داخل الرحم نحو ١٣ شهرًا حتى تمام تكوّنه.",
+          "text_en": "The fetus grows in the uterus for about 13 months until it is fully formed."
+        },
+        {
+          "text_ar": "عند المخاض تنقبض عضلات الرحم فتخرج الصغير.",
+          "text_en": "At labour the uterine muscle contracts and delivers the calf."
+        },
+        {
+          "text_ar": "بعد الولادة يعود الرحم تدريجيًّا إلى حجمه ويستعدّ لدورة جديدة.",
+          "text_en": "After birth the uterus gradually returns to its former size and prepares for a new cycle."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "blood",
+          "note_ar": "دم الأم يحمل الغذاء والأكسجين إلى المشيمة",
+          "note_en": "the mother's blood carries nutrients and oxygen to the placenta"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "blood",
+          "to": "blood",
+          "note_ar": "دم وريدي يعود إلى الدورة",
+          "note_en": "venous blood returning to the circulation"
+        }
+      ],
+      "connected_organs": [
+        "ovaries",
+        "blood"
+      ],
+      "camel_specific_ar": "رحم الإبل ذو قرنين، والقرن الأيسر أطول من الأيمن بوضوح، وهو اختلاف مميز عن كثير من الثدييات الأخرى. وبطانة الرحم في الجمل خالية من الحلمات الرحمية (الكارنكلات) الموجودة في الأبقار، وغددها بسيطة متفرّعة، ولها في نهاية كل قناة رحمية حلمة عضلية مميزة عند مدخل الرحم. ويبلغ متوسط مدة الحمل في الإبل العربية ٣٨٤٫٥ يومًا (نحو ١٢٫٦ شهرًا) في بيانات ٤٠٩٣ ولادة، ويطول الحمل نحو ١٨ يومًا في الأفراد التي تُلقَّح في نوفمبر مقارنةً بمايو.",
+      "camel_specific_en": "The camel uterus is bicornuate with a distinctly longer left horn, a marked difference from many other mammals. Its lining carries no caruncles (unlike cattle), its glands are simple and branched, and each oviduct opens into the uterus through a muscular papilla at a sphincter. Mean gestation in Arabian camels is 384.5 days (about 12.6 months) in a dataset of 4,093 births, and gestation is about 18 days longer in animals conceiving in November than in those conceiving in May.",
+      "animation_cues": {
+        "ar": "قرنان رحميان أحدهما (الأيسر) أطول، ينغرس فيه الجنين ثم ينمو فيه أشهرًا حتى يخرج.",
+        "en": "Two uterine horns with the left one longer, where the embryo implants and then grows for months before it is delivered."
+      },
+      "confidence": "high",
+      "source_ids": ["S54", "S55", "S61", "S62"]
+    },
+    {
+      "id": "ovaries",
+      "name_ar": "المبيضان",
+      "name_en": "Ovaries",
+      "location": {
+        "ar": "على مسافة نحو ٣٦ سم من فتحة الفرج، والمبيض الأيسر أقرب إلى الأمام والبطن من الأيمن، وكل مبيض داخل كيس من الرباط العريض.",
+        "en": "About 36 cm from the vulval opening; the left ovary lies more cranio-ventrally than the right, and each ovary sits inside a bursa of the broad ligament."
+      },
+      "relative_size": {
+        "ar": "٢٫٦-٦ سم طولًا، و٢-٤ سم عرضًا، و٠٫٥-٠٫٩ سم سُمكًا، ووزن كل مبيض ٣-٤ غرامات في الجمل العربي.",
+        "en": "2.6-6 cm long, 2-4 cm wide and 0.5-0.9 cm thick, each ovary weighing 3-4 g in the dromedary."
+      },
+      "function_ar": "تنضج فيه البويضات وتُطلق عند الإباضة، ويُفرز منه هرمون الإستروجين والبروجستيرون الذي يضبط الحمل.",
+      "function_en": "Eggs mature and are released here at ovulation, and the ovary produces oestrogen and the progesterone that supports pregnancy.",
+      "how_it_works": [
+        {
+          "text_ar": "تنمو مجموعات من الجريبات في موجات متتابعة، وقد تتزامن عدة موجات معًا.",
+          "text_en": "Groups of follicles grow in successive waves, and several generations can be present at the same time."
+        },
+        {
+          "text_ar": "عند التزاوج تنطلق الإشارة الهرمونية من الجماع فينفجر الجريب الناضج.",
+          "text_en": "At mating the hormonal signal from copulation triggers the mature follicle to rupture."
+        },
+        {
+          "text_ar": "تتكوّن بعد الإباضة غدّة صفراء تُفرز البروجستيرون لتهيئة الرحم للحمل.",
+          "text_en": "After ovulation a corpus luteum forms and secretes progesterone, preparing the uterus for pregnancy."
+        },
+        {
+          "text_ar": "إن لم يحدث حمل، تتحلّل الغدّة الصفراء بعد ١٠-١٢ يومًا وتعود الدورة.",
+          "text_en": "If pregnancy does not occur, the corpus luteum regresses after 10-12 days and the cycle resumes."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "blood",
+          "note_ar": "دم يحمل الهرمونات والغذاء إلى المبيض",
+          "note_en": "blood carrying hormones and nutrients to the ovary"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "blood",
+          "to": "blood",
+          "note_ar": "هرمونات تُفرز في الدم",
+          "note_en": "hormones released into the blood"
+        }
+      ],
+      "connected_organs": [
+        "uterus",
+        "blood"
+      ],
+      "camel_specific_ar": "الإبل ذات إباضة مُستحَثّة: لا تبيض من تلقاء نفسها، بل تحتاج إلى الجماع ليطلق ما يحفّز الإباضة، فلا تتكوّن غدّة صفراء دورية في غير المتزاوجة. والجريب المبيضي الناضج يبلغ ١٣-٢٠ مم، وتحدث الإباضة بعد ٢٤-٤٨ ساعة من التزاوج. وأحيانًا تظهر جريبات كبيرة لا تُبيض في نحو نصف الإناث غير المتزاوجة. أما الغدّة الصفراء في غير الحامل فتبلغ ١٢-١٥ مم وتزن ١٫٥-٢ غرام، وتكبر في الحمل.",
+      "camel_specific_en": "Camels are induced ovulators: they do not ovulate on their own but need mating to trigger the surge, so no cyclical corpus luteum forms in an unmated female. The mature pre-ovulatory follicle measures 13-20 mm, and ovulation follows mating by 24-48 hours. Large anovulatory follicles occur in about half of unmated females. In the non-pregnant animal the corpus luteum measures 12-15 mm and weighs 1.5-2 g, becoming larger in pregnancy.",
+      "animation_cues": {
+        "ar": "جريبات صغيرة تكبر على سطح المبيض على شكل موجات، ثم جريب ناضج ينفجر بعد التزاوج وتنشأ مكانه غدّة صفراء.",
+        "en": "Small follicles swelling on the ovarian surface in waves, then a mature follicle rupturing after mating and a corpus luteum forming in its place."
+      },
+      "confidence": "high",
+      "source_ids": ["S54", "S59", "S60"]
+    },
+    {
+      "id": "udder",
+      "name_ar": "الضرع",
+      "name_en": "Udder",
+      "location": {
+        "ar": "في المنطقة الإربية بين الفخذين، وينقسم إلى نصفين لكل منهما ربعان وحلمتان، أي أربع حلمات؛ ولكل ربع قناته اللبنية المستقلة.",
+        "en": "In the inguinal region between the thighs, divided into two halves each with two quarters and two teats, so four teats in all; each quarter has its own independent milk duct."
+      },
+      "relative_size": {
+        "ar": "متوسط طول الحلمة نحو ٥٠-٥٨ مم وقطرها ٣٩-٤٦ مم، وعمق الضرع نحو ٢٥ سم وطوله نحو ٣٧ سم في الجمل العربي الهندي.",
+        "en": "Teat length averages about 50-58 mm with a diameter of 39-46 mm, and udder depth and length average about 25 cm and 37 cm in Indian dromedaries."
+      },
+      "function_ar": "غدّة الحليب: تصنع اللبن من مواد تُنقل بالدم وتخزّنه في الأسناخ والحوض اللبني، ثم يُدرّ للصغير أو للحالب عند تحفيز الحلمة.",
+      "function_en": "The milk gland: it makes milk from materials carried in the blood and stores it in the alveoli and the milk cistern, then lets it down for the calf or the milker when the teat is stimulated.",
+      "how_it_works": [
+        {
+          "text_ar": "تصل العناصر الغذائية بالدم إلى خلايا الأسناخ فتفرز اللبن.",
+          "text_en": "Nutrients arrive by blood at the alveolar cells, which secrete milk."
+        },
+        {
+          "text_ar": "يُحتلب اللبن من الأسناخ في القنوات ثم في الحوض اللبني.",
+          "text_en": "Milk is pressed from the alveoli into the ducts and then into the milk cistern."
+        },
+        {
+          "text_ar": "عند الرضاعة يتحرّر الأوكسيتوسين فتنقبض الخلايا العضلية حول الأسناخ ويُنزل اللبن.",
+          "text_en": "At suckling oxytocin is released, myoepithelial cells around the alveoli contract and milk is let down."
+        },
+        {
+          "text_ar": "يخرج اللبن من الحلمة عبر قناتها إلى خارج الجسم.",
+          "text_en": "Milk leaves through the teat canal to the outside."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "nutrients",
+          "from": "blood",
+          "note_ar": "مواد الغذاء والماء تُنقل بالدم",
+          "note_en": "nutrients and water brought by the blood"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "nutrients",
+          "to": "environment",
+          "note_ar": "لبن يشربه الصغير أو يُحلب",
+          "note_en": "milk drunk by the calf or taken by milking"
+        }
+      ],
+      "connected_organs": [
+        "blood",
+        "uterus"
+      ],
+      "camel_specific_ar": "للضرع في الجمل أربعة أرباع وأربع حلمات، وقد يبدو نصفاه وكأنهما ضرعان منفصلان. والدراسة بالموجات فوق الصوتية والمنظار تُظهر أن قناتَي الحلمة وحوضيها مستقلان تمامًا، وأنه لا توجد قناة تربط نسيج الغدّة بين القناتين. وهذا التصميم المستقل مهمّ عمليًّا: يمكن أن يُصاب ربع دون الآخر، ومنه تنشأ الحاجة إلى فحص كل حلمة على حدة عند تشخيص التهاب الضرع.",
+      "camel_specific_en": "The camel udder has four quarters and four teats, and its two halves may look like separate glands. Ultrasonography and endoscopy show that the two teat canals and cisterns are completely independent, with no communication between the glandular tissue of the two canals. That independent design matters in practice: one quarter can be affected while another is healthy, which is why each teat must be examined separately when mastitis is diagnosed.",
+      "animation_cues": {
+        "ar": "ضرع بأربع حلمات، يستجيب للحلابة فيتحرّر الأوكسيتوسين ويدفع اللبن من الأسناخ إلى الحوض ثم خارج الحلمة.",
+        "en": "An udder with four teats responding to milking: oxytocin is released, pushing milk from the alveoli into the cistern and out through the teat."
+      },
+      "confidence": "high",
+      "source_ids": ["S56", "S57", "S58"]
+    },
+    {
+      "id": "testes",
+      "name_ar": "الخصيتان",
+      "name_en": "Testes",
+      "location": {
+        "ar": "في المنطقة العجانية تحت فتحة الشرج، موجّهتان إلى الخلف والأعلى، وكيس الصفن غير متدلٍّ بين الفخذين كما في الأبقار.",
+        "en": "In the perineal region below the anus, directed caudo-dorsally; the scrotum is not pendulous between the thighs as in cattle."
+      },
+      "relative_size": {
+        "ar": "متوسط الطول ٧-١٠ سم ووزن كل خصية ٨٠-١٠٠ غرام، ويتفاوت الحجم تفاوتًا واسعًا بحسب العمر والموسم والنشاط الجنسي.",
+        "en": "Length averages 7-10 cm and each testis weighs 80-100 g, varying widely with age, season and sexual activity."
+      },
+      "function_ar": "تنتج الحيوانات المنوية، وتفرز التستوستيرون الذي يضبط سلوك التزاوج وصفات الذكورة.",
+      "function_en": "They produce sperm and secrete testosterone, which controls mating behaviour and male characteristics.",
+      "how_it_works": [
+        {
+          "text_ar": "تنضج الحيوانات المنوية داخل الأنابيب المنوية في الخصية.",
+          "text_en": "Sperm mature inside the seminiferous tubules of the testis."
+        },
+        {
+          "text_ar": "تنتقل إلى البربخ ثم إلى الحبل المنوي لتُخزَّن استعدادًا للقذف.",
+          "text_en": "They pass into the epididymis and then the ductus deferens, where they are stored before ejaculation."
+        },
+        {
+          "text_ar": "تفرز خلايا لايدن التستوستيرون في الدم.",
+          "text_en": "Leydig cells secrete testosterone into the blood."
+        },
+        {
+          "text_ar": "يزداد نشاط الخصية وحجمها في موسم التزاوج البارد.",
+          "text_en": "Testicular activity and size increase in the cool breeding season."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "blood",
+          "note_ar": "دم يحمل الأكسجين والهرمونات الموجّهة",
+          "note_en": "blood carrying oxygen and the regulating hormones"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "blood",
+          "to": "blood",
+          "note_ar": "تستوستيرون يُفرز في الدم",
+          "note_en": "testosterone released into the blood"
+        }
+      ],
+      "connected_organs": [
+        "blood",
+        "bladder"
+      ],
+      "camel_specific_ar": "الخصيتان في الجمل صغيرتان بيضاويتان، وتقعان عاليًا في العجان تحت الشرج لا بين الفخذين، وتكبران وتبرزان في موسم التزاوج. وتتغيّر وظيفتها تغيّرًا موسميًّا: في الأشهر الحارة ينخفض حجم الخصية ومؤشّرات تدفّق الدم فيها، وتقلّ حركة الحيوانات المنوية وتركيزها، بينما ترتفع هذه القيم في الأشهر الباردة، فتُوصف دراسة الجدوى التناسلية للذكر بحسب الموسم.",
+      "camel_specific_en": "The camel's testes are small and ovoid, set high in the perineum below the anus rather than between the thighs, and they enlarge and protrude during the breeding season. Their function is strongly seasonal: in the hot months testicular volume and blood-flow indices fall and sperm motility and concentration drop, while all of these rise in the cool months, so evaluating a male's breeding potential is season-dependent.",
+      "animation_cues": {
+        "ar": "خصيتان صغيرتان مرتفعتان تحت الشرج تكبران في موسم التزاوج ثم تعودان، مع انخفاض في الأشهر الحارة.",
+        "en": "Two small testes set high under the anus enlarging in the breeding season and subsiding again, with a dip in the hot months."
+      },
+      "confidence": "high",
+      "source_ids": ["S54", "S63"]
+    },
+    {
+      "id": "dulla",
+      "name_ar": "الشقشقة (الدُّلّا)",
+      "name_en": "Dulla (soft palate)",
+      "location": {
+        "ar": "امتداد من الحنك الرخو عند سقف الفم والحلق، بطول يمتدّ نحو البلعوم.",
+        "en": "An extension of the soft palate at the roof of the mouth and throat, running towards the pharynx."
+      },
+      "relative_size": {
+        "ar": "أكبر بكثير في الذكر البالغ منها في الأنثى، وفي الأنثى تبقى غير قابلة للانتفاخ.",
+        "en": "Far larger in the adult male than in the female, and in the female it remains a non-distensible structure."
+      },
+      "function_ar": "جزء من الحنك الرخو يساعد في إغلاق مجرى الأنف عند البلع، وللذكر فيه استعمال خاص في موسم الهياج.",
+      "function_en": "Part of the soft palate that helps close off the nasal passage during swallowing; in the male it has a special use in the rut.",
+      "how_it_works": [
+        {
+          "text_ar": "يرتفع الحنك الرخو في أثناء البلع مع لسان المزمار فيمنع دخول الطعام إلى الأنف.",
+          "text_en": "During swallowing the soft palate rises with the epiglottis and keeps food out of the nose."
+        },
+        {
+          "text_ar": "في موسم الهياج ينفخ الذكر الحنك الرخو فيتمدّد.",
+          "text_en": "In the rut the male inflates the soft palate so that it distends."
+        },
+        {
+          "text_ar": "يُخرج الشقشقة من جانب فمه ككيس وردي مع صوت قرقرة مميّز.",
+          "text_en": "He pushes the dulla out of the side of his mouth as a pink bladder with a characteristic gurgling sound."
+        },
+        {
+          "text_ar": "يُستعمل هذا العرض أمام الإناث والمنافسين، ويرتبط أيضًا بالتهيّج والعدوانية.",
+          "text_en": "This display is used towards females and rivals, and it is also associated with irritation and aggression."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "blood",
+          "note_ar": "دم يغذّي النسيج الرخو وينتفخ به",
+          "note_en": "blood nourishing and engorging the soft tissue"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "air",
+          "to": "environment",
+          "note_ar": "صوت الهدير الخارج من الحلق",
+          "note_en": "the roaring sound produced at the throat"
+        }
+      ],
+      "connected_organs": [
+        "mouth",
+        "larynx",
+        "esophagus"
+      ],
+      "camel_specific_ar": "إخراج الشقشقة سلوك مميّز لذكور الجمل العربي وحده؛ فلا يُرى في الجمل ذي السنامين ولا في اللاما. والأكثر ترجيحًا أن الكيس الذي يُخرجه الذكر من جانب فمه هو تركيب تشريحي خاص بالذكر، يبقى غير عامل عند الأنثى. واللوزتان في منطقة الحنك الرخو والبلعوم كبيرة ومتطوّرة في الجمل، وقد يُصاب الحنك الرخو نفسه بالتدلّي وهو حالة سريرية وصفت في جمل عربي ذكر.",
+      "camel_specific_en": "Exteriorisation of the dulla is a display unique to male dromedaries; it is not seen in the Bactrian camel or the llama. The diverticulum the male pushes out of the side of his mouth is best regarded as a male-specific anatomical structure, non-functional in the female. The tonsils of the soft palate and pharynx are also large and well developed in the camel, and the soft palate itself can prolapse, a clinical condition described in a male Arabian camel.",
+      "animation_cues": {
+        "ar": "حنك رخو ينتفخ ويدفع من جانب الفم ككيس وردي مع قرقرة، ثم يعود إلى مكانه.",
+        "en": "A soft palate swelling and being pushed out of the side of the mouth as a pink bladder with a gurgle, then sliding back."
+      },
+      "confidence": "medium",
+      "source_ids": ["S85", "S72", "S73"]
+    },
+    {
+      "id": "eyes",
+      "name_ar": "العينان",
+      "name_en": "Eyes",
+      "location": {
+        "ar": "في تجويفين عظميين على جانبي الرأس تحت حاجب عظمي بارز، وكل عين داخل محجر واسع تحدّه عظام محيطة.",
+        "en": "In bony orbits on the sides of the head under a prominent bony brow; each eye sits in a wide orbit bounded by surrounding bones."
+      },
+      "relative_size": {
+        "ar": "العين كبيرة وكروية، والعدسة كرة كثيفة في مركزها، ويظهر محورها في الصور المقطعية واضحًا.",
+        "en": "The eye is large and spherical, with a dense lens at its centre, and its axis is clearly seen on cross-sectional imaging."
+      },
+      "function_ar": "الإبصار: تعبر الصورة عن سطح القرنية والعدسة إلى الشبكية، ثم تُنقل بالعصب البصري إلى الدماغ.",
+      "function_en": "Sight: light passes through the cornea and lens to the retina and is carried by the optic nerve to the brain.",
+      "how_it_works": [
+        {
+          "text_ar": "تنكسر أشعة الضوء على القرنية ثم العدسة فتتجمع على الشبكية.",
+          "text_en": "Light rays are refracted by the cornea and then the lens and come to a focus on the retina."
+        },
+        {
+          "text_ar": "تتحوّل الصورة في المستقبلات الضوئية إلى إشارات عصبية.",
+          "text_en": "Photoreceptors turn the image into nerve signals."
+        },
+        {
+          "text_ar": "تنتقل الإشارات في العصب البصري إلى مراكز الإبصار في الدماغ.",
+          "text_en": "The signals travel along the optic nerve to the visual centres of the brain."
+        },
+        {
+          "text_ar": "تحمي الدموع والجفون وحواجب العين سطحها وتغسل ما يعلق به.",
+          "text_en": "Tears, lids and the brow protect the surface and wash away what clings to it."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "blood",
+          "note_ar": "دم يغذّي الشبكية والملتحمة",
+          "note_en": "blood nourishing the retina and conjunctiva"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "water",
+          "to": "environment",
+          "note_ar": "دموع تخرج من زاوية العين",
+          "note_en": "tears leaving at the inner corner of the eye"
+        }
+      ],
+      "connected_organs": [
+        "brain",
+        "nasal_passages"
+      ],
+      "camel_specific_ar": "تكوّن طبقات العين في جنين الجمل وإطاره المحيط يُظهر تعديلات بيئية خاصة: تغطية سطحية للقرنية قرب الحوف، وتسمّك واضح في غشاء ديسميت، ووجود صبغة عند ملتقى القرنية بالصلبة، وهي كلها ترسيب يُرجَّح أنه يتلاءم مع بيئة شديدة القحولة والغبار. والصور المقطعية تُظهر أن جدار محجر العين العظمي يحيط بالعين تحديدًا واضحًا.",
+      "camel_specific_en": "The development of the eye tunics in the fetal camel and its surroundings shows specific environmental modifications: a pigmented peripheral cornea near the limbus, a markedly thickened Descemet's membrane and pigmentation at the corneo-scleral junction, all likely adaptations to a severe, dusty environment. Computed tomography shows that the bony wall of the orbit surrounds the eye with clear definition.",
+      "animation_cues": {
+        "ar": "عين كبيرة في محجر عظمي واسع، تدور لتتبع ما حولها، مع غلاف قرنية مُصبَّغ يزيد قرب الحوف وطبقة داخلية سميكة.",
+        "en": "A large eye in a wide bony orbit turning to follow the surroundings, with a pigmented corneal rim near the limbus and a thickened inner layer."
+      },
+      "confidence": "medium",
+      "source_ids": ["S84", "S83"]
+    },
+    {
+      "id": "ears",
+      "name_ar": "الأذنان",
+      "name_en": "Ears",
+      "location": {
+        "ar": "على جانبي الرأس: صيوان صغير مستدير يحمله صف من الغضاريف والعضلات، ثم قناة السمع ثم الأذن الداخلية داخل العظم الصدغي.",
+        "en": "On the sides of the head: a small rounded pinna supported by a set of cartilages and muscles, then the ear canal, then the inner ear within the petrous bone."
+      },
+      "relative_size": {
+        "ar": "الصيوان صغير نسبيًّا، أما الأذن الداخلية فتناسب حياة الصحراء: قوقعة عريضة، و٣ لفات، وغشاء قاعدي طويل.",
+        "en": "The pinna is relatively small, while the inner ear suits desert life: a broad cochlea, three turns and a long basilar membrane."
+      },
+      "function_ar": "السمع والتوازن: يلتقط الصيوان الصوت وتنقله العظيمات إلى الأذن الداخلية، حيث تُسمع الأصوات وتُضبط قدرة الجسم على الاتزان.",
+      "function_en": "Hearing and balance: the pinna gathers sound, the ossicles pass it to the inner ear, where sounds are detected and the sense of equilibrium is generated.",
+      "how_it_works": [
+        {
+          "text_ar": "يجمع الصيوان الأصوات ويركّزها نحو القناة السمعية.",
+          "text_en": "The pinna gathers sound and funnels it into the ear canal."
+        },
+        {
+          "text_ar": "تهتزّ طبلة الأذن وتنقل العظيمات الثلاث الذبذبات إلى الأذن الداخلية.",
+          "text_en": "The eardrum vibrates and the three ossicles carry the vibration to the inner ear."
+        },
+        {
+          "text_ar": "يتحوّل الاهتزاز في القوقعة إلى إشارات عصبية تُرسل إلى الدماغ.",
+          "text_en": "In the cochlea the vibration becomes nerve signals sent to the brain."
+        },
+        {
+          "text_ar": "تقيس القنوات الهلالية حركة الرأس وتساعد في حفظ التوازن.",
+          "text_en": "The semicircular canals measure head movement and help maintain balance."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "air",
+          "from": "environment",
+          "note_ar": "موجات صوتية تنتقل في الهواء",
+          "note_en": "sound waves travelling through the air"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "blood",
+          "to": "brain",
+          "note_ar": "إشارات سمعية وتوازنية إلى الدماغ",
+          "note_en": "auditory and balance signals to the brain"
+        }
+      ],
+      "connected_organs": [
+        "brain",
+        "skin"
+      ],
+      "camel_specific_ar": "صيوان الجمل بنية مميزة: ثلاث غضاريف وعضلات منظّمة في أربع مجموعات (أمامية وظهرية وبطنية وخلفية)، وهي مواضع يهتمّ بها الطبيب البيطري عند تخدير أعصاب الأذن. وتشير دراسة على الأذن الداخلية إلى أن طول الغشاء القاعدي واتّساع القوقعة وعدد لفاتها (٣ لفات) تُعين على سمع الأصوات المنخفضة، وأن تعامد القنوات الهلالية وشدّة تقوّس القناة الأفقية وظهور الحفرة تحت العظم الحرشفي تُعين الجمل على الاتزان على الرمل حتى في العواصف.",
+      "camel_specific_en": "The camel's pinna has a particular structure: three cartilages and muscles arranged in four groups (rostral, dorsal, ventral and caudal), landmarks the veterinarian uses for auricular nerve blocks. A study of the inner ear indicates that the length of the basilar membrane, the breadth of the cochlea and its three turns support low-frequency hearing, while the orthogonality of the semicircular canals, the strong curvature of the lateral canal and the presence of the subarcuate fossa help the camel keep its balance on sand, even in sandstorms.",
+      "animation_cues": {
+        "ar": "صيوان صغير يدور نحو مصدر الصوت، وتحت الجلد غضاريف وعضلات منظّمة، وداخل العظم قوقعة بثلاث لفات وقنوات توازن متعامدة.",
+        "en": "A small pinna turning towards a sound, with organised cartilages and muscle groups under the skin and, inside the bone, a three-turn cochlea and orthogonal balance canals."
+      },
+      "confidence": "high",
+      "source_ids": ["S79", "S80"]
+    },
+    {
+      "id": "poll_glands",
+      "name_ar": "غدّتا القفا",
+      "name_en": "Poll glands",
+      "location": {
+        "ar": "في النسيج تحت الجلد في منطقة القفا خلف الرأس، واحدة على كل جانب.",
+        "en": "In the subcutaneous tissue of the poll behind the head, one on each side."
+      },
+      "relative_size": {
+        "ar": "صغيرتان خارج الموسم، وتكبران وتنشطان نشاطًا واضحًا في موسم الهياج.",
+        "en": "Small outside the season; they enlarge and become markedly active during the rut."
+      },
+      "function_ar": "تفرزان مادة دهنية ذات رائحة مميزة يتركها الذكر على الأشياء والأرض ليعلّم مكانه ويجذب الإناث.",
+      "function_en": "They secrete a scented, fatty material that the male leaves on objects and the ground to mark his territory and attract females.",
+      "how_it_works": [
+        {
+          "text_ar": "في موسم الهياج يزداد حجم الغدّة ونشاط خلاياها الإفرازية.",
+          "text_en": "In the rut the gland enlarges and its secretory cells become more active."
+        },
+        {
+          "text_ar": "تزيد الخلايا استهلاك الأحماض الدهنية لتوفير الطاقة للإفراز المستمرّ.",
+          "text_en": "The cells increase their use of fatty acids to fuel continuous secretion."
+        },
+        {
+          "text_ar": "يخرج الإفراز على الجلد فيلتصق بالوبر والرمل.",
+          "text_en": "The secretion reaches the skin and sticks to the hair and sand."
+        },
+        {
+          "text_ar": "يمسح الذكر رأسه على الأشياء أو يخرج إفرازه مع البول لتعليم مكانه.",
+          "text_en": "The male rubs his head on objects or passes the secretion out with urine to mark his ground."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "nutrients",
+          "from": "blood",
+          "note_ar": "أحماض دهنية وسكّر تصل بالدم",
+          "note_en": "fatty acids and sugar delivered by the blood"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "water",
+          "to": "skin",
+          "note_ar": "إفراز دهني يخرج على سطح الجلد",
+          "note_en": "an oily secretion reaching the skin surface"
+        }
+      ],
+      "connected_organs": [
+        "skin",
+        "blood"
+      ],
+      "camel_specific_ar": "غدد القفا في الجمل موجودة عند الذكر فقط، وتنشط نشاطًا موسميًّا في زمن الهياج فتفرز مادة صفراء مائية برائحة مميزة، ويُستخدم هذا الإفراز مع رشّ البول في سلوك التعلّم على المكان وجذب الأنثى. ودراسات على نسيج الغدّة في موسم الهياج تُظهر تغيّرًا في أيض الأحماض الدهنية وتحوّلًا في نشاط الخلايا الإفرازية، ما يجعلها نموذجًا لأثر الموسم على الأعضاء الثانوية.",
+      "camel_specific_en": "Poll glands are present in the male camel only; they become seasonally active in the rut and secrete a pale-yellow, watery, strongly scented material that, together with urine spraying, is used to mark territory and attract females. Studies of the gland during the rutting season show shifts in fatty-acid metabolism and in the activity of its secretory cells, making it a model of how season affects secondary organs.",
+      "animation_cues": {
+        "ar": "غدّتان صغيرتان على القفا تكبران في الموسم وتسيل منهما مادة دهنية يمسحها الذكر على الأشياء.",
+        "en": "Two small glands on the poll enlarging in season and pouring out an oily material the male rubs on objects."
+      },
+      "confidence": "medium",
+      "source_ids": ["S64", "S65", "S66"]
+    },
+    {
+      "id": "adrenals",
+      "name_ar": "الغدّتان الكظريتان",
+      "name_en": "Adrenal glands",
+      "location": {
+        "ar": "غدّتان صغيرتان ملاصقتان للقطب الأمامي لكل كلية داخل الدهن المحيط بها.",
+        "en": "Two small glands sitting on the cranial pole of each kidney within the surrounding fat."
+      },
+      "relative_size": {
+        "ar": "صغيرتان، لكن قشرتهما مقسّمة إلى مناطق واضحة، ولكل منطقة وظيفة هرمونية مختلفة.",
+        "en": "Small glands, but their cortex is divided into clear zones, each with a different hormonal role."
+      },
+      "function_ar": "تفرزان الكورتيزول لمواجهة الشدّة، والألدوستيرون لضبط الصوديوم والماء، والأدرينالين الذي يرفع معدّل النبض والسكر عند الخوف أو الخطر.",
+      "function_en": "They secrete cortisol to meet stress, aldosterone to control sodium and water, and adrenaline, which raises heart rate and blood sugar under danger or fear.",
+      "how_it_works": [
+        {
+          "text_ar": "يصل أمر من المخ عبر الغدّة النخامية إلى القشرة الكظرية.",
+          "text_en": "A brain signal relayed through the pituitary reaches the adrenal cortex."
+        },
+        {
+          "text_ar": "تفرز المنطقة الحزمية الكورتيزول، فيرفع السكر ويضبط الاستجابة للشدّة.",
+          "text_en": "The zona fasciculata secretes cortisol, which raises blood sugar and shapes the stress response."
+        },
+        {
+          "text_ar": "تفرز المنطقة الكبيبية الألدوستيرون، فيعيد امتصاص الصوديوم والماء.",
+          "text_en": "The zona glomerulosa secretes aldosterone, which reclaims sodium and water."
+        },
+        {
+          "text_ar": "تفرز خلايا اللبّ الأدرينالين والنورأدرينالين عند الانفعال.",
+          "text_en": "The medulla releases adrenaline and noradrenaline in excitement."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "blood",
+          "note_ar": "دم يصل بالهرمونات المنظّمة",
+          "note_en": "blood arriving with the regulating hormones"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "blood",
+          "to": "blood",
+          "note_ar": "كورتيزول وألدوستيرون وأدرينالين في الدم",
+          "note_en": "cortisol, aldosterone and adrenaline entering the blood"
+        }
+      ],
+      "connected_organs": [
+        "kidneys",
+        "blood",
+        "brain"
+      ],
+      "camel_specific_ar": "وصف حديث لنسيج الغدّة الكظرية في الجمل العربي مع محور تحت المهاد-النخامية-الكظرية أظهر تركيبًا مماثلًا لبقية الثدييات، وربط بين التغيّرات البنيوية الدقيقة ومقدار الكورتيزول في الدم بعد نقل الحيوان مسافة طويلة. وفي الجمل ذي السنامين تُقسَّم القشرة إلى أربع مناطق، ومنها منطقة وسطية يظهر فيها فرق بين الجنسين والذكور المخصية. ولأن هذه التفاصيل بُنيت على أعداد صغيرة من الحيوانات، فتبقى ثقة هذه البطاقة متوسطة.",
+      "camel_specific_en": "A recent description of the adrenal tissue in the dromedary together with the hypothalamic-pituitary-adrenal axis showed a mammalian-typical structure and tied fine structural changes to blood cortisol after a long transport. In the Bactrian camel the cortex is divided into four zones, one of which (the zona intermedia) differs between females and castrated males. Because these details rest on small numbers of animals, this card is rated medium confidence.",
+      "animation_cues": {
+        "ar": "غدّة صغيرة فوق الكلية تفرز الكورتيزول والألدوستيرون، ويرتفع إفرازها عند الشدّة أو العطش.",
+        "en": "A small gland sitting on the kidney releasing cortisol and aldosterone, with output rising under stress or thirst."
+      },
+      "confidence": "medium",
+      "source_ids": ["S67", "S68"]
+    },
+    {
+      "id": "thyroid",
+      "name_ar": "الغدّة الدرقية",
+      "name_en": "Thyroid gland",
+      "location": {
+        "ar": "فصّان على جانبَي القصبة الهوائية في الجزء الأمامي من العنق.",
+        "en": "Two lobes on either side of the trachea in the cranial part of the neck."
+      },
+      "relative_size": {
+        "ar": "غدّة صغيرة الحجم، لكن نشاطها يتغيّر تغيّرًا موسميًّا واضحًا مع الماء والحرارة.",
+        "en": "A small gland, but its activity changes markedly with season, water supply and heat."
+      },
+      "function_ar": "تضبط سرعة الأيض ومقدار الحرارة التي يولّدها الجسم، وتؤثّر بالتالي في كمية الماء المفقود.",
+      "function_en": "It sets the metabolic rate and the amount of heat the body produces, and therefore how much water is lost.",
+      "how_it_works": [
+        {
+          "text_ar": "تفرز الغدّة هرمونَي الثيروكسين وثلاثي يودوثيرونين في الدم.",
+          "text_en": "The gland releases thyroxine and triiodothyronine into the blood."
+        },
+        {
+          "text_ar": "ترفع هذه الهرمونات استهلاك الخلايا للأكسجين وتوليد الحرارة.",
+          "text_en": "These hormones raise cellular oxygen use and heat production."
+        },
+        {
+          "text_ar": "عند الحاجة إلى صون الماء ينخفض إفرازها فيقلّ الاستهلاك والتوليد الحراري.",
+          "text_en": "When water must be conserved, secretion falls, so metabolism and heat production drop."
+        },
+        {
+          "text_ar": "يتغيّر نشاط الغدّة بين الفصول تبعًا للحرارة وتوفّر الماء.",
+          "text_en": "Glandular activity shifts between seasons with temperature and water availability."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "blood",
+          "note_ar": "دم يصل بالأكسجين واليود",
+          "note_en": "blood arriving with oxygen and iodine"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "blood",
+          "to": "blood",
+          "note_ar": "هرمونات درقية في الدم",
+          "note_en": "thyroid hormones entering the blood"
+        }
+      ],
+      "connected_organs": [
+        "blood",
+        "trachea"
+      ],
+      "camel_specific_ar": "قياس وظيفة الغدّة الدرقية في الجمل في الشتاء والربيع والصيف أظهر أن الغدّة تُحفَّز في الصيف عند توفّر الماء، وتُثبَّط بعد العطش. ويُفسَّر هذا بأن انخفاض إفراز الهرمون الدرقي في العطش الصيفي يساعد في صون ماء الجسم، إذ يقلّل فقد الماء مع التنفّس ويخفض الأيض الأساسي، وهي حيلة تنظيمية صيفية لا تُقاس عليها الحالات الأخرى.",
+      "camel_specific_en": "Measurements of thyroid function in camels in winter, spring and summer showed that the gland is stimulated in summer when water is available and inhibited after dehydration. The fall in thyroid secretion during summer thirst is interpreted as an aid to conserving body water, because it lowers water loss through the lungs and reduces basal metabolism; it is a seasonal regulatory response rather than a fixed state.",
+      "animation_cues": {
+        "ar": "غدّة صغيرة على القصبة الهوائية يهبط نشاطها صيفًا مع العطش، فيقلّ توليد الحرارة وفقد الماء.",
+        "en": "A small gland beside the trachea whose output falls in summer thirst, lowering heat production and water loss."
+      },
+      "confidence": "high",
+      "source_ids": ["S69"]
+    },
+    {
+      "id": "lymph_nodes",
+      "name_ar": "العقد اللمفاوية",
+      "name_en": "Lymph nodes",
+      "location": {
+        "ar": "مجموعات على مسار الأوعية اللمفية: في الرأس عقد نكفية وتحت الفك وخلف البلعوم، وعقد أمام الكتف وأمام الفخذ وفي أحشاء البطن.",
+        "en": "Groups along the lymph vessels: parotid, mandibular and lateral retropharyngeal nodes in the head, and nodes in front of the shoulder, in front of the thigh and within the abdomen."
+      },
+      "relative_size": {
+        "ar": "تتفاوت أحجامها بحسب الموضع؛ وهي في الرأس عقد فصّية، وقد تحمل عددًا كبيرًا من كريات الدم الحمراء.",
+        "en": "They vary in size with site; the head nodes are lobulated and may contain a large number of red blood cells."
+      },
+      "function_ar": "محطّات ترشيح في مسار اللمف: ترشّح السائل النسيجي، وتحتجز الجراثيم والجزيئات الغريبة، وتطلق الخلايا المناعية التي تبدأ الاستجابة.",
+      "function_en": "Filter stations along the lymph: they filter tissue fluid, trap germs and foreign particles, and launch the immune cells that begin the response.",
+      "how_it_works": [
+        {
+          "text_ar": "يجمع السائل النسيجي في الأوعية اللمفية ثم يصل إلى العقدة.",
+          "text_en": "Tissue fluid is collected by lymph vessels and arrives at the node."
+        },
+        {
+          "text_ar": "يمرّ السائل بين الجيوب والحبال اللمفية داخل العقدة.",
+          "text_en": "The fluid passes through the sinuses and lymphoid cords inside the node."
+        },
+        {
+          "text_ar": "تعرض الخلايا المناعية ما تجده من مسبّبات المرض فتبدأ الاستجابة.",
+          "text_en": "Immune cells present what they find, setting off a response."
+        },
+        {
+          "text_ar": "يخرج اللمف المصفّى من العقدة ويعود إلى الدم.",
+          "text_en": "Filtered lymph leaves the node and returns to the blood."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "blood",
+          "from": "blood",
+          "note_ar": "سائل نسيجي يتحوّل إلى لمف",
+          "note_en": "tissue fluid becoming lymph"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "blood",
+          "to": "blood",
+          "note_ar": "لمف مصفّى وخلايا مناعية عائدة إلى الدورة",
+          "note_en": "filtered lymph and immune cells returning to the circulation"
+        }
+      ],
+      "connected_organs": [
+        "blood",
+        "spleen",
+        "skin"
+      ],
+      "camel_specific_ar": "عقد الرأس في الجمل (النكفية وتحت الفك وخلف البلعوم) مفصولة فصيصًا ولا تُظهر التركيب المعتاد من قشرة ولبّ ومنطقة حول القشرة كما في غيره، بل تحوي عقيدات لمفية ونسيجًا منتشرًا وجيوبًا تحتوي عددًا كبيرًا من كريات الدم الحمراء، فتشبه بذلك العقد الدموية اللمفاوية. وللجمل كذلك عقد دموية لمفاوية حقيقية كروية أو كلوية الشكل ذات سرّة واحدة أو اثنتين، تعمل في ترشيح الدم واللمف معًا.",
+      "camel_specific_en": "The head lymph nodes of the camel (parotid, mandibular and lateral retropharyngeal) are lobulated and do not show the usual cortex, medulla and paracortex; instead they hold lymphatic nodules, diffuse lymphoid tissue and sinuses containing many red cells, resembling haemolymph nodes. The camel also has true haemal nodes — spherical or kidney-shaped, with one or two hili — that filter both blood and lymph.",
+      "animation_cues": {
+        "ar": "عقدة لمفاوية صغيرة على مسار أوعية دقيقة، يدخلها اللمف فتمرّ فيه الخلايا المناعية وتُحتبس الميكروبات ثم يعود اللمف مصفّى.",
+        "en": "A small node along fine vessels: lymph flows in, immune cells act and germs are trapped, and filtered lymph flows out."
+      },
+      "confidence": "high",
+      "source_ids": ["S70", "S71"]
+    },
+    {
+      "id": "skeleton",
+      "name_ar": "الهيكل العظمي",
+      "name_en": "Skeleton",
+      "location": {
+        "ar": "يتكوّن من الجمجمة والعمود الفقري والأضلاع والقوائم، وذكرت الدراسات المتاحة فقرات العنق والأضلاع والحوض مفصّلة.",
+        "en": "It consists of the skull, vertebral column, ribs and limb bones, and the available studies describe the cervical vertebrae, ribs and pelvis in detail."
+      },
+      "relative_size": {
+        "ar": "الفقرات العنقية سبع، وهي بنية طويلة تشكّل نحو ٤٦٫٧% من طول العمود الفقري في الجمل العربي.",
+        "en": "There are seven cervical vertebrae, and this region makes up about 46.7% of the total length of the vertebral column in the dromedary."
+      },
+      "function_ar": "يعطي الجسم شكله ويرفع الوزن ويسمح بالحركة، ويخزّن الكالسيوم، ويصنع خلايا الدم في نخاع العظم.",
+      "function_en": "It gives the body its shape, supports the body weight and allows movement, stores calcium, and makes blood cells in the marrow.",
+      "how_it_works": [
+        {
+          "text_ar": "سبع فقرات عنقية طويلة تتيح للجمل مدّ رأسه إلى الأعلى والأسفل والنظر حوله.",
+          "text_en": "Seven long cervical vertebrae let the camel raise and lower its head and look around."
+        },
+        {
+          "text_ar": "نتوءات الفقرات الصدرية الأولى تصنع الغارب عند مقدّمة الظهر.",
+          "text_en": "The tall spines of the first thoracic vertebrae build the withers at the front of the back."
+        },
+        {
+          "text_ar": "تحمل الأضلاع الصدر وتتّصل بالفقرات الصدرية.",
+          "text_en": "The ribs carry the chest and attach to the thoracic vertebrae."
+        },
+        {
+          "text_ar": "تتّصل عظام القوائم بالحوض والكتف وتبني الرافعات التي تحرّكها العضلات.",
+          "text_en": "The limb bones join the pelvis and shoulder to form the levers the muscles move."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "nutrients",
+          "from": "blood",
+          "note_ar": "كالسيوم وفسفور يصلان بالدم إلى العظم",
+          "note_en": "calcium and phosphate delivered by blood to bone"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "blood",
+          "to": "blood",
+          "note_ar": "خلايا دم تصنعها نخاع العظم",
+          "note_en": "blood cells made in the bone marrow"
+        }
+      ],
+      "connected_organs": [
+        "muscles",
+        "blood"
+      ],
+      "camel_specific_ar": "من السمات المدروسة جيدًا في هيكل الجمل العربي أنه يمتلك سبع فقرات عنقية كمعظم الثدييات لكنها طويلة جدًّا، وأن الثدي المجاور الأول والثاني لا يحملان ثقبًا مستعرضًا كما في بقية الفقرات العنقية، وأن العنق يشكّل نحو نصف طول العمود الفقري. وتُستخدم القياسات العظمية للجمجمة في مقارنة الأنواع والفصل بينها في الدراسات الأثرية والمرضية.",
+      "camel_specific_en": "A well-documented feature of the dromedary skeleton is that it has seven cervical vertebrae like most mammals but very long ones, that the first and second vertebrae lack the transverse foramen present in the rest of the cervical series, and that the neck makes up about half of the vertebral column. Cranial osteometry is used to compare breeds and to identify remains in archaeological and clinical work.",
+      "animation_cues": {
+        "ar": "هيكل بعنق طويل من سبع فقرات، فوقه نتوءات الفقرات الصدرية التي تصنع الغارب، ولا عظم في السنام فوقها.",
+        "en": "A skeleton with a long neck of seven vertebrae, topped by the tall thoracic spines that form the withers, with no bone in the hump above."
+      },
+      "confidence": "medium",
+      "source_ids": ["S81", "S82"]
+    },
+    {
+      "id": "muscles",
+      "name_ar": "العضلات الكبرى",
+      "name_en": "Major muscles",
+      "location": {
+        "ar": "كتل عضلية في الكتف والعضد والساعد والفخذ والساق، مع أوتار تربط العضل بالعظم.",
+        "en": "Muscle masses of the shoulder, upper arm, forearm, thigh and leg, with tendons joining muscle to bone."
+      },
+      "relative_size": {
+        "ar": "أعظم العضلات قرب الجسم، وتقلّ الكتلة العضلية كلّما اتّجهنا نحو الأسفل حتى تكاد تنعدم تحت الرسغ والعرقوب.",
+        "en": "The largest muscles lie near the body, and muscle mass decreases towards the foot until there is almost none below the carpus and hock."
+      },
+      "function_ar": "تحرّك العظام وتولّد الحرارة في الجسم، وثبات العضلات العالية يخفّف ثقل القوائم فتسهل الحركة على الرمل.",
+      "function_en": "They move the bones and generate body heat, and having the muscle mass high up lightens the limbs and eases movement over sand.",
+      "how_it_works": [
+        {
+          "text_ar": "تنقبض العضلة فتسحب الوتر الذي يحرّك العظم حول المفصل.",
+          "text_en": "A muscle contracts and pulls on its tendon, which moves the bone around a joint."
+        },
+        {
+          "text_ar": "تقع معظم الكتلة العضلية في أعلى القوائم قرب الجسم.",
+          "text_en": "Most of the muscle mass sits high on the limbs near the body."
+        },
+        {
+          "text_ar": "تحت الرسغ والعرقوب يغلب العظم والوتر على العضل، فتخفّ القوائم ويسهل تأرجحها.",
+          "text_en": "Below the carpus and hock, bone and tendon dominate, so the limbs are light and swing easily."
+        },
+        {
+          "text_ar": "يُنتج النشاط العضلي حرارة تُطرح عبر الجلد والتنفّس.",
+          "text_en": "Muscular activity produces heat, which is shed through the skin and breathing."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "nutrients",
+          "from": "blood",
+          "note_ar": "أكسجين وسكر يصلان إلى العضلة",
+          "note_en": "oxygen and sugar delivered to muscle"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "heat",
+          "to": "environment",
+          "note_ar": "حرارة تُطرح من الجسم",
+          "note_en": "heat shed from the body"
+        }
+      ],
+      "connected_organs": [
+        "skeleton",
+        "blood",
+        "skin"
+      ],
+      "camel_specific_ar": "الكتلة العضلية في الجمل متجمّعة عالية قرب الجسم، وتحت الرسغ والعرقوب لا تكاد توجد عضلات بل عظم وأوتار، ولذلك تتحرّك القوائم بخفّة. ووصف مفصل الرسغ في الجمل العربي باتجاهات الحقن يُظهر التفاصيل العملية لتلك البنى: كعوب وأوتار وأغشية زليلية مجاورة يجب تجنّبها. أما الحركة فتقترب من المشي المتأرجح (Pace) وهو سمة حركية معروفة للجمل.",
+      "camel_specific_en": "The camel's muscle mass is gathered high near the body, and below the carpus and hock there is virtually no muscle, only bone and tendon, which is why the limbs swing lightly. A detailed description of the dromedary carpus for injection approaches documents the tendons, sheaths and neighbouring synovial structures that must be avoided. As for locomotion, the camel uses a pacing gait, a well-known feature of the species.",
+      "animation_cues": {
+        "ar": "كتل عضلية عالية في الكتف والفخذ، وقوائم نحيلة من العظم والوتر تتحرّك بخفّة، مع تدفّق حرارة تخرج من الجلد.",
+        "en": "Heavy muscle masses high on the shoulder and thigh, slim limbs of bone and tendon swinging lightly, and heat flowing out through the skin."
+      },
+      "confidence": "medium",
+      "source_ids": ["S77", "S75"]
+    },
+    {
+      "id": "coat",
+      "name_ar": "الوبر",
+      "name_en": "Coat",
+      "location": {
+        "ar": "يغطّي الوبر معظم سطح الجسم، ويتكوّن من جريبات أولية (الشعر الأطول) وثانوية (الألياف الأدقّ) في الجلد.",
+        "en": "The coat covers most of the body and is made of primary follicles (the coarser hair) and secondary follicles (finer fibres) in the skin."
+      },
+      "relative_size": {
+        "ar": "متوسط قطر الليفة نحو ١٩ ميكرومتر، ونسبة الجريبات الثانوية إلى الأولية نحو ٦٫٨٥، وكثافة الجريبات الكلية نحو ٢٥ جريبًا في المليمتر المربع.",
+        "en": "Mean fibre diameter is about 19 µm, the secondary-to-primary follicle ratio is about 6.85 and total follicle density is about 25 per mm²."
+      },
+      "function_ar": "يعزل الجسم عن حرارة الشمس نهارًا وعن البرد ليلًا، ويمنع الرمل من ملامسة الجلد مباشرة، ويُطرح في الصيف تدريجيًّا.",
+      "function_en": "It insulates the body against daytime heat and night cold, keeps sand from touching the skin directly, and is shed gradually in summer.",
+      "how_it_works": [
+        {
+          "text_ar": "ينمو الوبر في الشتاء فيكثّ ويعزل.",
+          "text_en": "The coat thickens in winter and insulates."
+        },
+        {
+          "text_ar": "يهبط نشاط الجريبات في نهاية الشتاء وبداية الربيع فيبدأ التساقط.",
+          "text_en": "Follicular activity drops in late winter and early spring, and shedding begins."
+        },
+        {
+          "text_ar": "ينخفض معامل العزل فتزداد الحاجة إلى التعرّق لطرح الحرارة.",
+          "text_en": "As insulation falls, more sweating is needed to shed heat."
+        },
+        {
+          "text_ar": "يعود الوبر في الخريف استعدادًا للشتاء التالي.",
+          "text_en": "The coat returns in autumn, ready for the next winter."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "nutrients",
+          "from": "blood",
+          "note_ar": "مواد بناء الليفة تصل بالدم إلى الجريب",
+          "note_en": "fibre-building materials delivered by blood to the follicle"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "heat",
+          "to": "environment",
+          "note_ar": "حرارة تتبدّد عبر العزل والوبر",
+          "note_en": "heat dissipated through insulation and coat"
+        }
+      ],
+      "connected_organs": [
+        "skin",
+        "blood",
+        "hump"
+      ],
+      "camel_specific_ar": "دورة جريب الوبر في الجمل سنوية واضحة: هبطت نسبة الجريبات الأولية النشطة إلى أدنى قيمة (٨٣٫١%) في فبراير، وانخفض نشاط الجريبات الثانوية عبر الشتاء والربيع إلى نحو ٦٠% في فبراير، ثم عاد النشاط في الربيع. وهذا يفسّر التساقط الموسمي المعروف. وطول الوبر يتراجع جزئيًّا في الصيف، فيقلّ العزل ويزيد اعتماد الجمل على التعرّق وارتفاع حرارته اليومي.",
+      "camel_specific_en": "The camel's hair follicle cycle has a clear annual rhythm: the percentage of active primary follicles fell to its lowest value (83.1%) in February and secondary follicle activity dropped through winter and spring to about 60% in February before recovering in spring, which explains the familiar seasonal shedding. The coat thins in summer, so insulation falls and the camel relies more on sweating and on its daily temperature rise.",
+      "animation_cues": {
+        "ar": "وبر كثيف في الشتاء يبدأ في التساقط في الربيع بعد هبوط نشاط الجريبات، ثم يعود في الخريف.",
+        "en": "A thick coat in winter beginning to shed in spring after follicular activity falls, then returning in autumn."
+      },
+      "confidence": "medium",
+      "source_ids": ["S74"]
+    },
+    {
+      "id": "pads",
+      "name_ar": "الخفّ والثفنات",
+      "name_en": "Feet and callus pads",
+      "location": {
+        "ar": "وسادة عريضة لينة في كل قدم بإصبعين صغيرين وظفرين، وعلى الصدر والمرفقين والرسغين والركبتين ثفنات جلدية متصلّبة.",
+        "en": "A broad soft pad on each foot with two small digits and two nails; hardened skin calluses sit on the chest, elbows, carpi and stifles."
+      },
+      "relative_size": {
+        "ar": "وسادة عريضة تلامس الرمل على مساحة كبيرة، وبساطة البنية تجعل القدم أخفّ وأقدر على توزيع الوزن.",
+        "en": "A broad pad that meets the sand over a large area; its simple structure makes the foot light and better able to spread the load."
+      },
+      "function_ar": "تحمل وزن الجسم على الرمل الطري وتوزّعه فلا تغوص القوائم، وتحمي الجلد عند البروك بثفنات متينة.",
+      "function_en": "They carry the body weight on soft sand and spread it so the limbs do not sink, and hardened calluses protect the skin when the camel couches.",
+      "how_it_works": [
+        {
+          "text_ar": "تنبسط الوسادة عند ملامسة الأرض فتزيد مساحة التلامس.",
+          "text_en": "The pad flattens as it meets the ground, increasing the contact area."
+        },
+        {
+          "text_ar": "توزّع الوسادة الوزن على الإصبعين فتقلّ الحاجة إلى غوص القائمة.",
+          "text_en": "It spreads the load over the two digits, so the limb sinks less."
+        },
+        {
+          "text_ar": "تعود الوسادة إلى شكلها عند رفع القائمة بفعل نسيجها المرن.",
+          "text_en": "Elastic tissue lets the pad recover its shape as the foot is lifted."
+        },
+        {
+          "text_ar": "تحمل الثفنات المتصلّبة الضغط عند الجلوس على الصدر والركبتين.",
+          "text_en": "The hardened calluses take the pressure when the camel rests on its chest and knees."
+        }
+      ],
+      "flows_in": [
+        {
+          "flow": "nutrients",
+          "from": "blood",
+          "note_ar": "دم يغذّي الوسادة والثفنة",
+          "note_en": "blood nourishing pad and callus"
+        }
+      ],
+      "flows_out": [
+        {
+          "flow": "heat",
+          "to": "environment",
+          "note_ar": "حرارة تُطرح من سطح القدم على الرمل",
+          "note_en": "heat shed from the foot surface to the sand"
+        }
+      ],
+      "connected_organs": [
+        "skin",
+        "skeleton"
+      ],
+      "camel_specific_ar": "قدم الجمل وسادة عريضة لينة لا حافر صلب، بإصبعين وظفرين صغيرين، وهي تنبسط على الرمل فتوزّع الوزن. وتُشير دراسة للقوائم والأيدي في الجمل العربي إلى أن إصابات القدم والرسغ والعرقوب من الحالات الشائعة التي تُشخَّص بالفحص السريري والتصوير، ولذلك فإن صحة الوسادة والثفنات مؤشّر مهم على الرفق. وفي حيوان قريب (الغواناكو) وُصف وسادة الإصبع بأنها هلام مرن بألياف مرنة ومادة مخاطية يهبط عند الحمل ويعود عند رفعه.",
+      "camel_specific_en": "The camel foot is a broad soft pad rather than a hard hoof, with two digits and two small nails; it flattens on the sand and spreads the load. A study of the dromedary manus and pes shows that injuries of the foot, carpus and hock are common and are diagnosed clinically and radiographically, so the health of the pad and calluses is an important welfare indicator. In a closely related camelid, the guanaco, the digital cushion was described as an elastic gel pad with elastic fibres and mucinous material that flattens under load and recovers when it is lifted.",
+      "animation_cues": {
+        "ar": "وسادة عريضة تنبسط كلّما وضعت القائمة على الرمل فتوزّع الوزن، وتعزل السطح الحارّ عن الجلد.",
+        "en": "A broad pad flattening as the foot meets the sand to spread the load, and shielding the skin from the hot surface."
+      },
+      "confidence": "medium",
+      "source_ids": ["S78", "S76"]
+    }
+  ],
+  "journeys": [
+    {
+      "id": "food",
+      "name_ar": "رحلة الغذاء",
+      "name_en": "The journey of food",
+      "stops": [
+        {
+          "organ": "mouth",
+          "text_ar": "تبدأ الرحلة عند الفم: تلتقط الشفة العليا المشقوقة النباتات، وتطحنها الأضراس بحركات جانبية، ويختلط الطعام باللعاب.",
+          "text_en": "The journey starts at the mouth: the split upper lip gathers the plants, the cheek teeth grind them with lateral movements, and saliva mixes with the food."
+        },
+        {
+          "organ": "esophagus",
+          "text_ar": "تُدفع اللقمة في المريء بموجة عضلية نازلة حتى تصل إلى المعدة الأولى.",
+          "text_en": "The bolus is pushed down the oesophagus by a muscular wave until it reaches the first stomach compartment."
+        },
+        {
+          "organ": "stomach_c1",
+          "text_ar": "في C1 تبدأ التخمير الميكروبي للألياف، فتنشأ أحماض دهنية قصيرة السلسلة تُستخدم مصدراً للطاقة، ويُمتصّ معها الماء والصوديوم.",
+          "text_en": "In C1 microbial fermentation of fibre begins, producing short-chain fatty acids that serve as an energy source, alongside absorption of water and sodium."
+        },
+        {
+          "organ": "mouth",
+          "text_ar": "تعود لقم مختارة من C1 إلى الفم في عملية الاجترار: تُعاد مضغ اللقمة ثم تُبلع مرة أخرى، ويمكن لهذه الحلقة أن تتكرّر عشرات المرات في الساعة.",
+          "text_en": "Selected boluses return from C1 to the mouth in rumination: each bolus is chewed again and re-swallowed, and this loop can repeat dozens of times per hour."
+        },
+        {
+          "organ": "stomach_c2",
+          "text_ar": "تنتقل المحتويات إلى C2، وهي أصغر الحجرات، فتُستكمل فيها عملية الامتصاص عبر خلاياها الغدّية.",
+          "text_en": "Contents move into C2, the smallest compartment, where absorption continues through its glandular cells."
+        },
+        {
+          "organ": "stomach_c3",
+          "text_ar": "ثم إلى C3 الأنبوبية: أجزاؤها الأمامية تمتصّ، ونهايتها الخلفية تفرز الحمض والإنزيمات فتقوم عمل المعدة الحقيقية.",
+          "text_en": "Then into the tubular C3: its cranial part absorbs, and its caudal end secretes acid and enzymes, doing the work of the true stomach."
+        },
+        {
+          "organ": "small_intestine",
+          "text_ar": "يصل الكيموس إلى الأمعاء الدقيقة، حيث تعادل الصفراء والإنزيمات الحموضة ويفكّك الغذاء إلى جزيئات صغيرة تُمتصّ إلى الدم.",
+          "text_en": "Chyme enters the small intestine, where bile and enzymes neutralise the acidity and break the food into small molecules that are absorbed into the blood."
+        },
+        {
+          "organ": "large_intestine",
+          "text_ar": "في النهاية تستعيد الأمعاء الغليظة أكبر قدر ممكن من الماء والأملاح، ويتكوّن براز شبه جاف يُطرح خارج الجسم.",
+          "text_en": "Finally, the large intestine reclaims as much water and electrolyte as possible and forms nearly dry faeces that leave the body."
+        }
+      ]
+    },
+    {
+      "id": "blood",
+      "name_ar": "رحلة الدم",
+      "name_en": "The journey of blood",
+      "stops": [
+        {
+          "organ": "heart",
+          "text_ar": "يعود الدم غير المؤكسج من الجسم إلى الأذين الأيمن ثم إلى البطين الأيمن، الذي يدفعه نحو الرئتين.",
+          "text_en": "Deoxygenated blood returns from the body to the right atrium and then to the right ventricle, which pumps it towards the lungs."
+        },
+        {
+          "organ": "lungs",
+          "text_ar": "في الحويصلات الهوائية ينتقل الأكسجين إلى الدم ويتحرّر ثاني أكسيد الكربون ليخرج مع الزفير.",
+          "text_en": "In the alveoli, oxygen passes into the blood while carbon dioxide is released to leave with the exhaled air."
+        },
+        {
+          "organ": "heart",
+          "text_ar": "يعود الدم المؤكسج إلى الأذين الأيسر، ويدفعه البطين الأيسر بقوة إلى الأورطي ثم إلى أنحاء الجسم.",
+          "text_en": "Oxygenated blood returns to the left atrium, and the left ventricle pumps it forcefully into the aorta and on to the rest of the body."
+        },
+        {
+          "organ": "blood",
+          "text_ar": "في الشعيرات الدقيقة يعطي الدم الأكسجين والغذاء للخلايا، ويتحمّل ثاني أكسيد الكربون والفضلات ويعود بها إلى القلب.",
+          "text_en": "In the capillaries the blood hands oxygen and nutrients to the cells, picks up carbon dioxide and waste, and carries them back to the heart."
+        },
+        {
+          "organ": "spleen",
+          "text_ar": "تمرّ كريات الدم الحمراء في الطحال حيث تُفحص وتُزال القديم أو التالف منها، ويُخزَّن عدد من الصفائح الدموية.",
+          "text_en": "Red cells pass through the spleen, where they are checked and aged or damaged ones are removed, while platelets are held in reserve."
+        },
+        {
+          "organ": "kidneys",
+          "text_ar": "يتفرّع جزء من الدم إلى الكليتين للتصفية، فتُطرح الفضلات مع قليل من الماء ويُعاد الماء الذي يحتاجه الجسم.",
+          "text_en": "Part of the blood branches into the kidneys for filtration, so waste leaves with very little water while the water the body needs is returned."
+        },
+        {
+          "organ": "heart",
+          "text_ar": "ثم تعود كل هذه المسارات إلى القلب لتُعاد الدورة، وفي الإبل يعمل القلب بأربع حُجَر مع تغطية دهنية واضحة حول قاعدته وأخدوده التاجي.",
+          "text_en": "All these routes then return to the heart to begin the cycle again; the camel's four-chambered heart carries prominent fat around its base and coronary groove."
+        }
+      ]
+    },
+    {
+      "id": "air",
+      "name_ar": "رحلة الهواء",
+      "name_en": "The journey of air",
+      "stops": [
+        {
+          "organ": "nasal_passages",
+          "text_ar": "يدخل الهواء من فتحتي الأنف ويمرّ في ممرات ضيقة بين المحارات الأنفية، فيُدفَّأ ويُرطَّب وتُلتقط منه الجزيئات الغريبة.",
+          "text_en": "Air enters through the nostrils and passes through narrow meatuses between the nasal conchae, where it is warmed, humidified and cleared of particles."
+        },
+        {
+          "organ": "trachea",
+          "text_ar": "يتابع الهواء طريقه في القصبة الهوائية، وهي أنبوب تدعمه 66-75 حلقة غضروفية، وتزحف أهدابها بالطبقة المخاطية إلى أعلى.",
+          "text_en": "Air continues down the trachea, a tube supported by 66-75 cartilage rings, whose cilia sweep the mucus layer upwards."
+        },
+        {
+          "organ": "lungs",
+          "text_ar": "يتوزّع الهواء في الرئتين حتى الحويصلات، فيحدث تبادل الغازات: أكسجين إلى الدم وثاني أكسيد كربون إلى الهواء.",
+          "text_en": "Air spreads through the lungs down to the alveoli, where gas exchange happens: oxygen into the blood, carbon dioxide into the air."
+        },
+        {
+          "organ": "blood",
+          "text_ar": "يحمل الدم الأكسجين إلى الخلايا ويعود بثاني أكسيد الكربون إلى الرئة، وفي الإبل تكون كريات الدم الحمراء بيضوية الشكل وغير معتادة على التحلّل السريع.",
+          "text_en": "The blood carries oxygen to the cells and returns carbon dioxide to the lung; in camels the red cells are elliptical and unusually resistant to breaking down."
+        },
+        {
+          "organ": "nasal_passages",
+          "text_ar": "عند الزفير يمرّ الهواء الساخن الرطب على الأسطح الأنفية الأبرد فيفقد حرارته، وتستعيد هذه الأسطح جزءاً من بخار مائه، ولذلك يخرج الهواء غير مشبع تماماً.",
+          "text_en": "On exhalation the warm, moist air passes over the cooler nasal surfaces, loses heat and yields part of its water vapour back to the tissue, so the outgoing air is not fully saturated."
+        },
+        {
+          "organ": "brain",
+          "text_ar": "استعادة الحرارة هذه لها فائدة ثانية: يعود دم الأنف البارد إلى جيوب الجمجمة ويمرّ بجوار الشبكة السباتية، فيصل إلى الدماغ دم أقل حرارة من دم الجسم.",
+          "text_en": "This heat recovery has a second use: cool nasal blood returns to the cranial sinuses alongside the carotid rete, so blood reaching the brain can be cooler than the rest of the body's blood."
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name_ar": "رحلة الماء ولماذا يتحمّل الجمل العطش",
+      "name_en": "The journey of water, and why camels endure thirst",
+      "stops": [
+        {
+          "organ": "mouth",
+          "text_ar": "يبدأ الماء حين يشرب الجمل، وقد سُجّل في تجربة أن جمالاً حُرمت الماء 11 يوماً شربت نحو 97 لتراً في دقائق معدودة عند إعادة تقديم الماء.",
+          "text_en": "Water starts when the camel drinks; in one experiment camels deprived of water for 11 days drank about 97 L within a few minutes when water was offered again."
+        },
+        {
+          "organ": "esophagus",
+          "text_ar": "ينزل الماء سريعاً في المريء إلى المعدة الأمامية، لكن امتصاصه إلى الدم أبطأ مما في حيوانات أخرى، وهذا يمنع صدمة أسموزية في الدم.",
+          "text_en": "Water travels quickly down the oesophagus into the forestomach, but its absorption into the blood is slower than in other animals, which avoids an osmotic shock in the blood."
+        },
+        {
+          "organ": "stomach_c1",
+          "text_ar": "في C1 يبدأ امتصاص جزء من الماء، ويستمر فيها السائل الذي يحفظ التخمير الميكروبي، حتى إن اللعاب ظلّ يجري بنحو 2 لتر في الساعة في اليوم الحادي عشر من العطش.",
+          "text_en": "Part of the water is absorbed in C1, and the fluid that keeps microbial fermentation going is maintained there; saliva was still flowing at about 2 L/h on the eleventh day of water deprivation."
+        },
+        {
+          "organ": "small_intestine",
+          "text_ar": "يُكمل الماء طريقه مع الكيموس، ويُمتصّ قسم آخر منه عبر الأمعاء الدقيقة إلى الدم.",
+          "text_en": "Water continues along with the chyme, and another portion is absorbed through the small intestine into the blood."
+        },
+        {
+          "organ": "large_intestine",
+          "text_ar": "وتستعيد الأمعاء الغليظة ما بقي، فيخرج البراز شبه جاف، وهذه أولى بوابات توفير الماء في الجسم.",
+          "text_en": "The large intestine reclaims what is left, so the faeces leave nearly dry; this is the body's first water-saving gate."
+        },
+        {
+          "organ": "blood",
+          "text_ar": "يصبح الماء جزءاً من الدم وسوائل الجسم، وكريات الدم الحمراء البيضوية تتحمّل انخفاض تركيز الدم بعد الشرب السريع دون أن تتحلّل. وفي تجربة تحميل بالماء، احتفظ الجمل بالماء الزائد في جسمه أياماً وتحمّل انخفاض تركيز الدم بدلاً من طرحه فوراً، ويستطيع أن يفقد نحو 25% من وزن جسمه قبل أن تلحقه أضرار كبيرة.",
+          "text_en": "The water becomes part of the blood and body fluids, and the elliptical red cells tolerate the fall in blood concentration after rapid drinking without breaking up. In a water-loading experiment camels held the excess water in the body for days and tolerated a diluted blood concentration instead of dumping it immediately, and a camel can lose about 25% of its body mass before serious damage occurs."
+        },
+        {
+          "organ": "kidneys",
+          "text_ar": "تتصفّى الكلية الدم وتعيد معظم الماء إلى الجسم، بمساعدة قمة كلوية غنية بالعُرى الطويلة وحوض به 20-24 تجويفاً يعيد تدوير اليوريا ويرفع تركيز النخاع.",
+          "text_en": "The kidney filters the blood and returns most of the water to the body, helped by a renal crest rich in long loops of Henle and a pelvis with 20-24 recesses that recycles urea and raises medullary concentration."
+        },
+        {
+          "organ": "bladder",
+          "text_ar": "يخرج البول مركّزاً جداً، فيفقد الجمل من الماء مع البول أقل بكثير مما تفقده حيوانات أخرى بالحجم نفسه.",
+          "text_en": "Urine leaves very concentrated, so the camel loses far less water in urine than other animals of similar size."
+        },
+        {
+          "organ": "nasal_passages",
+          "text_ar": "وتوفّر الأنف طريقاً ثانياً: تبريد هواء الزفير ونزع جزء من بخاره يوفّر نحو 60% من الماء مقارنة بإخراج هواء مشبع بحرارة الجسم.",
+          "text_en": "The nose provides a second route: cooling exhaled air and stripping some of its vapour saves about 60% of the water compared with exhaling saturated air at body temperature."
+        },
+        {
+          "organ": "skin",
+          "text_ar": "الجلد طريق ثالث: لا يبدأ التعرّق إلا عند ارتفاع حرارة الجسم، وحرارة الجسم نفسها تتغيّر يومياً بين نحو 34 و41 °م، فيقلّ الماء المفقود بالتبخّر.",
+          "text_en": "The skin is a third route: sweating starts only once body temperature is already high, and body temperature itself swings between roughly 34 and 41 °C each day, so less water is lost by evaporation."
+        },
+        {
+          "organ": "hump",
+          "text_ar": "والسنام طريق داخلي: هو مخزن دهون لا ماء، وعند حرقه تنتج أكسدة الدهون ماءً أيضياً يساهم في موازنة الماء، ويتراجع حجم السنام في الجفاف الطويل.",
+          "text_en": "The hump is an internal route: it stores fat, not water, and burning that fat produces metabolic water that helps water balance, while the hump shrinks during long dry periods."
+        }
+      ]
+    }
+  ]
+}
