@@ -1,5 +1,5 @@
 import { $, $$, ACT, ANAT, buildKeys, BUS, camera, CHAPTERS, clamp, CU, DEG, drawDay, esc, focalFor, fovFor,
-  hourTo, MODEL3D, openTopic, renderLifeInfo, renderPanel, rig, setLANG, setPlaying, SOURCES, STATE, THREE,
+  hourTo, MODEL3D, MORE, openTopic, renderLifeInfo, renderPanel, rig, setLANG, setPlaying, SOURCES, STATE, THREE,
   tt, UI, V3, WORLD } from '../app.js';
 
 /* ════════════════════════════════════════════════════════════════
@@ -7,7 +7,7 @@ import { $, $$, ACT, ANAT, buildKeys, BUS, camera, CHAPTERS, clamp, CU, DEG, dra
    insets, search, tour, keyboard, mobile sheet
    ════════════════════════════════════════════════════════════════ */
 const root = document.documentElement;
-const U = { chapter: 'home', topic: null, filter: 'all', labels: true, follow: true, pairs: false, peel: false, section: null, sectionX: 0, userT: 0, sheet: 'half', signs: new Set(), symOpen: false, nictT: 0, userTime: false, demo: null };
+const U = { chapter: 'anatomy', topic: null, filter: 'all', labels: true, follow: true, pairs: false, peel: false, section: null, sectionX: 0, userT: 0, sheet: 'half', signs: new Set(), symOpen: false, nictT: 0, userTime: false, demo: null };
 
 /* ─────────── tiny icon set ─────────── */
 const ICONS = {
@@ -29,7 +29,8 @@ const chev = '<svg class="ic chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/><
 let toastT = 0;
 function toast(msg, ms = 2800) { const t = $('#toast'); t.textContent = tt(msg); t.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('on'), ms); }
 function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } return null; }
-const srcLinks = ids => ids && ids.length ? `<div class="src">${tt(UI.sources)}: ${ids.map(id => { const s = SOURCES.find(x => x[0] === id); return s ? `<a href="${s[3]}" target="_blank" rel="noopener">${esc(s[2].split(/[.(]/)[0].slice(0, 60))}</a>` : ''; }).filter(Boolean).join(' · ')}</div>` : '';
+const srcLabel = s => { if (s[1] !== 'res') return s[2].split(/[.(]/)[0].slice(0, 60); const who = s[2].split(' — ')[0].split(' (')[0], y = (s[2].match(/\((\d{4})/) || [])[1]; return (who.includes(',') ? who.split(',')[0] + ' et al.' : who).slice(0, 48) + (y ? ' ' + y : ''); };
+const srcLinks = ids => ids && ids.length ? `<div class="src">${tt(UI.sources)}: ${[...new Set(ids)].map(id => { const s = SOURCES.find(x => x[0] === id); return s ? `<a href="${s[3]}" target="_blank" rel="noopener">${esc(srcLabel(s))}</a>` : ''; }).filter(Boolean).join(' · ')}</div>` : '';
 const pctRange = el => { const p = (el.value - el.min) / (el.max - el.min) * 100; el.style.setProperty('--p', p + '%'); };
 function norm(s) {
   return String(s).toLowerCase().replace(/[ً-ٰٟـ]/g, '').replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه').replace(/ؤ/g, 'و').replace(/ئ/g, 'ي').replace(/<[^>]+>/g, ' ');
@@ -52,15 +53,29 @@ function applyLang(lang, first) {
 }
 
 /* ─────────── chapters ─────────── */
+/* main chapters in the bar; the secondary ones (movement, climate, life, prevention, about) in a "More" menu */
 function buildChapterNav() {
-  $('#chapters').innerHTML = CHAPTERS.map(c => `<button class="chap" data-ch="${c.id}" aria-current="${c.id === U.chapter}">${tt(c.name)}</button>`).join('');
-  $$('#chapters .chap').forEach(b => b.onclick = () => go(b.dataset.ch));
+  const more = CHAPTERS.filter(c => c.more), cur = more.find(c => c.id === U.chapter);
+  $('#chapters').innerHTML = CHAPTERS.filter(c => !c.more).map(c => `<button class="chap" data-ch="${c.id}" aria-current="${c.id === U.chapter}">${tt(c.name)}</button>`).join('') +
+    `<button class="chap more" id="chapMore" aria-haspopup="menu" aria-expanded="false" aria-current="${!!cur}">${tt(cur ? cur.name : MORE)}${chev}</button>`;
+  $('#moreMenu').innerHTML = more.map(c => `<button class="chap" role="menuitem" data-ch="${c.id}" aria-current="${c.id === U.chapter}">${tt(c.name)}</button>`).join('');
+  $$('#chapters .chap[data-ch], #moreMenu .chap').forEach(b => b.onclick = () => { moreMenu(false); go(b.dataset.ch); });
+  $('#chapMore').onclick = e => { e.stopPropagation(); moreMenu($('#moreMenu').hidden); };
+}
+function moreMenu(open) {
+  const m = $('#moreMenu'), b = $('#chapMore');
+  m.hidden = !open; if (b) b.setAttribute('aria-expanded', String(open));
+  if (!open || !b) return;
+  const r = b.getBoundingClientRect(), w = m.offsetWidth;
+  m.style.top = (r.bottom + 6) + 'px';
+  m.style.left = clamp(root.dir === 'rtl' ? r.right - w : r.left, 8, innerWidth - w - 8) + 'px';
+  const first = m.querySelector('.chap'); if (first) first.focus();
 }
 function go(ch, topic, opts = {}) {
-  if (!CHAPTERS.find(c => c.id === ch)) ch = 'home';
+  if (!CHAPTERS.find(c => c.id === ch)) ch = 'anatomy';
   const changed = ch !== U.chapter;
   U.chapter = ch; U.topic = null;
-  $$('#chapters .chap').forEach(b => b.setAttribute('aria-current', String(b.dataset.ch === ch)));
+  buildChapterNav();
   const cur = $(`#chapters .chap[data-ch="${ch}"]`); if (cur && cur.scrollIntoView) try { cur.scrollIntoView({ block: 'nearest', inline: 'center' }); } catch (e) { /* old */ }
   if (changed || opts.force) enterChapter(ch);
   renderPanel();
@@ -77,6 +92,7 @@ function enterChapter(ch) {
   if (ch !== 'anatomy') { setLayer(ch === 'climate' ? STATE.layer === 'thermal' ? 'thermal' : 'skin' : 'skin'); setSection(null); STATE.explode = 0; U.peel = false; }
   if (ch !== 'life' && STATE.stage !== 'adult') setStage('adult');
   if (ch === 'health') setLayer('skin');
+  if (ch === 'anatomy' && STATE.layer !== 'organs' && STATE.layer !== 'skeleton') setLayer('organs');
   document.body.classList.toggle('dock-off', !(ch === 'home' || ch === 'climate'));
   HL.clear();
   endTimeDemo();
@@ -201,6 +217,6 @@ const HL = {
   },
 };
 
-export { root, U, ic, chev, toast, srcLinks, pctRange, norm, applyLang, go, setHash, VIEWS, DAY_HOUR,
+export { root, U, ic, chev, toast, srcLinks, moreMenu, pctRange, norm, applyLang, go, setHash, VIEWS, DAY_HOUR,
   isTimeDemo, showBackDay, endTimeDemo, backToDay, userSetTime, frameChapter, freeRect, applyViewOffset,
   camelFrame, localToWorldPt, focusCam, setLayer, setSection, setGait, setSlow, setSeason, setStage, HL };

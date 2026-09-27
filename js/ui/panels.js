@@ -10,7 +10,7 @@ function renderPanel() {
   const head = (title, lede) => `<div class="ch-kicker"><span class="n num">${digits(C.n)}</span><span>${tt(C.name)}</span></div><h2 class="ch-title">${tt(title)}</h2><p class="ch-lede">${tt(lede)}</p>`;
   let h = '';
   if (ch === 'home') h = renderHome();
-  else if (ch === 'anatomy') h = head(ANATOMY.title, ANATOMY.lede) + renderAnatomy();
+  else if (ch === 'anatomy') h = head(ATLAS.labTitle, ATLAS.labLede) + renderAnatomy();
   else if (ch === 'movement') h = head(MOVEMENT.title, MOVEMENT.lede) + renderMovement();
   else if (ch === 'climate') h = head(CLIMATE.title, CLIMATE.lede) + renderClimate();
   else if (ch === 'life') h = head(LIFE.title, LIFE.lede) + renderLife();
@@ -34,14 +34,16 @@ function renderHome() {
 }
 function renderAnatomy() {
   const A = ANATOMY;
-  return `<div class="sec-label">${LANG === 'ar' ? 'الطبقة' : 'Layer'}</div>
+  return `<div class="btn-row lab-cta"><button class="btn primary" data-organ-go="heart">${tt(ATLAS.labStart)}</button><button class="btn" data-organ-go="nose">${tt(ATLAS.labNose)}</button><button class="btn" data-organ-go="hump">${tt(ATLAS.labHump)}</button></div>
+    ${renderAtlas()}
+    <details class="lab-tools"${U.toolsOpen ? ' open' : ''}><summary class="sec-label">${tt(ATLAS.tools)}${chev}</summary>
+    <div class="sec-label">${LANG === 'ar' ? 'الطبقة' : 'Layer'}</div>
     <div class="seg" role="group">${A.layers.map(([k, n]) => `<button data-layer="${k}" aria-pressed="${STATE.layer === k}">${tt(n)}</button>`).join('')}</div>
     <div class="sec-label">${tt(A.tools)}</div>
     <div class="row" style="margin-bottom:6px"><span style="font-size:13px;color:var(--bone-2);min-width:52px">${tt(A.section)}</span><div class="seg" style="flex:1">${[['', A.secOff], ['sagittal', A.secSag], ['trans', A.secTrans]].map(([k, n]) => `<button data-sec="${k}" aria-pressed="${(U.section || '') === k}">${tt(n)}</button>`).join('')}</div></div>
     <div class="sl" ${U.section ? '' : 'hidden'}><div class="sl-top"><label for="secPos">${tt(A.secPos)}</label></div><input class="rng" type="range" id="secPos" min="-0.9" max="2.2" step="0.01" value="${U.sectionX}"></div>
     <div class="row"><button class="btn small" id="btnExplode" aria-pressed="${STATE.explode > .5}">${tt(A.explode)}</button><button class="btn small" id="btnLabels" aria-pressed="${U.labels}">${tt(A.labels)}</button><button class="btn small" id="btnPeel" aria-pressed="${U.peel}">${tt(A.peel)}</button></div>
-    <p class="hint" id="peelHint" ${U.peel ? '' : 'hidden'}>${tt(A.peelHint)}</p>
-    ${renderAtlas()}
+    <p class="hint" id="peelHint" ${U.peel ? '' : 'hidden'}>${tt(A.peelHint)}</p></details>
     <div class="sec-label">${tt(A.topicsLabel)}</div>
     <div class="topics">${A.topics.map(tp => topicHTML(tp, tp.id === 'hump' ? humpSlider() : '')).join('')}</div>`;
 }
@@ -49,17 +51,23 @@ function renderAnatomy() {
 const sysOf = id => ATLAS.systems.find(x => x.organs.includes(id));
 function renderAtlas() {
   const cur = U.topic && U.topic.startsWith('o-') ? U.topic.slice(2) : null;
-  return `<div class="sec-label">${tt(ATLAS.title)}</div><p class="hint">${tt(ATLAS.lede)}</p>
+  return `<div class="sec-label">${tt(ATLAS.title)}</div>
     <div class="row" style="margin-bottom:8px"><span style="font-size:13px;color:var(--bone-2);min-width:52px">${tt(ATLAS.sexLabel)}</span><div class="seg" style="flex:1">${['f', 'm'].map(k => `<button data-sex="${k}" aria-pressed="${STATE.sex === k}">${tt(k === 'f' ? ATLAS.female : ATLAS.male)}</button>`).join('')}</div></div>
     <div class="atlas">${ATLAS.systems.map(sy => `<div class="asys"><div class="asys-h">${ic(sy.icon)}<b>${tt(sy.name)}</b></div><div class="chips">${sy.organs.map(id => { const o = ATLAS.organs[id]; return `<button class="chip" data-organ="${id}" aria-pressed="${cur === id}">${tt(o.name)}${o.sex ? ` <small>${o.sex === 'f' ? '♀' : '♂'}</small>` : ''}</button>`; }).join('')}</div></div>${cur && sy.organs.includes(cur) ? `<div id="organCard">${organCardHTML(cur)}</div>` : ''}`).join('')}${cur ? '' : '<div id="organCard"></div>'}</div>`;
 }
 function organCardHTML(id) {
-  const o = ATLAS.organs[id], sy = sysOf(id);
+  const o = ATLAS.organs[id], sy = sysOf(id), lab = o.lab;
   const dis = o.dis.map(did => HEALTH.list.find(d => d.id === did)).filter(Boolean);
-  return `<div class="ocard"><div class="ocard-h"><span class="ti">${ic(sy.icon)}</span><div style="flex:1"><div class="kick">${tt(sy.name)}${o.sex ? ' · ' + tt(ATLAS.sexOnly[o.sex]) : ''}</div><h3>${tt(o.name)}</h3></div><button class="x" data-close-organ aria-label="${tt(ATLAS.back)}">×</button></div>
-    <h4>${tt(ATLAS.fn)}</h4><p>${tt(o.fn)}</p><h4>${tt(ATLAS.camel)}</h4><p>${tt(o.camel)}</p>
+  const med = lab && lab.conf === 'medium', conn = lab ? lab.conn.filter(c => ATLAS.organs[c]) : [];
+  const sexMark = c => ATLAS.organs[c].sex ? ` <small>${ATLAS.organs[c].sex === 'f' ? '♀' : '♂'}</small>` : '';
+  return `<div class="ocard"><div class="ocard-h"><span class="ti">${ic(sy.icon)}</span><div style="flex:1"><div class="kick">${tt(sy.name)}${o.sex ? ' · ' + tt(ATLAS.sexOnly[o.sex]) : ''}</div><h3>${tt(o.name)}</h3>${med ? `<span class="conf-m" title="${esc(tt(ATLAS.confMNote))}">${tt(ATLAS.confM)}</span>` : ''}</div><button class="x" data-close-organ aria-label="${tt(ATLAS.back)}">×</button></div>
+    <h4>${tt(ATLAS.fn)}</h4><p>${tt(lab ? lab.fn : o.fn)}</p>
+    ${lab && lab.steps.length ? `<h4>${tt(ATLAS.how)}</h4><ol class="steps">${lab.steps.map(x => `<li>${tt(x)}</li>`).join('')}</ol>` : ''}
+    <h4>${tt(ATLAS.camel)}</h4><p>${tt(o.camel)}</p>
+    ${lab ? `<details class="omore"><summary>${tt(ATLAS.more)}${chev}</summary><p>${tt(lab.camel)}</p><h4>${tt(ATLAS.where)}</h4><p>${tt(lab.where)}</p><h4>${tt(ATLAS.size)}</h4><p>${tt(lab.size)}</p>${med ? `<p class="hint conf-note">${tt(ATLAS.confMNote)}</p>` : ''}</details>` : ''}
+    ${conn.length ? `<h4>${tt(ATLAS.conn)} <span class="hint-i">· ${tt(ATLAS.connHint)}</span></h4><div class="chips">${conn.map(c => `<button class="chip conn" data-conn="${c}">${tt(ATLAS.organs[c].name)}${sexMark(c)}</button>`).join('')}</div>` : ''}
     <h4>${tt(ATLAS.dis)}</h4>${dis.length ? `<div class="chips">${dis.map(d => `<button class="chip dis" data-godis="${d.id}">${tt(d.name)}${d.zoo ? ` <span class="flag z">${tt(UI.zoo)}</span>` : ''}</button>`).join('')}</div>` : `<p class="hint">${tt(ATLAS.noDis)}</p>`}
-    <div class="vet">${ic('shield')}<span>${tt(UI.vet)}</span></div>${srcLinks(o.src)}</div>`;
+    <div class="vet">${ic('shield')}<span>${tt(UI.vet)}</span></div>${srcLinks([...(o.src || []), ...(lab ? lab.src : [])])}</div>`;
 }
 function setSex(sx) {
   STATE.sex = sx;
@@ -92,6 +100,7 @@ function openOrgan(id, scroll) {
 function wireOrganCard() {
   $$('#organCard [data-godis]').forEach(b => b.onclick = () => go('health', b.dataset.godis));
   $$('#organCard [data-close-organ]').forEach(b => b.onclick = () => closeTopic());
+  $$('#organCard [data-conn]').forEach(b => b.onclick = () => openOrgan(b.dataset.conn, true));
 }
 /* a disease on the body: organ looks (inflamed, patchy, swollen, cysts…) and skin looks (mange, pox…) */
 const SKIN_LES = { mange: 1, pox: 2, ringworm: 3, ticks: 4, foot: 5, redden: 6 };
@@ -213,7 +222,8 @@ function renderPrevention() {
 function renderSources() {
   const m = MODEL3D.cfg && MODEL3D.ready ? MODEL3D.cfg : null;
   const model = m ? `<div class="sec-label">${LANG === 'ar' ? 'مجسّم الناقة' : 'Camel model'}</div><ul class="srcs"><li>${m.url ? `<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.title || 'Camel')}</a>` : esc(m.title || 'Camel')} — ${esc(m.author || '')} — ${esc(m.license || '')}</li></ul>` : '';
-  return `${model}${tt(SOURCES_TXT.method)}${SRC_GROUPS.map(([g, n]) => { const items = SOURCES.filter(s => s[1] === g); return items.length ? `<div class="sec-label">${tt(n)}</div><ul class="srcs">${items.map(s => `<li><a href="${s[3]}" target="_blank" rel="noopener">${esc(s[2])}</a></li>`).join('')}</ul>` : ''; }).join('')}<p class="hint">${tt(SOURCES_TXT.built)}</p>`;
+  const seen = new Set(SOURCES.filter(s => s[1] !== 'res').map(s => s[3].replace(/\/$/, '')));   // research entries already listed above are not repeated
+  return `${model}${tt(SOURCES_TXT.method)}${SRC_GROUPS.map(([g, n]) => { const items = SOURCES.filter(s => s[1] === g && (g !== 'res' || !seen.has(s[3].replace(/\/$/, '')))); return items.length ? `<div class="sec-label">${tt(n)}</div>${g === 'res' ? tt(SOURCES_TXT.research) : ''}<ul class="srcs">${items.map(s => `<li><a href="${s[3]}" target="_blank" rel="noopener">${esc(s[2])}</a></li>`).join('')}</ul>` : ''; }).join('')}<p class="hint">${tt(SOURCES_TXT.built)}</p>`;
 }
 
 function wirePanel() {
@@ -240,6 +250,8 @@ function wirePanel() {
   on('[data-stage]', 'click', e => setStage(e.currentTarget.dataset.stage));
   on('[data-filter]', 'click', e => { U.filter = e.currentTarget.dataset.filter; renderPanel(); });
   on('[data-sex]', 'click', e => setSex(e.currentTarget.dataset.sex));
+  on('[data-organ-go]', 'click', e => openOrgan(e.currentTarget.dataset.organGo, true));
+  on('details.lab-tools', 'toggle', e => { U.toolsOpen = e.currentTarget.open; });
   on('[data-organ]', 'click', e => { const id = e.currentTarget.dataset.organ; if (U.topic === 'o-' + id) closeTopic(); else openOrgan(id, true); });
   on('[data-goorgan]', 'click', e => go('anatomy', 'o-' + e.currentTarget.dataset.goorgan));
   on('details.sym', 'toggle', e => { U.symOpen = e.currentTarget.open; });

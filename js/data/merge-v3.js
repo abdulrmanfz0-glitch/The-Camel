@@ -1,4 +1,4 @@
-import { ATLAS, DIS_MAP, HEALTH, HEALTH_V3, L, SOURCES } from '../app.js';
+import { ATLAS, DIS_MAP, HEALTH, HEALTH_V3, L, ORGAN_LAB, SOURCES, SOURCES_RES } from '../app.js';
 
 /* sources for v3 */
 const SOURCES_V3 = [
@@ -17,10 +17,12 @@ const SOURCES_V3 = [
   ['texBabylon', 'env', 'Sand, gravel, silt-crust, rock and bark textures: Babylon.js Assets (CC BY 4.0), re-encoded to WebP.', 'https://github.com/BabylonJS/Assets'],
   ['preetham', 'env', 'Preetham AJ, Shirley P, Smits B (1999). A practical analytic model for daylight (as implemented in the three.js Sky example).', 'https://github.com/mrdoob/three.js/blob/r170/examples/jsm/objects/Sky.js'],
 ];
-SOURCES.push(...SOURCES_V3);
+SOURCES.push(...SOURCES_V3, ...SOURCES_RES);
 HEALTH.list.push(...HEALTH_V3);
 HEALTH.list.forEach(d => { const m = DIS_MAP[d.id]; d.org = m ? m.org : []; d.vis = m ? m.vis : []; d.cam = m && m.cam; });
 HEALTH.orgLabel = L('الأعضاء المعنيّة', 'Organs involved');
 /* organ → diseases, derived */
 for (const id in ATLAS.organs) { ATLAS.organs[id].id = id; ATLAS.organs[id].dis = HEALTH.list.filter(d => d.org.includes(id)).map(d => d.id); }
 for (const s of ATLAS.systems) for (const o of s.organs) ATLAS.organs[o].sys = s.id;
+/* the anatomy lab: research content on every organ card */
+for (const id in ATLAS.organs) ATLAS.organs[id].lab = ORGAN_LAB[id] || null;

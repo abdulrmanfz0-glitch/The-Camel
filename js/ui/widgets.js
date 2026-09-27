@@ -1,5 +1,5 @@
 import { $, $$, ACT, ANATOMY, applyViewOffset, ATLAS, CHAPTERS, clamp, CLIMATE, clock, CU, digits, easeInOut,
-  ENV, GAITS, go, HEALTH, L, LANG, lerp, LIFE, MODEL, MOVEMENT, norm, num, openTopic, PREVENT, root,
+  ENV, FLOW_NODES, GAITS, go, HEALTH, L, LANG, lerp, LIFE, MODEL, MOVEMENT, norm, num, openTopic, PREVENT, root,
   samplePalette, setGait, setSlow, setStage, STATE, SYMPTOMS, sysOf, TAU, TOUR, tt, U, UI, WORLD, wrap24 } from '../app.js';
 
 /* ─────────── dock: day canvas and live readout ─────────── */
@@ -158,7 +158,9 @@ const SEARCH = {
     MOVEMENT.topics.forEach(t => add(L('حركة', 'Movement'), t.title, t.sum, () => go('movement', t.id), t.body.ar + t.body.en));
     CLIMATE.topics.forEach(t => add(L('مناخ', 'Climate'), t.title, t.sum, () => go('climate', t.id), t.body.ar + t.body.en));
     HEALTH.list.forEach(d => add(L('مرض', 'Disease'), d.name, d.signs, () => go('health', d.id), [d.cause, d.spread].map(x => x.ar + x.en).join(' ')));
-    Object.values(ATLAS.organs).forEach(o => add(L('عضو', 'Organ'), o.name, sysOf(o.id).name, () => go('anatomy', 'o-' + o.id), o.fn.ar + o.fn.en + o.camel.ar + o.camel.en));
+    const labText = b => b ? [b.fn, b.camel, b.where, b.size, ...b.steps].map(x => x.ar + ' ' + x.en).join(' ') : '';
+    Object.values(ATLAS.organs).forEach(o => add(L('عضو', 'Organ'), o.name, sysOf(o.id).name, () => go('anatomy', 'o-' + o.id), o.fn.ar + o.fn.en + o.camel.ar + o.camel.en + ' ' + o.id + ' ' + labText(o.lab)));
+    Object.values(FLOW_NODES).forEach(n => n.near && add(L('بنية', 'Structure'), n.name, ATLAS.organs[n.near].name, () => go('anatomy', 'o-' + n.near)));
     SYMPTOMS.signs.forEach(([id, n]) => add(L('علامة', 'Sign'), n, SYMPTOMS.title, () => { U.signs.add(id); U.symOpen = true; U.filter = 'all'; go('health'); }));
     LIFE.stages.forEach(s => add(L('العمر', 'Age'), s.name, s.age, () => { go('life'); setStage(s.id); }));
     LIFE.names.forEach(n => add(L('اسم', 'Name'), L(n[0], n[0]), n[1], () => go('life'), n[2].ar + n[2].en));
@@ -186,7 +188,7 @@ const SEARCH = {
 const TOURX = {
   i: 0, on: false, t: 0, dur: 11,
   start() { this.on = true; this.i = 0; document.body.classList.add('touring'); $('#tour').hidden = false; this.show(); },
-  stop() { this.on = false; document.body.classList.remove('touring'); $('#tour').hidden = true; setSlow(1); ACT.stopStorm(); applyViewOffset(); go('home', null, { force: true }); },
+  stop() { this.on = false; document.body.classList.remove('touring'); $('#tour').hidden = true; setSlow(1); ACT.stopStorm(); applyViewOffset(); go('anatomy', null, { force: true }); },
   show() {
     const s = TOUR[this.i]; this.t = 0;
     $('#tStep').textContent = digits(`${this.i + 1} / ${TOUR.length}`);
