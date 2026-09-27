@@ -263,6 +263,8 @@ body.panel-off #dock{inset-inline-start:16px}
 #dayKnob::after{content:"";position:absolute;top:-4px;left:-4px;width:10px;height:10px;border-radius:50%;background:var(--bone)}
 .day-labels{display:flex;justify-content:space-between;font-size:10.5px;color:var(--bone-4);margin-top:2px}
 #clock{font-size:15px;font-weight:600;min-width:52px;text-align:center}
+#backDay{flex:none;border:0;border-radius:999px;padding:5px 12px;background:#ffc46b;color:#1b160f;font:inherit;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+#backDay[hidden]{display:none}
 body.dock-off #dock{opacity:0;pointer-events:none}
 body.dock-off #dock>*{pointer-events:none}
 
@@ -386,10 +388,11 @@ html[lang="en"] .ld h2{font-family:var(--f-ui);font-size:30px;font-weight:600}
     <button id="playBtn" data-i18n-aria="playAria" aria-label="تشغيل اليوم"><svg class="ic" viewBox="0 0 24 24" id="playIc"><path d="M8 5.5v13l10-6.5z"/></svg></button>
     <div class="day-wrap">
       <canvas id="dayCanvas" aria-hidden="true"></canvas>
-      <input type="range" id="day" min="0" max="24" step="0.05" value="17" data-i18n-aria="dayAria" aria-label="ساعة اليوم">
+      <input type="range" id="day" min="0" max="24" step="0.05" value="16.6" data-i18n-aria="dayAria" aria-label="ساعة اليوم">
       <div id="dayKnob"></div>
     </div>
-    <span id="clock" class="num">17:00</span>
+    <span id="clock" class="num">16:36</span>
+    <button id="backDay" type="button" data-i18n="backDay" hidden>رجوع للنهار</button>
   </div>
 </div>
 
@@ -618,7 +621,7 @@ const UI = {
   errThree: L('تعذّر تحميل مكتبة الرسم ثلاثي الأبعاد. تحقّق من الاتصال ثم أعد تحميل الصفحة.', 'The 3D library could not be loaded. Check your connection and reload the page.'),
   errGL: L('متصفحك لا يدعم WebGL2، وهو لازم لهذا الأطلس.', 'Your browser does not support WebGL2, which this atlas needs.'),
   roBody: L('حرارة جسمها', 'Her body'), roAir: L('الهواء', 'Air'), roSaved: L('عرقٌ لم يُنفَق', 'Sweat saved'), roStatus: L('الحالة', 'Status'),
-  playAria: L('تشغيل اليوم أو إيقافه', 'Play or pause the day'), dayAria: L('ساعة اليوم', 'Time of day'),
+  playAria: L('تشغيل اليوم أو إيقافه', 'Play or pause the day'), dayAria: L('ساعة اليوم', 'Time of day'), backDay: L('رجوع للنهار', 'Back to daytime'),
   deg: L('°م', '°C'), litre: L('لتر', 'L'), dawn: L('فجر', 'dawn'), noon: L('ظهر', 'noon'), dusk: L('غروب', 'dusk'), midnight: L('منتصف الليل', 'midnight'),
   st: [L('آمنة', 'Safe'), L('انتباه', 'Caution'), L('خطر', 'Danger')],
   showMore: L('اقرأ', 'Read'), sources: L('المصادر', 'Sources'),
@@ -5225,7 +5228,7 @@ const WORLD = {
    insets, search, tour, keyboard, mobile sheet
    ════════════════════════════════════════════════════════════════ */
 const root = document.documentElement;
-const U = { chapter: 'home', topic: null, filter: 'all', labels: true, follow: true, pairs: false, peel: false, section: null, sectionX: 0, userT: 0, sheet: 'half', signs: new Set(), symOpen: false, nictT: 0 };
+const U = { chapter: 'home', topic: null, filter: 'all', labels: true, follow: true, pairs: false, peel: false, section: null, sectionX: 0, userT: 0, sheet: 'half', signs: new Set(), symOpen: false, nictT: 0, userTime: false, demo: null };
 
 /* ─────────── tiny icon set ─────────── */
 const ICONS = {
@@ -5297,7 +5300,8 @@ function enterChapter(ch) {
   if (ch === 'health') setLayer('skin');
   document.body.classList.toggle('dock-off', !(ch === 'home' || ch === 'climate'));
   HL.clear();
-  if (CH_HOUR[ch] != null && !STATE.playing) hourTo(CH_HOUR[ch]);
+  endTimeDemo();
+  if (!U.userTime) { setPlaying(false); if (STATE.season !== 'summer') setSeason('summer'); hourTo(DAY_HOUR); }
   frameChapter(ch);
 }
 const VIEWS = {
@@ -5310,7 +5314,17 @@ const VIEWS = {
   prevention: { t: [.6, 1.12, 0], box: 1, az: -.55, el: .09 },
   sources: { t: [.6, 1.12, 0], box: 1, az: 1.35, el: .1 },
 };
-const CH_HOUR = { anatomy: 9.6, life: 9.8, health: 10.2, prevention: 16.2, movement: 16.4 };
+/* the scene always opens on the designed golden summer afternoon; never the device clock.
+   Only the slider, or a topic that demonstrates night or winter, moves it (with a way back). */
+const DAY_HOUR = 16.6;
+const isTimeDemo = f => f.season === 'winter' || !!f.play || (f.hour != null && (f.hour < 6.5 || f.hour > 18.5));
+function showBackDay(on) { const b = $('#backDay'); if (b) b.hidden = !on; }
+function endTimeDemo() {
+  const d = U.demo; if (!d) return; U.demo = null; showBackDay(false); setPlaying(false);
+  if (STATE.season !== d.season) setSeason(d.season); hourTo(d.hour);
+}
+function backToDay() { U.demo = null; U.userTime = false; showBackDay(false); setPlaying(false); if (STATE.season !== 'summer') setSeason('summer'); hourTo(DAY_HOUR); }
+function userSetTime() { U.userTime = true; U.demo = null; showBackDay(false); }
 function frameChapter(ch) { focusCam(VIEWS[ch] || VIEWS.home, ch === 'movement'); }
 
 /* ─────────── framing into the free part of the screen ─────────── */
@@ -5638,7 +5652,7 @@ function wirePanel() {
   on('#actCouch', 'click', () => ACT.couch());
   on('#actDrink', 'click', () => ACT.drink());
   on('#actStorm', 'click', () => ACT.storm());
-  on('[data-season]', 'click', e => setSeason(e.currentTarget.dataset.season));
+  on('[data-season]', 'click', e => { userSetTime(); setSeason(e.currentTarget.dataset.season); });
   on('#lossR', 'input', e => { STATE.loss = +e.target.value; $('#lossOut').textContent = pct(STATE.loss, STATE.loss % 1 ? 1 : 0); pctRange(e.target); drawDay(true); });
   on('#humpR', 'input', e => { STATE.hump = +e.target.value; $('#humpOut').textContent = pct(STATE.hump); pctRange(e.target); });
   on('[data-stage]', 'click', e => setStage(e.currentTarget.dataset.stage));
@@ -5686,6 +5700,7 @@ function openTopic(id, scroll) {
   applyFocus(tp.focus || {}, tp);
 }
 function closeTopic() {
+  endTimeDemo();
   $$('#pcontent .topic.open').forEach(t => { if (t.dataset.topic || t.dataset.dis) { t.classList.remove('open'); const b = t.querySelector('.body'); if (b) b.hidden = true; t.firstElementChild.setAttribute('aria-expanded', 'false'); } });
   const oc = $('#organCard'); if (oc) oc.innerHTML = ''; $$('[data-organ]').forEach(b => b.setAttribute('aria-pressed', 'false'));
   U.topic = null; setHash(); INSET.hide(); HL.clear(); clearDiseaseLook(); if (U.pairs) HL.pairs(true);
@@ -5706,9 +5721,13 @@ function applyFocus(f, tp) {
   }
   if (f.layer) setLayer(f.layer);
   else if (U.chapter === 'health') setLayer('skin');
-  if (f.season) setSeason(f.season);
-  if (f.hour != null) setHour(f.hour);
-  if (f.play) setPlaying(true);
+  if (isTimeDemo(f)) {
+    if (!U.demo) U.demo = { hour: STATE.playing ? DAY_HOUR : STATE.hour, season: STATE.season };
+    if (f.season) setSeason(f.season);
+    if (f.hour != null) setHour(f.hour);
+    if (f.play) setPlaying(true);
+    showBackDay(true);
+  } else endTimeDemo();
   if (f.gait) setGait(f.gait);
   if (f.speed) setSlow(f.speed);
   if (f.pairs) { U.pairs = true; const b = $('#btnPairs'); if (b) b.setAttribute('aria-pressed', 'true'); HL.pairs(true); }
@@ -5996,8 +6015,9 @@ function initUI() {
   $('#search').onclick = e => { if (e.target.id === 'search') SEARCH.close(); };
   $('#sq').addEventListener('input', e => SEARCH.run(e.target.value));
   $('#sq').addEventListener('keydown', e => { if (e.key === 'ArrowDown') { e.preventDefault(); SEARCH.move(1); } else if (e.key === 'ArrowUp') { e.preventDefault(); SEARCH.move(-1); } else if (e.key === 'Enter') { e.preventDefault(); SEARCH.pick(SEARCH.sel); } else if (e.key === 'Escape') SEARCH.close(); });
-  $('#day').addEventListener('input', e => { setPlaying(false); setHour(+e.target.value); });
-  $('#playBtn').onclick = () => setPlaying(!STATE.playing);
+  $('#day').addEventListener('input', e => { userSetTime(); setPlaying(false); setHour(+e.target.value); });
+  $('#playBtn').onclick = () => { userSetTime(); setPlaying(!STATE.playing); };
+  $('#backDay').onclick = backToDay;
   // mobile sheet
   const sheetSizes = () => ({ peek: Math.round(innerHeight * .24), half: Math.round(innerHeight * .44), full: Math.round(innerHeight * .8) });
   const setSheet = k => { U.sheet = k; root.style.setProperty('--sheet-h', sheetSizes()[k] + 'px'); setTimeout(() => applyViewOffset(), 360); };
@@ -6017,8 +6037,8 @@ function initUI() {
     const k = e.code;
     if (e.key === '/' || k === 'Slash') { e.preventDefault(); SEARCH.open(); return; }
     if (/^Digit[1-8]$/.test(k)) { go(CHAPTERS[+k.slice(5) - 1].id); return; }
-    if (k === 'Space' && tag !== 'button') { e.preventDefault(); setPlaying(!STATE.playing); return; }
-    if (k === 'ArrowRight' || k === 'ArrowLeft') { if (tag === 'input') return; const d = (k === 'ArrowRight') !== (root.dir === 'rtl') ? .25 : -.25; setPlaying(false); setHour(STATE.hour + d); return; }
+    if (k === 'Space' && tag !== 'button') { e.preventDefault(); userSetTime(); setPlaying(!STATE.playing); return; }
+    if (k === 'ArrowRight' || k === 'ArrowLeft') { if (tag === 'input') return; const d = (k === 'ArrowRight') !== (root.dir === 'rtl') ? .25 : -.25; userSetTime(); setPlaying(false); setHour(STATE.hour + d); return; }
     if (k === 'KeyW') { const n = { stand: 'walk', walk: 'pace', pace: 'stand' }[STATE.gait]; if (U.chapter !== 'movement') go('movement'); setGait(n); focusCam(VIEWS.movement, true); return; }
     if (k === 'KeyK') { ACT.couch(); return; }
     if (k === 'KeyD') { ACT.drink(); return; }
