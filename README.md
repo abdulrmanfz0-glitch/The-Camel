@@ -6,7 +6,7 @@ An interactive 3D atlas of the dromedary: anatomy and a full organ atlas, moveme
 
 ## Run it
 
-Serve the folder (for example `npx serve .`) and open `index.html` in a browser with WebGL2. The page is one HTML file plus the photographic textures in `assets/tex/`. three.js r170 loads as an ES module from jsDelivr (with an unpkg fallback) and the fonts come from Google Fonts. Opened straight from disk the textures cannot load; the page then falls back to procedural detail.
+Serve the folder (for example `npx serve .`) and open `index.html` in a browser with WebGL2. The page is `index.html` plus plain ES modules in `js/` (no build step), `css/app.css`, and the photographic textures in `assets/tex/`. three.js r170 loads as an ES module from jsDelivr (with an unpkg fallback) and the fonts come from Google Fonts. Opened straight from disk the textures cannot load; the page then falls back to procedural detail.
 
 Quality adapts to the device. Force a tier with `?q=low`, `?q=medium` or `?q=high`, and the language with `?lang=en`. Deep links work, for example `#anatomy.stomach`, `#anatomy.o-pancreas` (an atlas organ) or `#health.hydatid`.
 
